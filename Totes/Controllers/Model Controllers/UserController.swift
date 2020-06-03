@@ -1,5 +1,5 @@
 //
-//  User.swift
+//  UserController.swift
 //  Totes
 //
 //  Created by Moses on 6/2/20.
@@ -9,6 +9,7 @@
 import Foundation
 
 
-class User {
+
+class UserController {
     
 } // END OF CLASS

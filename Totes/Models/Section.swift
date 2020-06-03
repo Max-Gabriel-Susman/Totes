@@ -1,5 +1,5 @@
 //
-//  User.swift
+//  Section.swift
 //  Totes
 //
 //  Created by Moses on 6/2/20.
@@ -9,6 +9,6 @@
 import Foundation
 
 
-class User {
+class Section {
     
 } // END OF CLASS

@@ -7,7 +7,11 @@
 //
 
 import UIKit
-
+/*
+ 
+ Let's replace this entire setup with a tableview inside of a ViewController so that we can use multiple views in the same view controller
+ 
+ */
 class InventoryTableViewController: UITableViewController {
     
     // MARK: - Outlets

@@ -157,26 +157,27 @@
                                     <constraint firstAttribute="width" secondItem="MFs-yf-tNx" secondAttribute="height" multiplier="1:1" id="RB8-Cb-eJU"/>
                                 </constraints>
                             </imageView>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="kUd-ZO-DnD">
-                                <rect key="frame" x="31" y="600.5" width="352" height="34"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Item's Category: " textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="kUd-ZO-DnD">
+                                <rect key="frame" x="31" y="598" width="352" height="39"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="c7D-28-MAU">
-                                <rect key="frame" x="31" y="672" width="352" height="34"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Item's Name:" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="c7D-28-MAU">
+                                <rect key="frame" x="31" y="669.5" width="352" height="38.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uAr-KQ-4Wf">
                                 <rect key="frame" x="31" y="745" width="352" height="30"/>
-                                <state key="normal" title="Button"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <state key="normal" title="Deposit"/>
                             </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="c7D-28-MAU" firstAttribute="centerY" secondItem="9Z8-IP-k4t" secondAttribute="centerY" multiplier="1.45" id="9cW-YV-oL8"/>
                             <constraint firstItem="kUd-ZO-DnD" firstAttribute="width" secondItem="9Z8-IP-k4t" secondAttribute="width" multiplier="0.85" id="CH4-uu-cWm"/>
-                            <constraint firstItem="c7D-28-MAU" firstAttribute="height" secondItem="9Z8-IP-k4t" secondAttribute="height" multiplier="0.0439276" id="DiB-wd-PCk"/>
+                            <constraint firstItem="c7D-28-MAU" firstAttribute="height" secondItem="9Z8-IP-k4t" secondAttribute="height" multiplier="0.05" id="DiB-wd-PCk"/>
                             <constraint firstItem="uAr-KQ-4Wf" firstAttribute="centerY" secondItem="9Z8-IP-k4t" secondAttribute="centerY" multiplier="1.6" id="Fa3-dl-9QI"/>
                             <constraint firstItem="kUd-ZO-DnD" firstAttribute="centerY" secondItem="9Z8-IP-k4t" secondAttribute="centerY" multiplier="1.3" id="G6g-7p-w3d"/>
                             <constraint firstItem="MFs-yf-tNx" firstAttribute="width" secondItem="9Z8-IP-k4t" secondAttribute="width" multiplier="0.85" id="GAr-qw-Dtj"/>
@@ -187,7 +188,7 @@
                             <constraint firstItem="c7D-28-MAU" firstAttribute="width" secondItem="9Z8-IP-k4t" secondAttribute="width" multiplier="0.85" id="cI8-ws-icu"/>
                             <constraint firstItem="c7D-28-MAU" firstAttribute="centerX" secondItem="9Z8-IP-k4t" secondAttribute="centerX" id="hqD-uO-dLk"/>
                             <constraint firstItem="MFs-yf-tNx" firstAttribute="centerY" secondItem="9Z8-IP-k4t" secondAttribute="centerY" multiplier="0.75" id="jSJ-Kd-b7f"/>
-                            <constraint firstItem="kUd-ZO-DnD" firstAttribute="height" secondItem="9Z8-IP-k4t" secondAttribute="height" multiplier="0.0439276" id="nVE-lU-z2q"/>
+                            <constraint firstItem="kUd-ZO-DnD" firstAttribute="height" secondItem="9Z8-IP-k4t" secondAttribute="height" multiplier="0.05" id="nVE-lU-z2q"/>
                             <constraint firstItem="MFs-yf-tNx" firstAttribute="centerX" secondItem="9Z8-IP-k4t" secondAttribute="centerX" id="xCV-qX-hOj"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="9Z8-IP-k4t"/>

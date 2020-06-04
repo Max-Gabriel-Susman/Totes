@@ -12,4 +12,24 @@ import Foundation
 
 class UserController {
     
+    // MARK: - Shared Instance
+    static let shared = UserController()
+    
+    // MARK: - Properties
+    var users: [User] = []
+    
+    // MARK: - CRUD Methods
+    // Create
+    func createUser() {
+        
+    }
+    
+    func updateUser() {
+        
+    }
+    
+    func deleteUser() {
+        
+    }
+    // MARK: - Persistence Methods
 } // END OF CLASS

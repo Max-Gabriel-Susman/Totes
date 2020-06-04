@@ -11,4 +11,11 @@ import Foundation
 
 class Item {
     
+    let itemName: String
+    let itemCategory: String
+    
+    init(itemName: String, itemCategory: String) {
+        self.itemName = itemName
+        self.itemCategory = itemCategory
+    }
 } // END OF CLASS

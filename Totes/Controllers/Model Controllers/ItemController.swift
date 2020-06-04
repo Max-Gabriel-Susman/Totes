@@ -10,5 +10,13 @@ import Foundation
 
 
 class ItemController {
+   
+    // Create
+    func createItem() {
+        
+    }
     
+    func deleteItem() {
+        
+    }
 } // END OF CLASS

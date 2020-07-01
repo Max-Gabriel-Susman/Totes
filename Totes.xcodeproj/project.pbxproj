@@ -18,10 +18,15 @@
 		A643A6C42487249A00BD3364 /* UserController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A643A6C32487249A00BD3364 /* UserController.swift */; };
 		A643A6C6248724AD00BD3364 /* SectionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A643A6C5248724AD00BD3364 /* SectionController.swift */; };
 		A643A6C8248724BA00BD3364 /* ItemController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A643A6C7248724BA00BD3364 /* ItemController.swift */; };
-		A643A6CA248724F400BD3364 /* WithdrawViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A643A6C9248724F400BD3364 /* WithdrawViewController.swift */; };
-		A643A6CC2487250600BD3364 /* DepositViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A643A6CB2487250600BD3364 /* DepositViewController.swift */; };
 		A643A6CE2487251C00BD3364 /* InventoryTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A643A6CD2487251C00BD3364 /* InventoryTableViewController.swift */; };
 		A643A6D02487254300BD3364 /* SectionTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A643A6CF2487254300BD3364 /* SectionTableViewController.swift */; };
+		A680DD7D24ABABBF00A8A0A3 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A680DD7C24ABABBF00A8A0A3 /* LoginViewController.swift */; };
+		A680DD7F24ABABCF00A8A0A3 /* RegistrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A680DD7E24ABABCF00A8A0A3 /* RegistrationViewController.swift */; };
+		A680DD8124ABADEA00A8A0A3 /* ForgottenPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A680DD8024ABADEA00A8A0A3 /* ForgottenPasswordViewController.swift */; };
+		A680DD8524ABCF3500A8A0A3 /* TransactionListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A680DD8424ABCF3500A8A0A3 /* TransactionListTableViewController.swift */; };
+		A680DD8724ABCF4F00A8A0A3 /* TransactionDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A680DD8624ABCF4F00A8A0A3 /* TransactionDetailViewController.swift */; };
+		A680DD8924ABCF6000A8A0A3 /* WithdrawalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A680DD8824ABCF6000A8A0A3 /* WithdrawalViewController.swift */; };
+		A680DD8B24ABCF6F00A8A0A3 /* DepositViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A680DD8A24ABCF6F00A8A0A3 /* DepositViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,10 +43,15 @@
 		A643A6C32487249A00BD3364 /* UserController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserController.swift; sourceTree = "<group>"; };
 		A643A6C5248724AD00BD3364 /* SectionController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionController.swift; sourceTree = "<group>"; };
 		A643A6C7248724BA00BD3364 /* ItemController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemController.swift; sourceTree = "<group>"; };
-		A643A6C9248724F400BD3364 /* WithdrawViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WithdrawViewController.swift; sourceTree = "<group>"; };
-		A643A6CB2487250600BD3364 /* DepositViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DepositViewController.swift; sourceTree = "<group>"; };
 		A643A6CD2487251C00BD3364 /* InventoryTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InventoryTableViewController.swift; sourceTree = "<group>"; };
 		A643A6CF2487254300BD3364 /* SectionTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionTableViewController.swift; sourceTree = "<group>"; };
+		A680DD7C24ABABBF00A8A0A3 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		A680DD7E24ABABCF00A8A0A3 /* RegistrationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationViewController.swift; sourceTree = "<group>"; };
+		A680DD8024ABADEA00A8A0A3 /* ForgottenPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgottenPasswordViewController.swift; sourceTree = "<group>"; };
+		A680DD8424ABCF3500A8A0A3 /* TransactionListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionListTableViewController.swift; sourceTree = "<group>"; };
+		A680DD8624ABCF4F00A8A0A3 /* TransactionDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionDetailViewController.swift; sourceTree = "<group>"; };
+		A680DD8824ABCF6000A8A0A3 /* WithdrawalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WithdrawalViewController.swift; sourceTree = "<group>"; };
+		A680DD8A24ABCF6F00A8A0A3 /* DepositViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DepositViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -140,10 +150,15 @@
 		A643A6BA2486EDAA00BD3364 /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				A643A6C9248724F400BD3364 /* WithdrawViewController.swift */,
-				A643A6CB2487250600BD3364 /* DepositViewController.swift */,
 				A643A6CD2487251C00BD3364 /* InventoryTableViewController.swift */,
 				A643A6CF2487254300BD3364 /* SectionTableViewController.swift */,
+				A680DD7C24ABABBF00A8A0A3 /* LoginViewController.swift */,
+				A680DD7E24ABABCF00A8A0A3 /* RegistrationViewController.swift */,
+				A680DD8024ABADEA00A8A0A3 /* ForgottenPasswordViewController.swift */,
+				A680DD8424ABCF3500A8A0A3 /* TransactionListTableViewController.swift */,
+				A680DD8624ABCF4F00A8A0A3 /* TransactionDetailViewController.swift */,
+				A680DD8824ABCF6000A8A0A3 /* WithdrawalViewController.swift */,
+				A680DD8A24ABCF6F00A8A0A3 /* DepositViewController.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -230,17 +245,22 @@
 			buildActionMask = 2147483647;
 			files = (
 				A643A6C6248724AD00BD3364 /* SectionController.swift in Sources */,
+				A680DD8B24ABCF6F00A8A0A3 /* DepositViewController.swift in Sources */,
+				A680DD8724ABCF4F00A8A0A3 /* TransactionDetailViewController.swift in Sources */,
 				A643A6C42487249A00BD3364 /* UserController.swift in Sources */,
 				A643A6CE2487251C00BD3364 /* InventoryTableViewController.swift in Sources */,
 				A643A6C8248724BA00BD3364 /* ItemController.swift in Sources */,
+				A680DD7F24ABABCF00A8A0A3 /* RegistrationViewController.swift in Sources */,
 				A643A6C22487248E00BD3364 /* Item.swift in Sources */,
 				A643A6A12486ED6500BD3364 /* AppDelegate.swift in Sources */,
 				A643A6C02487248300BD3364 /* Section.swift in Sources */,
 				A643A6A32486ED6500BD3364 /* SceneDelegate.swift in Sources */,
-				A643A6CA248724F400BD3364 /* WithdrawViewController.swift in Sources */,
+				A680DD8124ABADEA00A8A0A3 /* ForgottenPasswordViewController.swift in Sources */,
+				A680DD8524ABCF3500A8A0A3 /* TransactionListTableViewController.swift in Sources */,
 				A643A6BE2486EE5E00BD3364 /* User.swift in Sources */,
 				A643A6D02487254300BD3364 /* SectionTableViewController.swift in Sources */,
-				A643A6CC2487250600BD3364 /* DepositViewController.swift in Sources */,
+				A680DD7D24ABABBF00A8A0A3 /* LoginViewController.swift in Sources */,
+				A680DD8924ABCF6000A8A0A3 /* WithdrawalViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

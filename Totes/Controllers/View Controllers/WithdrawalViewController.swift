@@ -1,5 +1,5 @@
 //
-//  DepositViewController.swift
+//  WithdrawalViewController.swift
 //  Totes
 //
 //  Created by Moses on 6/30/20.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class DepositViewController: UIViewController {
+class WithdrawalViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()

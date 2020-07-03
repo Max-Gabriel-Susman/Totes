@@ -317,37 +317,37 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="qrcode" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="4JP-1h-NSm">
-                                <rect key="frame" x="87" y="446.5" width="240" height="237.5"/>
+                                <rect key="frame" x="41.5" y="17" width="331" height="329"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="4JP-1h-NSm" secondAttribute="height" multiplier="1:1" id="uTn-J8-Ths"/>
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="(TRANSACTION_TYPE)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Sko-k6-a9u">
-                                <rect key="frame" x="119" y="110" width="176" height="22"/>
+                                <rect key="frame" x="119" y="373" width="176" height="22"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="(AGENT_NAME)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WJJ-CW-P6G">
-                                <rect key="frame" x="146" y="231.5" width="122" height="22"/>
+                                <rect key="frame" x="146" y="433.5" width="122" height="22"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="(ITEM_NAME&amp;CATEGORY)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="evW-T0-zfx">
-                                <rect key="frame" x="154" y="150.5" width="106" height="22"/>
+                                <rect key="frame" x="154" y="494" width="106" height="22"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="(QUANTITY)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kxf-eK-LJ2">
-                                <rect key="frame" x="159" y="191" width="96" height="22"/>
+                                <rect key="frame" x="159" y="554.5" width="96" height="22"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Is there a placeholder for me?" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="cNR-oG-hfT">
-                                <rect key="frame" x="87" y="297" width="240" height="133.5"/>
+                                <rect key="frame" x="41.5" y="620" width="331" height="133.5"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -356,29 +356,29 @@
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="cNR-oG-hfT" firstAttribute="width" secondItem="Ve9-Rf-G4h" secondAttribute="width" multiplier="0.57971" id="2RZ-9o-CRa"/>
+                            <constraint firstItem="cNR-oG-hfT" firstAttribute="width" secondItem="Ve9-Rf-G4h" secondAttribute="width" multiplier="0.8" id="2RZ-9o-CRa"/>
                             <constraint firstItem="evW-T0-zfx" firstAttribute="centerX" secondItem="Ve9-Rf-G4h" secondAttribute="centerX" id="5ba-5a-6To"/>
                             <constraint firstItem="evW-T0-zfx" firstAttribute="height" secondItem="Ve9-Rf-G4h" secondAttribute="height" multiplier="0.0271318" id="8L7-A5-XxY"/>
                             <constraint firstItem="evW-T0-zfx" firstAttribute="width" secondItem="Ve9-Rf-G4h" secondAttribute="width" multiplier="0.256039" id="Cr8-Qf-a3k"/>
                             <constraint firstItem="Kxf-eK-LJ2" firstAttribute="centerX" secondItem="Ve9-Rf-G4h" secondAttribute="centerX" id="ERc-Ny-M0P"/>
                             <constraint firstItem="Kxf-eK-LJ2" firstAttribute="width" secondItem="Ve9-Rf-G4h" secondAttribute="width" multiplier="0.231884" id="Jjz-PR-Cg3"/>
-                            <constraint firstItem="Kxf-eK-LJ2" firstAttribute="centerY" secondItem="Ve9-Rf-G4h" secondAttribute="centerY" multiplier="0.5" id="Lge-co-Nme"/>
+                            <constraint firstItem="Kxf-eK-LJ2" firstAttribute="centerY" secondItem="Ve9-Rf-G4h" secondAttribute="centerY" multiplier="1.4" id="Lge-co-Nme"/>
                             <constraint firstItem="Sko-k6-a9u" firstAttribute="height" secondItem="Ve9-Rf-G4h" secondAttribute="height" multiplier="0.0271318" id="LwM-JF-Ufi"/>
                             <constraint firstItem="WJJ-CW-P6G" firstAttribute="width" secondItem="Ve9-Rf-G4h" secondAttribute="width" multiplier="0.294686" id="N7y-ER-5G2"/>
                             <constraint firstItem="WJJ-CW-P6G" firstAttribute="centerX" secondItem="Ve9-Rf-G4h" secondAttribute="centerX" id="X3y-Ke-x1b"/>
-                            <constraint firstItem="WJJ-CW-P6G" firstAttribute="centerY" secondItem="Ve9-Rf-G4h" secondAttribute="centerY" multiplier="0.6" id="Ygh-L5-ujQ"/>
-                            <constraint firstItem="cNR-oG-hfT" firstAttribute="centerY" secondItem="Ve9-Rf-G4h" secondAttribute="centerY" multiplier="0.9" id="b3L-EN-hNl"/>
+                            <constraint firstItem="WJJ-CW-P6G" firstAttribute="centerY" secondItem="Ve9-Rf-G4h" secondAttribute="centerY" multiplier="1.1" id="Ygh-L5-ujQ"/>
+                            <constraint firstItem="cNR-oG-hfT" firstAttribute="centerY" secondItem="Ve9-Rf-G4h" secondAttribute="centerY" multiplier="1.7" id="b3L-EN-hNl"/>
                             <constraint firstItem="Kxf-eK-LJ2" firstAttribute="height" secondItem="Ve9-Rf-G4h" secondAttribute="height" multiplier="0.0271318" id="cAb-n1-Hwp"/>
                             <constraint firstItem="cNR-oG-hfT" firstAttribute="centerX" secondItem="Ve9-Rf-G4h" secondAttribute="centerX" id="ftQ-Bx-zz5"/>
                             <constraint firstItem="Sko-k6-a9u" firstAttribute="centerX" secondItem="Ve9-Rf-G4h" secondAttribute="centerX" id="iFx-hr-Mzq"/>
-                            <constraint firstItem="Sko-k6-a9u" firstAttribute="centerY" secondItem="Ve9-Rf-G4h" secondAttribute="centerY" multiplier="0.3" id="lLQ-04-Xw3"/>
+                            <constraint firstItem="Sko-k6-a9u" firstAttribute="centerY" secondItem="Ve9-Rf-G4h" secondAttribute="centerY" multiplier="0.95" id="lLQ-04-Xw3"/>
                             <constraint firstItem="4JP-1h-NSm" firstAttribute="centerX" secondItem="Ve9-Rf-G4h" secondAttribute="centerX" id="nVq-Zb-7aS"/>
                             <constraint firstItem="Sko-k6-a9u" firstAttribute="width" secondItem="Ve9-Rf-G4h" secondAttribute="width" multiplier="0.425121" id="nWB-XQ-wPm"/>
                             <constraint firstItem="cNR-oG-hfT" firstAttribute="height" secondItem="Ve9-Rf-G4h" secondAttribute="height" multiplier="0.165375" id="rC2-j8-p6E"/>
-                            <constraint firstItem="4JP-1h-NSm" firstAttribute="width" secondItem="Ve9-Rf-G4h" secondAttribute="width" multiplier="0.57971" id="rys-xj-v4M"/>
+                            <constraint firstItem="4JP-1h-NSm" firstAttribute="width" secondItem="Ve9-Rf-G4h" secondAttribute="width" multiplier="0.8" id="rys-xj-v4M"/>
                             <constraint firstItem="WJJ-CW-P6G" firstAttribute="height" secondItem="Ve9-Rf-G4h" secondAttribute="height" multiplier="0.0271318" id="spq-n4-wK2"/>
-                            <constraint firstItem="evW-T0-zfx" firstAttribute="centerY" secondItem="Ve9-Rf-G4h" secondAttribute="centerY" multiplier="0.4" id="unX-jm-yZf"/>
-                            <constraint firstItem="4JP-1h-NSm" firstAttribute="centerY" secondItem="Ve9-Rf-G4h" secondAttribute="centerY" multiplier="1.4" id="w6l-Fd-Y7b"/>
+                            <constraint firstItem="evW-T0-zfx" firstAttribute="centerY" secondItem="Ve9-Rf-G4h" secondAttribute="centerY" multiplier="1.25" id="unX-jm-yZf"/>
+                            <constraint firstItem="4JP-1h-NSm" firstAttribute="centerY" secondItem="Ve9-Rf-G4h" secondAttribute="centerY" multiplier="0.45" id="w6l-Fd-Y7b"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Ve9-Rf-G4h"/>
                     </view>

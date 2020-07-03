@@ -9,6 +9,11 @@
 import UIKit
 
 class ForgottenPasswordViewController: UIViewController {
+    
+    // MARK: - Outlets
+    @IBOutlet weak var enterEmailTextField: UITextField!
+    
+    // MARK: - Properties
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -16,7 +21,12 @@ class ForgottenPasswordViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
-
+    // MARK: - Actions
+    @IBAction func resetLinkButton(_ sender: Any) {
+    }
+    @IBAction func registrationButton(_ sender: Any) {
+    }
+    
     /*
     // MARK: - Navigation
 

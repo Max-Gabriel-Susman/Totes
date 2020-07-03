@@ -20,6 +20,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <state key="normal" title="Login"/>
                                 <connections>
+                                    <action selector="loginButton:" destination="Cng-I5-rCm" eventType="touchUpInside" id="mF4-SI-S94"/>
                                     <segue destination="BGE-sb-sBI" kind="show" identifier="loginToInventory" id="msn-VX-Pul"/>
                                 </connections>
                             </button>
@@ -28,6 +29,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <state key="normal" title="Registration"/>
                                 <connections>
+                                    <action selector="registrationButton:" destination="Cng-I5-rCm" eventType="touchUpInside" id="bDI-vg-e0z"/>
                                     <segue destination="Dss-HS-6Ys" kind="show" identifier="loginToRegistration" id="4Zg-bQ-z1R"/>
                                 </connections>
                             </button>
@@ -51,6 +53,7 @@
                                 <rect key="frame" x="41.5" y="691.5" width="331" height="31"/>
                                 <state key="normal" title="Forgot your password?"/>
                                 <connections>
+                                    <action selector="forgottenPasswordButton:" destination="Cng-I5-rCm" eventType="touchUpInside" id="i70-mm-edr"/>
                                     <segue destination="vmr-fK-PDk" kind="show" identifier="loginToForgottenPassword" id="VYp-tC-0ID"/>
                                 </connections>
                             </button>
@@ -84,6 +87,10 @@
                         <viewLayoutGuide key="safeArea" id="C4m-gN-srP"/>
                     </view>
                     <navigationItem key="navigationItem" title="Logout" id="Mvz-cN-ReR"/>
+                    <connections>
+                        <outlet property="enterPasswordTextField" destination="S7C-Bv-Uro" id="AE9-BO-Jf9"/>
+                        <outlet property="enterUsernameTextField" destination="S7C-Bv-Uro" id="Z3J-Eb-j3D"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fjo-aS-MvJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -173,11 +180,15 @@
                                 <rect key="frame" x="41.5" y="611" width="331" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <state key="normal" title="Register"/>
+                                <connections>
+                                    <action selector="registerButton:" destination="Dss-HS-6Ys" eventType="touchUpInside" id="pVH-51-hTn"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bKt-an-S9U">
                                 <rect key="frame" x="41.5" y="651.5" width="331" height="30"/>
                                 <state key="normal" title="Forgot Your Password?"/>
                                 <connections>
+                                    <action selector="forgottenPasswordButton:" destination="Dss-HS-6Ys" eventType="touchUpInside" id="CU2-Ct-sfJ"/>
                                     <segue destination="vmr-fK-PDk" kind="show" identifier="registrationToForgottenPassword" id="LJE-tq-Iw7"/>
                                 </connections>
                             </button>
@@ -232,6 +243,9 @@
                         <viewLayoutGuide key="safeArea" id="nDQ-uo-Nxz"/>
                     </view>
                     <navigationItem key="navigationItem" id="stu-hL-xUF"/>
+                    <connections>
+                        <outlet property="createAUsernameTextField" destination="DcY-WC-RKK" id="uYz-3E-puw"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gv1-bv-QlQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -473,6 +487,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <state key="normal" title="Send password reset link"/>
                                 <connections>
+                                    <action selector="resetLinkButton:" destination="vmr-fK-PDk" eventType="touchUpInside" id="PA7-pH-9Oe"/>
                                     <segue destination="Cng-I5-rCm" kind="show" identifier="forgottenPasswordToLogin" id="T53-H1-pkm"/>
                                 </connections>
                             </button>
@@ -480,6 +495,7 @@
                                 <rect key="frame" x="41.5" y="580" width="331" height="31.5"/>
                                 <state key="normal" title="Registration"/>
                                 <connections>
+                                    <action selector="registrationButton:" destination="vmr-fK-PDk" eventType="touchUpInside" id="qNh-Ib-aay"/>
                                     <segue destination="Dss-HS-6Ys" kind="show" identifier="forgottenPasswordToRegistration" id="hVM-XY-JWI"/>
                                 </connections>
                             </button>
@@ -516,6 +532,9 @@
                         <viewLayoutGuide key="safeArea" id="nJI-PP-Aiq"/>
                     </view>
                     <navigationItem key="navigationItem" id="RBd-bF-WDq"/>
+                    <connections>
+                        <outlet property="enterEmailTextField" destination="uNx-mA-Rtb" id="Nt5-pf-8Bz"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="N0S-xy-7UY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -675,7 +694,7 @@
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="LJE-tq-Iw7"/>
-        <segue reference="4Zg-bQ-z1R"/>
+        <segue reference="hVM-XY-JWI"/>
         <segue reference="T53-H1-pkm"/>
     </inferredMetricsTieBreakers>
     <resources>

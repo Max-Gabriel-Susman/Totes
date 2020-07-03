@@ -9,6 +9,11 @@
 import UIKit
 
 class LoginViewController: UIViewController {
+    // MARK: - Outlets
+    @IBOutlet weak var enterPasswordTextField: UITextField!
+    @IBOutlet weak var enterUsernameTextField: UITextField!
+    
+    // MARK: - Properties
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -16,6 +21,15 @@ class LoginViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
+    // MARK: - Actions
+    @IBAction func loginButton(_ sender: Any) {
+    }
+    @IBAction func registrationButton(_ sender: Any) {
+    }
+    @IBAction func forgottenPasswordButton(_ sender: Any) {
+    }
+    
+
 
     /*
     // MARK: - Navigation

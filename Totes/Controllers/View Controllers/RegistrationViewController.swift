@@ -9,6 +9,11 @@
 import UIKit
 
 class RegistrationViewController: UIViewController {
+    // MARK: - Outlets
+    // pretty sure this guys wrong, going to fix later
+    @IBOutlet weak var createAUsernameTextField: UITextField!
+    
+    // MARK: - Properties
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -16,6 +21,13 @@ class RegistrationViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
+    // MARK: - Actions
+    @IBAction func registerButton(_ sender: Any) {
+    }
+    @IBAction func forgottenPasswordButton(_ sender: Any) {
+    }
+    
+
 
     /*
     // MARK: - Navigation

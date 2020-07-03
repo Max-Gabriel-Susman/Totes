@@ -9,14 +9,31 @@
 import UIKit
 
 class WithdrawalViewController: UIViewController {
-
+    
+    // MARK: - Outlets
+    @IBOutlet weak var transactorLabel: UILabel!
+    @IBOutlet weak var itemCategoryLabel: UILabel!
+    @IBOutlet weak var itemNameLabel: UILabel!
+    @IBOutlet weak var quantityLabel: UILabel!
+    @IBOutlet weak var metricLabel: UILabel!
+    @IBOutlet weak var amountEntryTextField: UITextField!
+    
+    
+    // MARK: - Properties
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
     }
     
-
+    // MARK: - Actions
+    @IBAction func withdrawAmountButton(_ sender: Any) {
+    }
+    @IBAction func withdrawAllButton(_ sender: Any) {
+    }
+    
     /*
     // MARK: - Navigation
 

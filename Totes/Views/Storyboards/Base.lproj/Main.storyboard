@@ -7,16 +7,16 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Logout-->
+        <!--Login-->
         <scene sceneID="mVq-lo-zbI">
             <objects>
                 <viewController id="Cng-I5-rCm" customClass="LoginViewController" customModule="Totes" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="zSe-cR-NvB">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="20G-m1-t6B">
-                                <rect key="frame" x="41.5" y="610.5" width="331" height="31.5"/>
+                                <rect key="frame" x="41.5" y="721.5" width="331" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <state key="normal" title="Login"/>
                                 <connections>
@@ -25,7 +25,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jau-hj-bhH">
-                                <rect key="frame" x="41.5" y="651" width="331" height="31.5"/>
+                                <rect key="frame" x="41.5" y="769" width="331" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <state key="normal" title="Registration"/>
                                 <connections>
@@ -34,23 +34,23 @@
                                 </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter password here:" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="c5w-Ic-eRS">
-                                <rect key="frame" x="41.5" y="538.5" width="331" height="34"/>
+                                <rect key="frame" x="41.5" y="637" width="331" height="32.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter username here:" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="S7C-Bv-Uro">
-                                <rect key="frame" x="41.5" y="468" width="331" height="34"/>
+                                <rect key="frame" x="41.5" y="553.5" width="331" height="33"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="paperplane" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="skh-sm-ydq">
-                                <rect key="frame" x="41.5" y="77.5" width="331" height="330.5"/>
+                                <rect key="frame" x="41.5" y="120" width="331" height="330.5"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="skh-sm-ydq" secondAttribute="height" multiplier="1:1" id="SJG-zH-e2f"/>
                                 </constraints>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2nK-UX-M95">
-                                <rect key="frame" x="41.5" y="691.5" width="331" height="31"/>
+                                <rect key="frame" x="41.5" y="816.5" width="331" height="30"/>
                                 <state key="normal" title="Forgot your password?"/>
                                 <connections>
                                     <action selector="forgottenPasswordButton:" destination="Cng-I5-rCm" eventType="touchUpInside" id="i70-mm-edr"/>
@@ -86,7 +86,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="C4m-gN-srP"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Logout" id="Mvz-cN-ReR"/>
+                    <navigationItem key="navigationItem" title="Login" id="Mvz-cN-ReR"/>
                     <connections>
                         <outlet property="enterPasswordTextField" destination="S7C-Bv-Uro" id="AE9-BO-Jf9"/>
                         <outlet property="enterUsernameTextField" destination="S7C-Bv-Uro" id="Z3J-Eb-j3D"/>
@@ -101,11 +101,11 @@
             <objects>
                 <tableViewController id="BGE-sb-sBI" customClass="InventoryTableViewController" customModule="Totes" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="EzQ-w9-DP3">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" textLabel="AlO-PY-0Ys" detailTextLabel="uke-47-7ey" style="IBUITableViewCellStyleValue1" id="vaf-9P-RFZ">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="showSection" textLabel="AlO-PY-0Ys" detailTextLabel="uke-47-7ey" style="IBUITableViewCellStyleValue1" id="vaf-9P-RFZ">
                                 <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="vaf-9P-RFZ" id="EYu-iK-77R">
@@ -128,6 +128,7 @@
                                         </label>
                                     </subviews>
                                 </tableViewCellContentView>
+                                <accessibility key="accessibilityConfiguration" identifier="showSection"/>
                                 <connections>
                                     <segue destination="IGb-ym-9AV" kind="show" identifier="inventoryToSection" id="wVg-l4-lGb"/>
                                 </connections>
@@ -173,11 +174,11 @@
             <objects>
                 <viewController id="Dss-HS-6Ys" customClass="RegistrationViewController" customModule="Totes" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="jO3-54-BRX">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1P0-1J-m7e">
-                                <rect key="frame" x="41.5" y="611" width="331" height="30"/>
+                                <rect key="frame" x="41.5" y="722" width="331" height="28.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <state key="normal" title="Register"/>
                                 <connections>
@@ -185,7 +186,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bKt-an-S9U">
-                                <rect key="frame" x="41.5" y="651.5" width="331" height="30"/>
+                                <rect key="frame" x="41.5" y="769.5" width="331" height="28.5"/>
                                 <state key="normal" title="Forgot Your Password?"/>
                                 <connections>
                                     <action selector="forgottenPasswordButton:" destination="Dss-HS-6Ys" eventType="touchUpInside" id="CU2-Ct-sfJ"/>
@@ -193,22 +194,22 @@
                                 </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Create a username(minimum of 8 characters):" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0Om-44-crI">
-                                <rect key="frame" x="41.5" y="468" width="331" height="34"/>
+                                <rect key="frame" x="41.5" y="553.5" width="331" height="33"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Create a password(minimum 8 characters):" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="DcY-WC-RKK">
-                                <rect key="frame" x="41.5" y="538.5" width="331" height="34"/>
+                                <rect key="frame" x="41.5" y="637" width="331" height="32.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter your email address:" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="DVn-Vg-KVc">
-                                <rect key="frame" x="41.5" y="397" width="331" height="34"/>
+                                <rect key="frame" x="41.5" y="470.5" width="331" height="32.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="person.badge.plus" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="Wfy-S2-FeC">
-                                <rect key="frame" x="41.5" y="37.5" width="331" height="331.5"/>
+                                <rect key="frame" x="41.5" y="73" width="331" height="331.5"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="Wfy-S2-FeC" secondAttribute="height" multiplier="1:1" id="dgM-sK-JeW"/>
                                 </constraints>
@@ -244,7 +245,9 @@
                     </view>
                     <navigationItem key="navigationItem" id="stu-hL-xUF"/>
                     <connections>
-                        <outlet property="createAUsernameTextField" destination="DcY-WC-RKK" id="uYz-3E-puw"/>
+                        <outlet property="emailAddressEntryTextField" destination="DVn-Vg-KVc" id="dHm-Pl-KyC"/>
+                        <outlet property="passwordEntryTextField" destination="DcY-WC-RKK" id="6sd-Cd-WBB"/>
+                        <outlet property="usernameEntryTextField" destination="0Om-44-crI" id="Pg2-Q6-8dH"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gv1-bv-QlQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -256,11 +259,11 @@
             <objects>
                 <tableViewController id="PV9-vT-nsj" customClass="TransactionListTableViewController" customModule="Totes" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="nI4-ra-GLV">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" textLabel="0PM-EM-Uv4" detailTextLabel="fR1-Dg-i6M" style="IBUITableViewCellStyleValue1" id="6fh-c3-hFX">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="showTransaction" textLabel="0PM-EM-Uv4" detailTextLabel="fR1-Dg-i6M" style="IBUITableViewCellStyleValue1" id="6fh-c3-hFX">
                                 <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="6fh-c3-hFX" id="89j-gs-NBd">
@@ -283,6 +286,7 @@
                                         </label>
                                     </subviews>
                                 </tableViewCellContentView>
+                                <accessibility key="accessibilityConfiguration" identifier="showTransaction"/>
                                 <connections>
                                     <segue destination="7UQ-35-lZb" kind="show" identifier="transactionListToTransactionDetail" id="Py7-24-M4p"/>
                                 </connections>
@@ -295,25 +299,25 @@
                     </tableView>
                     <navigationItem key="navigationItem" title="Transactions" id="bLL-is-VvQ">
                         <rightBarButtonItems>
-                            <barButtonItem style="plain" id="DNT-uk-r19">
-                                <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="nbo-Mq-8Mr">
+                            <barButtonItem style="done" id="oI6-Wp-0tg">
+                                <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="GeY-NK-vjT">
                                     <rect key="frame" x="314" y="7" width="80" height="30"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                    <state key="normal" title="Withdrawal"/>
-                                </button>
-                                <connections>
-                                    <segue destination="iAh-bi-xHN" kind="show" identifier="transactionsToWithdrawal" id="hPC-cm-CJd"/>
-                                </connections>
-                            </barButtonItem>
-                            <barButtonItem style="plain" id="oI6-Wp-0tg">
-                                <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="GeY-NK-vjT">
-                                    <rect key="frame" x="226" y="7" width="80" height="30"/>
-                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     <state key="normal" title="Deposit"/>
+                                    <connections>
+                                        <segue destination="Xvh-XO-Ngc" kind="show" id="Hut-Ye-AQM"/>
+                                    </connections>
                                 </button>
-                                <connections>
-                                    <segue destination="Xvh-XO-Ngc" kind="show" identifier="transactionsToDeposits" id="elK-d5-g4Q"/>
-                                </connections>
+                            </barButtonItem>
+                            <barButtonItem style="done" id="hvX-1A-m7s">
+                                <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="P5t-If-toz">
+                                    <rect key="frame" x="214" y="7" width="92" height="30"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <state key="normal" title="Wilthdrawal"/>
+                                    <connections>
+                                        <segue destination="iAh-bi-xHN" kind="show" id="0S0-pt-Kjf"/>
+                                    </connections>
+                                </button>
                             </barButtonItem>
                         </rightBarButtonItems>
                     </navigationItem>
@@ -327,41 +331,41 @@
             <objects>
                 <viewController id="7UQ-35-lZb" customClass="TransactionDetailViewController" customModule="Totes" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="nSX-7i-g4T">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="qrcode" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="4JP-1h-NSm">
-                                <rect key="frame" x="41.5" y="17" width="331" height="329"/>
+                                <rect key="frame" x="41.5" y="49" width="331" height="329"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="4JP-1h-NSm" secondAttribute="height" multiplier="1:1" id="uTn-J8-Ths"/>
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="(TRANSACTION_TYPE)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Sko-k6-a9u">
-                                <rect key="frame" x="119" y="373" width="176" height="22"/>
+                                <rect key="frame" x="119" y="441" width="176" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="(AGENT_NAME)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WJJ-CW-P6G">
-                                <rect key="frame" x="146" y="433.5" width="122" height="22"/>
+                                <rect key="frame" x="146" y="512" width="122" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="(ITEM_NAME&amp;CATEGORY)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="evW-T0-zfx">
-                                <rect key="frame" x="154" y="494" width="106" height="22"/>
+                                <rect key="frame" x="154" y="583.5" width="106" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="(QUANTITY)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kxf-eK-LJ2">
-                                <rect key="frame" x="159" y="554.5" width="96" height="22"/>
+                                <rect key="frame" x="159" y="654.5" width="96" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Is there a placeholder for me?" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="cNR-oG-hfT">
-                                <rect key="frame" x="41.5" y="620" width="331" height="133.5"/>
+                                <rect key="frame" x="41.5" y="743.5" width="331" height="128"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -397,6 +401,13 @@
                         <viewLayoutGuide key="safeArea" id="Ve9-Rf-G4h"/>
                     </view>
                     <navigationItem key="navigationItem" id="FB9-d3-ZEF"/>
+                    <connections>
+                        <outlet property="agentNameLabel" destination="WJJ-CW-P6G" id="0Je-KG-pkm"/>
+                        <outlet property="itemNameLabel" destination="evW-T0-zfx" id="PzA-Y6-Rfc"/>
+                        <outlet property="noteTextView" destination="cNR-oG-hfT" id="070-Il-jdw"/>
+                        <outlet property="quantityLabel" destination="Kxf-eK-LJ2" id="nhu-p7-rQR"/>
+                        <outlet property="transactionTypeLabel" destination="Sko-k6-a9u" id="3IP-Vd-3qU"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="00N-m9-Fow" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -407,38 +418,48 @@
             <objects>
                 <viewController id="Xvh-XO-Ngc" customClass="DepositViewController" customModule="Totes" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Rbg-nb-gYT">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="qrcode" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="XWE-od-fd1">
-                                <rect key="frame" x="52" y="48" width="310.5" height="308"/>
+                                <rect key="frame" x="41.5" y="37.5" width="331" height="328.5"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="XWE-od-fd1" secondAttribute="height" multiplier="1:1" id="usU-Tr-dzW"/>
                                 </constraints>
                             </imageView>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Item Here:" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="rlK-9c-1RE">
-                                <rect key="frame" x="41.5" y="410.5" width="331" height="35.5"/>
+                                <rect key="frame" x="41.5" y="482" width="331" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aNC-tB-5cl">
-                                <rect key="frame" x="41.5" y="659" width="331" height="31.5"/>
+                                <rect key="frame" x="41.5" y="887.5" width="331" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
-                                <state key="normal" title="Deposit Item"/>
+                                <state key="normal" title="Deposit"/>
+                                <connections>
+                                    <action selector="depositButton:" destination="Xvh-XO-Ngc" eventType="touchUpInside" id="lYa-ex-urm"/>
+                                </connections>
                             </button>
                             <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QCf-aO-mjY">
-                                <rect key="frame" x="41.5" y="440.5" width="331" height="161.5"/>
+                                <rect key="frame" x="41.5" y="597.5" width="331" height="135"/>
                             </pickerView>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter category here:" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="i6r-bp-4K7">
-                                <rect key="frame" x="41.5" y="358" width="331" height="35.5"/>
+                                <rect key="frame" x="41.5" y="410.5" width="331" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter the quantity here:" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ax2-42-F5M">
-                                <rect key="frame" x="41.5" y="596.5" width="331" height="35.5"/>
+                                <rect key="frame" x="41.5" y="553" width="331" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Enter note hither" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="hQn-QQ-nAE">
+                                <rect key="frame" x="41.5" y="753.5" width="331" height="108"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
@@ -447,28 +468,39 @@
                             <constraint firstItem="QCf-aO-mjY" firstAttribute="width" secondItem="0wt-cT-OxN" secondAttribute="width" multiplier="0.8" id="BaT-BQ-XXS"/>
                             <constraint firstItem="XWE-od-fd1" firstAttribute="centerX" secondItem="0wt-cT-OxN" secondAttribute="centerX" id="Ftn-Da-Gzq"/>
                             <constraint firstItem="i6r-bp-4K7" firstAttribute="width" secondItem="0wt-cT-OxN" secondAttribute="width" multiplier="0.8" id="HiU-IE-5Gp"/>
-                            <constraint firstItem="i6r-bp-4K7" firstAttribute="centerY" secondItem="0wt-cT-OxN" secondAttribute="centerY" multiplier="0.93" id="Nrn-BV-eTH"/>
+                            <constraint firstItem="i6r-bp-4K7" firstAttribute="centerY" secondItem="0wt-cT-OxN" secondAttribute="centerY" multiplier="0.9" id="Nrn-BV-eTH"/>
                             <constraint firstItem="aNC-tB-5cl" firstAttribute="centerX" secondItem="0wt-cT-OxN" secondAttribute="centerX" id="ObK-i9-3fo"/>
-                            <constraint firstItem="QCf-aO-mjY" firstAttribute="centerY" secondItem="0wt-cT-OxN" secondAttribute="centerY" multiplier="1.29" id="VXZ-0t-omL"/>
+                            <constraint firstItem="hQn-QQ-nAE" firstAttribute="height" secondItem="0wt-cT-OxN" secondAttribute="height" multiplier="0.14" id="UBb-LS-2Jd"/>
+                            <constraint firstItem="QCf-aO-mjY" firstAttribute="centerY" secondItem="0wt-cT-OxN" secondAttribute="centerY" multiplier="1.4" id="VXZ-0t-omL"/>
                             <constraint firstItem="aNC-tB-5cl" firstAttribute="width" secondItem="0wt-cT-OxN" secondAttribute="width" multiplier="0.8" id="deW-wv-xz9"/>
+                            <constraint firstItem="hQn-QQ-nAE" firstAttribute="centerX" secondItem="0wt-cT-OxN" secondAttribute="centerX" id="exi-za-hdT"/>
                             <constraint firstItem="ax2-42-F5M" firstAttribute="centerX" secondItem="0wt-cT-OxN" secondAttribute="centerX" id="fdA-ux-ms9"/>
                             <constraint firstItem="i6r-bp-4K7" firstAttribute="height" secondItem="0wt-cT-OxN" secondAttribute="height" multiplier="0.0439276" id="iVl-Fg-Omh"/>
                             <constraint firstItem="aNC-tB-5cl" firstAttribute="height" secondItem="0wt-cT-OxN" secondAttribute="height" multiplier="0.0387597" id="jta-iM-3OI"/>
                             <constraint firstItem="rlK-9c-1RE" firstAttribute="height" secondItem="0wt-cT-OxN" secondAttribute="height" multiplier="0.0439276" id="kW5-O2-Ru2"/>
-                            <constraint firstItem="QCf-aO-mjY" firstAttribute="height" secondItem="0wt-cT-OxN" secondAttribute="height" multiplier="0.2" id="lk3-qu-V08"/>
+                            <constraint firstItem="QCf-aO-mjY" firstAttribute="height" secondItem="0wt-cT-OxN" secondAttribute="height" multiplier="0.175" id="lk3-qu-V08"/>
                             <constraint firstItem="ax2-42-F5M" firstAttribute="height" secondItem="0wt-cT-OxN" secondAttribute="height" multiplier="0.0439276" id="n7v-7d-iXX"/>
-                            <constraint firstItem="ax2-42-F5M" firstAttribute="centerY" secondItem="0wt-cT-OxN" secondAttribute="centerY" multiplier="1.52" id="onx-gd-Bbk"/>
-                            <constraint firstItem="XWE-od-fd1" firstAttribute="width" secondItem="0wt-cT-OxN" secondAttribute="width" multiplier="0.75" id="pjM-TS-do8"/>
+                            <constraint firstItem="hQn-QQ-nAE" firstAttribute="width" secondItem="0wt-cT-OxN" secondAttribute="width" multiplier="0.8" id="oOA-vO-nLH"/>
+                            <constraint firstItem="ax2-42-F5M" firstAttribute="centerY" secondItem="0wt-cT-OxN" secondAttribute="centerY" multiplier="1.2" id="onx-gd-Bbk"/>
+                            <constraint firstItem="XWE-od-fd1" firstAttribute="width" secondItem="0wt-cT-OxN" secondAttribute="width" multiplier="0.8" id="pjM-TS-do8"/>
                             <constraint firstItem="rlK-9c-1RE" firstAttribute="width" secondItem="0wt-cT-OxN" secondAttribute="width" multiplier="0.8" id="qvR-Tv-iYU"/>
-                            <constraint firstItem="rlK-9c-1RE" firstAttribute="centerY" secondItem="0wt-cT-OxN" secondAttribute="centerY" multiplier="1.06" id="rWd-fc-KcO"/>
-                            <constraint firstItem="XWE-od-fd1" firstAttribute="centerY" secondItem="0wt-cT-OxN" secondAttribute="centerY" multiplier="0.5" id="rc4-6u-kCr"/>
+                            <constraint firstItem="hQn-QQ-nAE" firstAttribute="centerY" secondItem="0wt-cT-OxN" secondAttribute="centerY" multiplier="1.7" id="rHm-hU-UI1"/>
+                            <constraint firstItem="rlK-9c-1RE" firstAttribute="centerY" secondItem="0wt-cT-OxN" secondAttribute="centerY" multiplier="1.05" id="rWd-fc-KcO"/>
+                            <constraint firstItem="XWE-od-fd1" firstAttribute="centerY" secondItem="0wt-cT-OxN" secondAttribute="centerY" multiplier="0.425" id="rc4-6u-kCr"/>
                             <constraint firstItem="QCf-aO-mjY" firstAttribute="centerX" secondItem="0wt-cT-OxN" secondAttribute="centerX" id="uLZ-jA-1SF"/>
-                            <constraint firstItem="aNC-tB-5cl" firstAttribute="centerY" secondItem="0wt-cT-OxN" secondAttribute="centerY" multiplier="1.67" id="wzG-Pw-Ecu"/>
+                            <constraint firstItem="aNC-tB-5cl" firstAttribute="centerY" secondItem="0wt-cT-OxN" secondAttribute="centerY" multiplier="1.9" id="wzG-Pw-Ecu"/>
                             <constraint firstItem="i6r-bp-4K7" firstAttribute="centerX" secondItem="0wt-cT-OxN" secondAttribute="centerX" id="zDc-2P-dis"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="0wt-cT-OxN"/>
                     </view>
                     <navigationItem key="navigationItem" title="Deposit" id="FOz-qB-kwY"/>
+                    <connections>
+                        <outlet property="categoryEntryTextField" destination="i6r-bp-4K7" id="31o-sp-sa3"/>
+                        <outlet property="itemEntryTextField" destination="rlK-9c-1RE" id="DYS-xb-sKQ"/>
+                        <outlet property="noteEntryTextView" destination="hQn-QQ-nAE" id="hhf-Pd-lIl"/>
+                        <outlet property="quantityEntryTextField" destination="ax2-42-F5M" id="Z9d-L7-iW3"/>
+                        <outlet property="quantityTypePickerView" destination="QCf-aO-mjY" id="QGj-2o-jiw"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MKF-Tx-ntV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -479,20 +511,19 @@
             <objects>
                 <viewController id="vmr-fK-PDk" customClass="ForgottenPasswordViewController" customModule="Totes" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="7JZ-wT-cGS">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3je-Ko-izb">
-                                <rect key="frame" x="41.5" y="540" width="331" height="31"/>
+                                <rect key="frame" x="41.5" y="638" width="331" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <state key="normal" title="Send password reset link"/>
                                 <connections>
                                     <action selector="resetLinkButton:" destination="vmr-fK-PDk" eventType="touchUpInside" id="PA7-pH-9Oe"/>
-                                    <segue destination="Cng-I5-rCm" kind="show" identifier="forgottenPasswordToLogin" id="T53-H1-pkm"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QCR-nj-JYA">
-                                <rect key="frame" x="41.5" y="580" width="331" height="31.5"/>
+                                <rect key="frame" x="41.5" y="685.5" width="331" height="30"/>
                                 <state key="normal" title="Registration"/>
                                 <connections>
                                     <action selector="registrationButton:" destination="vmr-fK-PDk" eventType="touchUpInside" id="qNh-Ib-aay"/>
@@ -500,12 +531,12 @@
                                 </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter your email or username here: " textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="uNx-mA-Rtb">
-                                <rect key="frame" x="41.5" y="467" width="331" height="35.5"/>
+                                <rect key="frame" x="41.5" y="553" width="331" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="questionmark" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="Inx-nb-KnH">
-                                <rect key="frame" x="41.5" y="78" width="331" height="329"/>
+                                <rect key="frame" x="41.5" y="120.5" width="331" height="329"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="Inx-nb-KnH" secondAttribute="height" multiplier="1:1" id="SAS-Mp-s6Y"/>
                                 </constraints>
@@ -545,11 +576,11 @@
             <objects>
                 <tableViewController id="IGb-ym-9AV" customClass="SectionTableViewController" customModule="Totes" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="RKw-6O-y9h">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" textLabel="mHO-n1-yFa" detailTextLabel="XwM-of-I2h" style="IBUITableViewCellStyleValue1" id="8cb-FW-SBu">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="showItem" textLabel="mHO-n1-yFa" detailTextLabel="XwM-of-I2h" style="IBUITableViewCellStyleValue1" id="8cb-FW-SBu">
                                 <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="8cb-FW-SBu" id="ERW-8M-fZs">
@@ -572,6 +603,7 @@
                                         </label>
                                     </subviews>
                                 </tableViewCellContentView>
+                                <accessibility key="accessibilityConfiguration" identifier="showItem"/>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -590,57 +622,63 @@
             <objects>
                 <viewController id="iAh-bi-xHN" customClass="WithdrawalViewController" customModule="Totes" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="cWY-hy-1Yw">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="qrcode.viewfinder" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="JpR-85-1st">
-                                <rect key="frame" x="41.5" y="37.5" width="331" height="328.5"/>
+                                <rect key="frame" x="41.5" y="73" width="331" height="328.5"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="JpR-85-1st" secondAttribute="height" multiplier="1:1" id="w24-PM-yVQ"/>
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Transactor" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DNt-Oe-gWX">
-                                <rect key="frame" x="41.5" y="390" width="331" height="28"/>
+                                <rect key="frame" x="41.5" y="461.5" width="331" height="27"/>
                                 <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="25"/>
                                 <color key="textColor" red="0.09111206979" green="0.065848462280000006" blue="0.29197227949999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Item Category" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jLR-Pm-cKg">
-                                <rect key="frame" x="41.5" y="430.5" width="331" height="28"/>
+                                <rect key="frame" x="41.5" y="509" width="331" height="27"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <color key="textColor" red="0.09111206979" green="0.065848462280000006" blue="0.29197227949999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Item Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EAF-UF-ac9">
-                                <rect key="frame" x="41.5" y="470.5" width="331" height="28.5"/>
+                                <rect key="frame" x="41.5" y="556.5" width="331" height="27"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <color key="textColor" red="0.09111206979" green="0.065848462280000006" blue="0.29197227949999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Quantity" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gUz-Ug-kof">
-                                <rect key="frame" x="41.5" y="511" width="331" height="28.5"/>
+                                <rect key="frame" x="41.5" y="604" width="331" height="27"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <color key="textColor" red="0.09111206979" green="0.065848462280000006" blue="0.29197227949999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Metric" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="107-mz-r7o">
-                                <rect key="frame" x="41.5" y="551.5" width="331" height="28"/>
+                                <rect key="frame" x="41.5" y="651.5" width="331" height="27"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <color key="textColor" red="0.09111206979" green="0.065848462280000006" blue="0.29197227949999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2mb-um-HDK">
-                                <rect key="frame" x="41.5" y="682" width="331" height="30"/>
+                                <rect key="frame" x="41.5" y="805" width="331" height="28.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <state key="normal" title="Withdraw Amount"/>
+                                <connections>
+                                    <action selector="withdrawAmountButton:" destination="iAh-bi-xHN" eventType="touchUpInside" id="cMD-Nq-1kX"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="t6H-KL-QPP">
-                                <rect key="frame" x="41.5" y="732.5" width="331" height="30"/>
+                                <rect key="frame" x="41.5" y="864.5" width="331" height="28.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <state key="normal" title="Withdraw All"/>
+                                <connections>
+                                    <action selector="withdrawAllButton:" destination="iAh-bi-xHN" eventType="touchUpInside" id="mCI-FV-qkw"/>
+                                </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter amount to withdraw:" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="P8s-SA-VJV">
-                                <rect key="frame" x="41.5" y="609" width="331" height="34"/>
+                                <rect key="frame" x="41.5" y="720" width="331" height="32.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
@@ -686,6 +724,14 @@
                         <viewLayoutGuide key="safeArea" id="V7y-8D-byb"/>
                     </view>
                     <navigationItem key="navigationItem" title="Withdrawal" id="wGx-jy-WUy"/>
+                    <connections>
+                        <outlet property="amountEntryTextField" destination="P8s-SA-VJV" id="dE7-9X-oUD"/>
+                        <outlet property="itemCategoryLabel" destination="jLR-Pm-cKg" id="B0o-bh-hf6"/>
+                        <outlet property="itemNameLabel" destination="EAF-UF-ac9" id="bIH-wy-pwg"/>
+                        <outlet property="metricLabel" destination="107-mz-r7o" id="DwZ-YB-Xg9"/>
+                        <outlet property="quantityLabel" destination="gUz-Ug-kof" id="SVb-66-kVj"/>
+                        <outlet property="transactorLabel" destination="DNt-Oe-gWX" id="jue-PX-vzm"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mpo-DK-F5T" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -693,9 +739,8 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="LJE-tq-Iw7"/>
-        <segue reference="hVM-XY-JWI"/>
-        <segue reference="T53-H1-pkm"/>
+        <segue reference="VYp-tC-0ID"/>
+        <segue reference="4Zg-bQ-z1R"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="paperplane" catalog="system" width="128" height="121"/>

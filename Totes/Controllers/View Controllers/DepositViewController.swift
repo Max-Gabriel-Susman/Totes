@@ -9,14 +9,27 @@
 import UIKit
 
 class DepositViewController: UIViewController {
-
+    
+    // MARK: - Outlets
+    @IBOutlet weak var categoryEntryTextField: UITextField!
+    @IBOutlet weak var itemEntryTextField: UITextField!
+    @IBOutlet weak var quantityTypePickerView: UIPickerView!
+    @IBOutlet weak var quantityEntryTextField: UITextField!
+    @IBOutlet weak var noteEntryTextView: UITextView!
+    
+    // MARK: - Properties
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
     }
     
-
+    // MARK: - Actions
+    @IBAction func depositButton(_ sender: Any) {
+    }
+    
     /*
     // MARK: - Navigation
 

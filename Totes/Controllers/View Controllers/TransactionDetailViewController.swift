@@ -9,12 +9,25 @@
 import UIKit
 
 class TransactionDetailViewController: UIViewController {
-
+    
+    // MARK: - Outlets
+    @IBOutlet weak var transactionTypeLabel: UILabel!
+    @IBOutlet weak var agentNameLabel: UILabel!
+    @IBOutlet weak var itemNameLabel: UILabel!
+    @IBOutlet weak var quantityLabel: UILabel!
+    @IBOutlet weak var noteTextView: UITextView!
+  
+    
+    // MARK: - Properties
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
     }
+    
+    // MARK: - Actions
     
 
     /*

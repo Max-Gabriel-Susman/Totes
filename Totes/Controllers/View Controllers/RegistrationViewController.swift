@@ -11,7 +11,10 @@ import UIKit
 class RegistrationViewController: UIViewController {
     // MARK: - Outlets
     // pretty sure this guys wrong, going to fix later
-    @IBOutlet weak var createAUsernameTextField: UITextField!
+    @IBOutlet weak var emailAddressEntryTextField: UITextField!
+    @IBOutlet weak var usernameEntryTextField: UITextField!
+    @IBOutlet weak var passwordEntryTextField: UITextField!
+    
     
     // MARK: - Properties
 

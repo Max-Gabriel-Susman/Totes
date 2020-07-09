@@ -3,10 +3,11 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		152D0F596099D61D3F9D60D4 /* Pods_Totes.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3CA25C478FA8303039CC76E6 /* Pods_Totes.framework */; };
 		A643A6A12486ED6500BD3364 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A643A6A02486ED6500BD3364 /* AppDelegate.swift */; };
 		A643A6A32486ED6500BD3364 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A643A6A22486ED6500BD3364 /* SceneDelegate.swift */; };
 		A643A6A82486ED6500BD3364 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A643A6A62486ED6500BD3364 /* Main.storyboard */; };
@@ -27,9 +28,14 @@
 		A680DD8724ABCF4F00A8A0A3 /* TransactionDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A680DD8624ABCF4F00A8A0A3 /* TransactionDetailViewController.swift */; };
 		A680DD8924ABCF6000A8A0A3 /* WithdrawalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A680DD8824ABCF6000A8A0A3 /* WithdrawalViewController.swift */; };
 		A680DD8B24ABCF6F00A8A0A3 /* DepositViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A680DD8A24ABCF6F00A8A0A3 /* DepositViewController.swift */; };
+		A697914F24B77CD3001581AA /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A697914E24B77CD3001581AA /* GoogleService-Info.plist */; };
+		A697915124B7A969001581AA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A697915024B7A969001581AA /* ViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		25C406D9D7E84AE28CDFB068 /* Pods-Totes.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Totes.release.xcconfig"; path = "Target Support Files/Pods-Totes/Pods-Totes.release.xcconfig"; sourceTree = "<group>"; };
+		3CA25C478FA8303039CC76E6 /* Pods_Totes.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Totes.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6958AE8096BE558EDB8FEFD1 /* Pods-Totes.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Totes.debug.xcconfig"; path = "Target Support Files/Pods-Totes/Pods-Totes.debug.xcconfig"; sourceTree = "<group>"; };
 		A643A69D2486ED6500BD3364 /* Totes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Totes.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A643A6A02486ED6500BD3364 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A643A6A22486ED6500BD3364 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -52,6 +58,8 @@
 		A680DD8624ABCF4F00A8A0A3 /* TransactionDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionDetailViewController.swift; sourceTree = "<group>"; };
 		A680DD8824ABCF6000A8A0A3 /* WithdrawalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WithdrawalViewController.swift; sourceTree = "<group>"; };
 		A680DD8A24ABCF6F00A8A0A3 /* DepositViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DepositViewController.swift; sourceTree = "<group>"; };
+		A697914E24B77CD3001581AA /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		A697915024B7A969001581AA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,17 +67,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				152D0F596099D61D3F9D60D4 /* Pods_Totes.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9DC9A250E81B5A538DB39AB5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3CA25C478FA8303039CC76E6 /* Pods_Totes.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		A643A6942486ED6500BD3364 = {
 			isa = PBXGroup;
 			children = (
 				A643A69F2486ED6500BD3364 /* Totes */,
 				A643A69E2486ED6500BD3364 /* Products */,
+				C859188159BC12E293A5773F /* Pods */,
+				9DC9A250E81B5A538DB39AB5 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -108,6 +127,7 @@
 				A643A6A92486ED6900BD3364 /* Assets.xcassets */,
 				A643A6AB2486ED6900BD3364 /* LaunchScreen.storyboard */,
 				A643A6AE2486ED6900BD3364 /* Info.plist */,
+				A697914E24B77CD3001581AA /* GoogleService-Info.plist */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -159,6 +179,7 @@
 				A680DD8624ABCF4F00A8A0A3 /* TransactionDetailViewController.swift */,
 				A680DD8824ABCF6000A8A0A3 /* WithdrawalViewController.swift */,
 				A680DD8A24ABCF6F00A8A0A3 /* DepositViewController.swift */,
+				A697915024B7A969001581AA /* ViewController.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -173,6 +194,15 @@
 			path = "Model Controllers";
 			sourceTree = "<group>";
 		};
+		C859188159BC12E293A5773F /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				6958AE8096BE558EDB8FEFD1 /* Pods-Totes.debug.xcconfig */,
+				25C406D9D7E84AE28CDFB068 /* Pods-Totes.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -180,9 +210,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = A643A6B12486ED6900BD3364 /* Build configuration list for PBXNativeTarget "Totes" */;
 			buildPhases = (
+				D78EB597D9278629462AFEF1 /* [CP] Check Pods Manifest.lock */,
 				A643A6992486ED6500BD3364 /* Sources */,
 				A643A69A2486ED6500BD3364 /* Frameworks */,
 				A643A69B2486ED6500BD3364 /* Resources */,
+				11F41EB14BDFC75BA3437658 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -232,12 +264,55 @@
 			buildActionMask = 2147483647;
 			files = (
 				A643A6AD2486ED6900BD3364 /* LaunchScreen.storyboard in Resources */,
+				A697914F24B77CD3001581AA /* GoogleService-Info.plist in Resources */,
 				A643A6AA2486ED6900BD3364 /* Assets.xcassets in Resources */,
 				A643A6A82486ED6500BD3364 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		11F41EB14BDFC75BA3437658 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Totes/Pods-Totes-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Totes/Pods-Totes-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Totes/Pods-Totes-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D78EB597D9278629462AFEF1 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Totes-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		A643A6992486ED6500BD3364 /* Sources */ = {
@@ -256,6 +331,7 @@
 				A643A6C02487248300BD3364 /* Section.swift in Sources */,
 				A643A6A32486ED6500BD3364 /* SceneDelegate.swift in Sources */,
 				A680DD8124ABADEA00A8A0A3 /* ForgottenPasswordViewController.swift in Sources */,
+				A697915124B7A969001581AA /* ViewController.swift in Sources */,
 				A680DD8524ABCF3500A8A0A3 /* TransactionListTableViewController.swift in Sources */,
 				A643A6BE2486EE5E00BD3364 /* User.swift in Sources */,
 				A643A6D02487254300BD3364 /* SectionTableViewController.swift in Sources */,
@@ -402,6 +478,7 @@
 		};
 		A643A6B22486ED6900BD3364 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6958AE8096BE558EDB8FEFD1 /* Pods-Totes.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -420,6 +497,7 @@
 		};
 		A643A6B32486ED6900BD3364 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 25C406D9D7E84AE28CDFB068 /* Pods-Totes.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;

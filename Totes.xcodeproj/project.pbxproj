@@ -30,6 +30,12 @@
 		A680DD8B24ABCF6F00A8A0A3 /* DepositViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A680DD8A24ABCF6F00A8A0A3 /* DepositViewController.swift */; };
 		A697914F24B77CD3001581AA /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A697914E24B77CD3001581AA /* GoogleService-Info.plist */; };
 		A697915124B7A969001581AA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A697915024B7A969001581AA /* ViewController.swift */; };
+		A697915424B7B94E001581AA /* InventoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A697915324B7B94E001581AA /* InventoryTableViewCell.swift */; };
+		A697915624B7B95C001581AA /* SectionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A697915524B7B95C001581AA /* SectionTableViewCell.swift */; };
+		A697915924B7B9D7001581AA /* SectionTrashTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A697915824B7B9D7001581AA /* SectionTrashTableViewCell.swift */; };
+		A697915B24B7B9F3001581AA /* InventoryTrashTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A697915A24B7B9F3001581AA /* InventoryTrashTableViewCell.swift */; };
+		A697915D24B7BD87001581AA /* InventoryTrashListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A697915C24B7BD87001581AA /* InventoryTrashListTableViewController.swift */; };
+		A697915F24B7BDA1001581AA /* SectionTrashListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A697915E24B7BDA1001581AA /* SectionTrashListTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -60,6 +66,12 @@
 		A680DD8A24ABCF6F00A8A0A3 /* DepositViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DepositViewController.swift; sourceTree = "<group>"; };
 		A697914E24B77CD3001581AA /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		A697915024B7A969001581AA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		A697915324B7B94E001581AA /* InventoryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InventoryTableViewCell.swift; sourceTree = "<group>"; };
+		A697915524B7B95C001581AA /* SectionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionTableViewCell.swift; sourceTree = "<group>"; };
+		A697915824B7B9D7001581AA /* SectionTrashTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionTrashTableViewCell.swift; sourceTree = "<group>"; };
+		A697915A24B7B9F3001581AA /* InventoryTrashTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InventoryTrashTableViewCell.swift; sourceTree = "<group>"; };
+		A697915C24B7BD87001581AA /* InventoryTrashListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InventoryTrashListTableViewController.swift; sourceTree = "<group>"; };
+		A697915E24B7BDA1001581AA /* SectionTrashListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionTrashListTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -144,6 +156,7 @@
 		A643A6B72486ED8F00BD3364 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				A697915224B7B925001581AA /* Custom Views */,
 				A643A6B92486EDA100BD3364 /* Storyboards */,
 			);
 			path = Views;
@@ -180,6 +193,8 @@
 				A680DD8824ABCF6000A8A0A3 /* WithdrawalViewController.swift */,
 				A680DD8A24ABCF6F00A8A0A3 /* DepositViewController.swift */,
 				A697915024B7A969001581AA /* ViewController.swift */,
+				A697915C24B7BD87001581AA /* InventoryTrashListTableViewController.swift */,
+				A697915E24B7BDA1001581AA /* SectionTrashListTableViewController.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -192,6 +207,17 @@
 				A643A6C7248724BA00BD3364 /* ItemController.swift */,
 			);
 			path = "Model Controllers";
+			sourceTree = "<group>";
+		};
+		A697915224B7B925001581AA /* Custom Views */ = {
+			isa = PBXGroup;
+			children = (
+				A697915324B7B94E001581AA /* InventoryTableViewCell.swift */,
+				A697915524B7B95C001581AA /* SectionTableViewCell.swift */,
+				A697915824B7B9D7001581AA /* SectionTrashTableViewCell.swift */,
+				A697915A24B7B9F3001581AA /* InventoryTrashTableViewCell.swift */,
+			);
+			path = "Custom Views";
 			sourceTree = "<group>";
 		};
 		C859188159BC12E293A5773F /* Pods */ = {
@@ -324,18 +350,24 @@
 				A680DD8724ABCF4F00A8A0A3 /* TransactionDetailViewController.swift in Sources */,
 				A643A6C42487249A00BD3364 /* UserController.swift in Sources */,
 				A643A6CE2487251C00BD3364 /* InventoryTableViewController.swift in Sources */,
+				A697915B24B7B9F3001581AA /* InventoryTrashTableViewCell.swift in Sources */,
 				A643A6C8248724BA00BD3364 /* ItemController.swift in Sources */,
 				A680DD7F24ABABCF00A8A0A3 /* RegistrationViewController.swift in Sources */,
 				A643A6C22487248E00BD3364 /* Item.swift in Sources */,
+				A697915924B7B9D7001581AA /* SectionTrashTableViewCell.swift in Sources */,
 				A643A6A12486ED6500BD3364 /* AppDelegate.swift in Sources */,
 				A643A6C02487248300BD3364 /* Section.swift in Sources */,
 				A643A6A32486ED6500BD3364 /* SceneDelegate.swift in Sources */,
 				A680DD8124ABADEA00A8A0A3 /* ForgottenPasswordViewController.swift in Sources */,
+				A697915424B7B94E001581AA /* InventoryTableViewCell.swift in Sources */,
+				A697915D24B7BD87001581AA /* InventoryTrashListTableViewController.swift in Sources */,
+				A697915624B7B95C001581AA /* SectionTableViewCell.swift in Sources */,
 				A697915124B7A969001581AA /* ViewController.swift in Sources */,
 				A680DD8524ABCF3500A8A0A3 /* TransactionListTableViewController.swift in Sources */,
 				A643A6BE2486EE5E00BD3364 /* User.swift in Sources */,
 				A643A6D02487254300BD3364 /* SectionTableViewController.swift in Sources */,
 				A680DD7D24ABABBF00A8A0A3 /* LoginViewController.swift in Sources */,
+				A697915F24B7BDA1001581AA /* SectionTrashListTableViewController.swift in Sources */,
 				A680DD8924ABCF6000A8A0A3 /* WithdrawalViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

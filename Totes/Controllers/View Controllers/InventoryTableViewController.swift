@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Firebase
 /*
  
  Let's replace this entire setup with a tableview inside of a ViewController so that we can use multiple views in the same view controller
@@ -18,7 +19,7 @@ class InventoryTableViewController: UITableViewController {
     
     
     // MARK: - Properties
-    
+    let inventory: [String] = ["company culture", "goggle rentals", "sunglasses", "towels"]
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -31,13 +32,15 @@ class InventoryTableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 0
+        return inventory.count
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "showSection", for: indexPath)
-
-        // Configure the cell...
+        
+        let sectionName = inventory[indexPath.row]
+        
+        cell.textLabel?.text = sectionName
 
         return cell
     }

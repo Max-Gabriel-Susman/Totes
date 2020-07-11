@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Firebase
 // This is all you need to import regardless of what specific firebase libraries you are using
 import Firebase
 

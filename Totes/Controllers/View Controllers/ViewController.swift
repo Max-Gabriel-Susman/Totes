@@ -18,10 +18,6 @@ class ViewController: UIViewController {
     @IBOutlet weak var quoteTextField: UITextField!
     @IBOutlet weak var authorsNameTextField: UITextField!
     
-//    @IBOutlet weak var quoteLabel: UILabel!
-//    @IBOutlet weak var quoteTextField: UITextField!
-//    @IBOutlet weak var authorsNameTextField: UITextField!
-    
     // MARK: - Properties
     var docRef: DocumentReference!
     var quoteListener: ListenerRegistration!
@@ -48,18 +44,7 @@ class ViewController: UIViewController {
         super.viewWillDisappear(animated)
         quoteListener.remove()
     }
-    
-    // MARK: - Actions
-//    @IBAction func fetchButtonTapped(_ sender: Any) {
-//        docRef.getDocument { (docSnapshot, error) in
-//            guard let docSnapshot = docSnapshot, docSnapshot.exists else { return }
-//            let myData = docSnapshot.data()
-//            // grabbing content from your data like this will always return an optional value
-//            let latestQuote = myData?["quote"] as? String ?? ""
-//            let quoteAuthor = myData?["author"] as? String ?? "(none)"
-//            self.quoteLabel.text = "\"\(latestQuote)\" -- \(quoteAuthor)"
-//        }
-//    }
+  
     @IBAction func saveButtonTapped(_ sender: Any) {
         guard let quoteText = quoteTextField.text, !quoteText.isEmpty else { return }
         guard let quoteAuthor = authorsNameTextField.text, !quoteAuthor.isEmpty else { return }

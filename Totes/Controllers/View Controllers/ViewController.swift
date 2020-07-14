@@ -25,6 +25,8 @@ class ViewController: UIViewController {
     // MARK: - LifecycleMethods
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        // do I actually need realtime for my application?
+        // do collections have addSnapshotListener
         quoteListener = docRef.addSnapshotListener { (docSnapshot, error) in
         guard let docSnapshot = docSnapshot, docSnapshot.exists else { return }
         let myData = docSnapshot.data()

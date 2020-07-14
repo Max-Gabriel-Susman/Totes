@@ -11,16 +11,13 @@ import Firebase
 
 
 class InventoryTableViewController: UITableViewController {
-    
-    // MARK: - Outlets
-    
-    
     // MARK: - Properties
-    // we need to create the code to retrieve the actual document titles from cloud firestore
     var docRef: DocumentReference!
     var quoteListener: ListenerRegistration!
     var user: String = "user0"
-    var inventory: [String] = []
+    var FBsections: [String : Any] = [:]
+    var sectionNames: [String] = []
+    var sectionItemSelections: [Int] = []
 
     // MARK: - LifecycleMethods
     // I think we need to keep this, note entirely sure though
@@ -32,18 +29,28 @@ class InventoryTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        // Firestore path for db queries
         docRef = Firestore.firestore().document("/totes/usersMap/usersCollection/\(user)/")
         
+        // Reads data from a given user document in Firestore
         quoteListener = docRef.addSnapshotListener { (docSnapshot, error) in
         
+            // Ensures the data captured isn't nil
             guard let docSnapshot = docSnapshot, docSnapshot.exists else { return }
             
+            // Creates a local object in which to store the data
             let myData = docSnapshot.data()
             
-            let sectionIDs = myData?["sectionIDs"] as? [String] ?? []
+            // populates a local dictionary with data from the sections map
+            self.FBsections = myData?["sections"] as? [String : Any] ?? [:]
             
-            self.inventory = sectionIDs
-            // populates tableview with firestore data
+            // populate arrays with the keys and values from the map
+            for section in self.FBsections {
+                self.sectionNames.append(section.key)
+                self.sectionItemSelections.append(section.value as! Int)
+            }
+            
+            // populates tableview with the data
             self.tableView.reloadData()
         }
     }
@@ -59,18 +66,20 @@ class InventoryTableViewController: UITableViewController {
     }
     
     // MARK: - Table view data source
-
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
-        return inventory.count
+        return sectionNames.count
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "showSection", for: indexPath)
         
-        let sectionName = inventory[indexPath.row]
+        let sectionName = sectionNames[indexPath.row]
+        
+        let sectionItemSelection = sectionItemSelections[indexPath.row]
         
         cell.textLabel?.text = sectionName
+        
+        cell.detailTextLabel?.text = "\(sectionItemSelection)"
 
         return cell
     }
@@ -83,11 +92,5 @@ class InventoryTableViewController: UITableViewController {
         } else if editingStyle == .insert {
             // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
         }    
-    }
-  
-    // MARK: - Navigation
-
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-     
     }
 } // END OF CLASS

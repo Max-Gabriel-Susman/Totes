@@ -21,10 +21,10 @@ class InventoryTableViewController: UITableViewController {
 
     // MARK: - LifecycleMethods
     // I think we need to keep this, note entirely sure though
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-
-    }
+//    override func viewWillAppear(_ animated: Bool) {
+//        super.viewWillAppear(animated)
+//
+//    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -60,10 +60,10 @@ class InventoryTableViewController: UITableViewController {
         quoteListener.remove()
     }
     
+//    override func didReceiveMemoryWarning() {
+//        super.didReceiveMemoryWarning()
+//    }
     // MARK: - Actions
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-    }
     
     // MARK: - Table view data source
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -93,4 +93,16 @@ class InventoryTableViewController: UITableViewController {
             // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
         }    
     }
+    
+    // MARK: - Navigation
+    // ok so I don't think we actually need all of this
+//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+//
+////        if segue.identifier == "inventoryToSection" {
+////
+////            guard let index = tableView.indexPathForSelectedRow,
+////
+////            let destination = segue.destination as? SectionTableViewController else { return }
+//        }
+ //   }
 } // END OF CLASS

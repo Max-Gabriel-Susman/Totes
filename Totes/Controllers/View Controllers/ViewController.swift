@@ -30,9 +30,16 @@ class ViewController: UIViewController {
         quoteListener = docRef.addSnapshotListener { (docSnapshot, error) in
         guard let docSnapshot = docSnapshot, docSnapshot.exists else { return }
         let myData = docSnapshot.data()
+        
         // grabbing content from your data like this will always return an optional value
         let latestQuote = myData?["quote"] as? String ?? ""
         let quoteAuthor = myData?["author"] as? String ?? "(none)"
+        //print(myData?["test"]![0])
+        // I forgot to cast!!!
+//        let test: NSArray = myData?["test"] as? NSArray ?? []
+//        for i in test {
+//            print(i)
+//        }
         self.quoteLabel.text = "\"\(latestQuote)\" -- \(quoteAuthor)"
         }
     }

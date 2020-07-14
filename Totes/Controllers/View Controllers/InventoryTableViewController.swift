@@ -8,11 +8,8 @@
 
 import UIKit
 import Firebase
-/*
- 
- Let's replace this entire setup with a tableview inside of a ViewController so that we can use multiple views in the same view controller
- 
- */
+
+
 class InventoryTableViewController: UITableViewController {
     
     // MARK: - Outlets
@@ -20,35 +17,35 @@ class InventoryTableViewController: UITableViewController {
     
     // MARK: - Properties
     // we need to create the code to retrieve the actual document titles from cloud firestore
-    var docRef: CollectionReference!
+    var docRef: DocumentReference!
     var quoteListener: ListenerRegistration!
     var user: String = "user0"
-    
-    // mock data array
-    //let inventory: [String] = ["company culture", "goggle rentals", "sunglasses", "towels"]
     var inventory: [String] = []
 
     // MARK: - LifecycleMethods
+    // I think we need to keep this, note entirely sure though
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        
-        
-        quoteListener = docRef.addSnapshotListener { (collectSnapshot, error) in
-        //guard let collectSnapshot = collectSnapshot, collectSnapshot.exists else { return }
-        //let myData = collectSnapshot.data()
-        // grabbing content from your data like this will always return an optional value
-//        let latestQuote = myData?["quote"] as? String ?? ""
-//        let quoteAuthor = myData?["author"] as? String ?? "(none)"
-        // self.quoteLabel.text = "\"\(latestQuote)\" -- \(quoteAuthor)"
-        }
+
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // interpolate user var??
-        // we need to determine how exactly we are going to assign the correct user to user var
-        // what is the best practice for dynamic content assingment from a cloud firestore db?
-        docRef = Firestore.firestore().collection("totes/\(user)/sections/")
+        
+        docRef = Firestore.firestore().document("/totes/usersMap/usersCollection/\(user)/")
+        
+        quoteListener = docRef.addSnapshotListener { (docSnapshot, error) in
+        
+            guard let docSnapshot = docSnapshot, docSnapshot.exists else { return }
+            
+            let myData = docSnapshot.data()
+            
+            let sectionIDs = myData?["sectionIDs"] as? [String] ?? []
+            
+            self.inventory = sectionIDs
+            // populates tableview with firestore data
+            self.tableView.reloadData()
+        }
     }
     
     override func viewWillDisappear(_ animated: Bool) {
@@ -57,24 +54,8 @@ class InventoryTableViewController: UITableViewController {
     }
     
     // MARK: - Actions
-    @IBAction func saveButtonTapped(_ sender: Any) {
-//        guard let quoteText = quoteTextField.text, !quoteText.isEmpty else { return }
-//        guard let quoteAuthor = authorsNameTextField.text, !quoteAuthor.isEmpty else { return }
-        //let dataToSave: [String: Any] = ["quote" : quoteText, "author" : quoteAuthor]
-//        let dataToSave: [String: Any] = ["place": "holder"]
-//        docRef.setData(dataToSave) { (error) in
-//            if let error = error {
-//                print("Oh no! Got an error : \(error.localizedDescription)")
-//            } else {
-//                print("Data has been saved!")
-//            }
-//
-//        }
-    }
-    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        //docRef =
     }
     
     // MARK: - Table view data source
@@ -93,7 +74,7 @@ class InventoryTableViewController: UITableViewController {
 
         return cell
     }
- 
+    
     // Override to support editing the table view.
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {

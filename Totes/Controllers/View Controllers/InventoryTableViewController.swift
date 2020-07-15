@@ -93,16 +93,4 @@ class InventoryTableViewController: UITableViewController {
             // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
         }    
     }
-    
-    // MARK: - Navigation
-    // ok so I don't think we actually need all of this
-//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-//
-////        if segue.identifier == "inventoryToSection" {
-////
-////            guard let index = tableView.indexPathForSelectedRow,
-////
-////            let destination = segue.destination as? SectionTableViewController else { return }
-//        }
- //   }
 } // END OF CLASS

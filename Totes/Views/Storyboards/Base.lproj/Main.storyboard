@@ -152,9 +152,6 @@
                                     <rect key="frame" x="234" y="41" width="92" height="30"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     <state key="normal" title="Deposit"/>
-                                    <connections>
-                                        <segue destination="Xvh-XO-Ngc" kind="show" identifier="inventoryToDeposit" id="3V8-C4-ddi"/>
-                                    </connections>
                                 </button>
                             </barButtonItem>
                             <barButtonItem title="Withdraw" style="plain" id="bQn-jE-K90">
@@ -162,9 +159,6 @@
                                     <rect key="frame" x="142" y="41" width="92" height="30"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     <state key="normal" title="Withdraw"/>
-                                    <connections>
-                                        <segue destination="iAh-bi-xHN" kind="show" identifier="inventoryToWithdraw" id="w6k-mE-ygq"/>
-                                    </connections>
                                 </button>
                             </barButtonItem>
                             <barButtonItem title="Trash" style="plain" id="Yp1-Mr-uW2">
@@ -320,9 +314,6 @@
                                     </subviews>
                                 </tableViewCellContentView>
                                 <accessibility key="accessibilityConfiguration" identifier="showTransaction"/>
-                                <connections>
-                                    <segue destination="7UQ-35-lZb" kind="show" identifier="transactionListToTransactionDetail" id="Py7-24-M4p"/>
-                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -337,9 +328,6 @@
                                     <rect key="frame" x="314" y="7" width="80" height="30"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     <state key="normal" title="Deposit"/>
-                                    <connections>
-                                        <segue destination="Xvh-XO-Ngc" kind="show" id="Hut-Ye-AQM"/>
-                                    </connections>
                                 </button>
                             </barButtonItem>
                             <barButtonItem style="done" id="hvX-1A-m7s">
@@ -347,9 +335,6 @@
                                     <rect key="frame" x="214" y="7" width="92" height="30"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     <state key="normal" title="Wilthdrawal"/>
-                                    <connections>
-                                        <segue destination="iAh-bi-xHN" kind="show" id="0S0-pt-Kjf"/>
-                                    </connections>
                                 </button>
                             </barButtonItem>
                         </rightBarButtonItems>
@@ -357,187 +342,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EVn-E3-2JJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4622" y="356"/>
-        </scene>
-        <!--Transaction Detail View Controller-->
-        <scene sceneID="qrY-xo-C8U">
-            <objects>
-                <viewController id="7UQ-35-lZb" customClass="TransactionDetailViewController" customModule="Totes" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="nSX-7i-g4T">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="qrcode" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="4JP-1h-NSm">
-                                <rect key="frame" x="41.5" y="49" width="331" height="329"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" secondItem="4JP-1h-NSm" secondAttribute="height" multiplier="1:1" id="uTn-J8-Ths"/>
-                                </constraints>
-                            </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="(TRANSACTION_TYPE)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Sko-k6-a9u">
-                                <rect key="frame" x="119" y="441" width="176" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="(AGENT_NAME)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WJJ-CW-P6G">
-                                <rect key="frame" x="146" y="512" width="122" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="(ITEM_NAME&amp;CATEGORY)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="evW-T0-zfx">
-                                <rect key="frame" x="154" y="583.5" width="106" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="(QUANTITY)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kxf-eK-LJ2">
-                                <rect key="frame" x="159" y="654.5" width="96" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Is there a placeholder for me?" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="cNR-oG-hfT">
-                                <rect key="frame" x="41.5" y="743.5" width="331" height="128"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                                <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
-                        </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <constraints>
-                            <constraint firstItem="cNR-oG-hfT" firstAttribute="width" secondItem="Ve9-Rf-G4h" secondAttribute="width" multiplier="0.8" id="2RZ-9o-CRa"/>
-                            <constraint firstItem="evW-T0-zfx" firstAttribute="centerX" secondItem="Ve9-Rf-G4h" secondAttribute="centerX" id="5ba-5a-6To"/>
-                            <constraint firstItem="evW-T0-zfx" firstAttribute="height" secondItem="Ve9-Rf-G4h" secondAttribute="height" multiplier="0.0271318" id="8L7-A5-XxY"/>
-                            <constraint firstItem="evW-T0-zfx" firstAttribute="width" secondItem="Ve9-Rf-G4h" secondAttribute="width" multiplier="0.256039" id="Cr8-Qf-a3k"/>
-                            <constraint firstItem="Kxf-eK-LJ2" firstAttribute="centerX" secondItem="Ve9-Rf-G4h" secondAttribute="centerX" id="ERc-Ny-M0P"/>
-                            <constraint firstItem="Kxf-eK-LJ2" firstAttribute="width" secondItem="Ve9-Rf-G4h" secondAttribute="width" multiplier="0.231884" id="Jjz-PR-Cg3"/>
-                            <constraint firstItem="Kxf-eK-LJ2" firstAttribute="centerY" secondItem="Ve9-Rf-G4h" secondAttribute="centerY" multiplier="1.4" id="Lge-co-Nme"/>
-                            <constraint firstItem="Sko-k6-a9u" firstAttribute="height" secondItem="Ve9-Rf-G4h" secondAttribute="height" multiplier="0.0271318" id="LwM-JF-Ufi"/>
-                            <constraint firstItem="WJJ-CW-P6G" firstAttribute="width" secondItem="Ve9-Rf-G4h" secondAttribute="width" multiplier="0.294686" id="N7y-ER-5G2"/>
-                            <constraint firstItem="WJJ-CW-P6G" firstAttribute="centerX" secondItem="Ve9-Rf-G4h" secondAttribute="centerX" id="X3y-Ke-x1b"/>
-                            <constraint firstItem="WJJ-CW-P6G" firstAttribute="centerY" secondItem="Ve9-Rf-G4h" secondAttribute="centerY" multiplier="1.1" id="Ygh-L5-ujQ"/>
-                            <constraint firstItem="cNR-oG-hfT" firstAttribute="centerY" secondItem="Ve9-Rf-G4h" secondAttribute="centerY" multiplier="1.7" id="b3L-EN-hNl"/>
-                            <constraint firstItem="Kxf-eK-LJ2" firstAttribute="height" secondItem="Ve9-Rf-G4h" secondAttribute="height" multiplier="0.0271318" id="cAb-n1-Hwp"/>
-                            <constraint firstItem="cNR-oG-hfT" firstAttribute="centerX" secondItem="Ve9-Rf-G4h" secondAttribute="centerX" id="ftQ-Bx-zz5"/>
-                            <constraint firstItem="Sko-k6-a9u" firstAttribute="centerX" secondItem="Ve9-Rf-G4h" secondAttribute="centerX" id="iFx-hr-Mzq"/>
-                            <constraint firstItem="Sko-k6-a9u" firstAttribute="centerY" secondItem="Ve9-Rf-G4h" secondAttribute="centerY" multiplier="0.95" id="lLQ-04-Xw3"/>
-                            <constraint firstItem="4JP-1h-NSm" firstAttribute="centerX" secondItem="Ve9-Rf-G4h" secondAttribute="centerX" id="nVq-Zb-7aS"/>
-                            <constraint firstItem="Sko-k6-a9u" firstAttribute="width" secondItem="Ve9-Rf-G4h" secondAttribute="width" multiplier="0.425121" id="nWB-XQ-wPm"/>
-                            <constraint firstItem="cNR-oG-hfT" firstAttribute="height" secondItem="Ve9-Rf-G4h" secondAttribute="height" multiplier="0.165375" id="rC2-j8-p6E"/>
-                            <constraint firstItem="4JP-1h-NSm" firstAttribute="width" secondItem="Ve9-Rf-G4h" secondAttribute="width" multiplier="0.8" id="rys-xj-v4M"/>
-                            <constraint firstItem="WJJ-CW-P6G" firstAttribute="height" secondItem="Ve9-Rf-G4h" secondAttribute="height" multiplier="0.0271318" id="spq-n4-wK2"/>
-                            <constraint firstItem="evW-T0-zfx" firstAttribute="centerY" secondItem="Ve9-Rf-G4h" secondAttribute="centerY" multiplier="1.25" id="unX-jm-yZf"/>
-                            <constraint firstItem="4JP-1h-NSm" firstAttribute="centerY" secondItem="Ve9-Rf-G4h" secondAttribute="centerY" multiplier="0.45" id="w6l-Fd-Y7b"/>
-                        </constraints>
-                        <viewLayoutGuide key="safeArea" id="Ve9-Rf-G4h"/>
-                    </view>
-                    <navigationItem key="navigationItem" id="FB9-d3-ZEF"/>
-                    <connections>
-                        <outlet property="agentNameLabel" destination="WJJ-CW-P6G" id="0Je-KG-pkm"/>
-                        <outlet property="itemNameLabel" destination="evW-T0-zfx" id="PzA-Y6-Rfc"/>
-                        <outlet property="noteTextView" destination="cNR-oG-hfT" id="070-Il-jdw"/>
-                        <outlet property="quantityLabel" destination="Kxf-eK-LJ2" id="nhu-p7-rQR"/>
-                        <outlet property="transactionTypeLabel" destination="Sko-k6-a9u" id="3IP-Vd-3qU"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="00N-m9-Fow" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="4622" y="1048"/>
-        </scene>
-        <!--Deposit-->
-        <scene sceneID="o7g-oZ-DYT">
-            <objects>
-                <viewController id="Xvh-XO-Ngc" customClass="DepositViewController" customModule="Totes" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="Rbg-nb-gYT">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="qrcode" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="XWE-od-fd1">
-                                <rect key="frame" x="41.5" y="37.5" width="331" height="328.5"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" secondItem="XWE-od-fd1" secondAttribute="height" multiplier="1:1" id="usU-Tr-dzW"/>
-                                </constraints>
-                            </imageView>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Item Here:" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="rlK-9c-1RE">
-                                <rect key="frame" x="41.5" y="482" width="331" height="34"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aNC-tB-5cl">
-                                <rect key="frame" x="41.5" y="887.5" width="331" height="30"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
-                                <state key="normal" title="Deposit"/>
-                                <connections>
-                                    <action selector="depositButton:" destination="Xvh-XO-Ngc" eventType="touchUpInside" id="lYa-ex-urm"/>
-                                </connections>
-                            </button>
-                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QCf-aO-mjY">
-                                <rect key="frame" x="41.5" y="597.5" width="331" height="135"/>
-                            </pickerView>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter category here:" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="i6r-bp-4K7">
-                                <rect key="frame" x="41.5" y="410.5" width="331" height="34"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter the quantity here:" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ax2-42-F5M">
-                                <rect key="frame" x="41.5" y="553" width="331" height="34"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Enter note hither" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="hQn-QQ-nAE">
-                                <rect key="frame" x="41.5" y="753.5" width="331" height="108"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                                <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
-                        </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <constraints>
-                            <constraint firstItem="rlK-9c-1RE" firstAttribute="centerX" secondItem="0wt-cT-OxN" secondAttribute="centerX" id="66y-Ni-2WK"/>
-                            <constraint firstItem="ax2-42-F5M" firstAttribute="width" secondItem="0wt-cT-OxN" secondAttribute="width" multiplier="0.8" id="8ZN-hS-hy4"/>
-                            <constraint firstItem="QCf-aO-mjY" firstAttribute="width" secondItem="0wt-cT-OxN" secondAttribute="width" multiplier="0.8" id="BaT-BQ-XXS"/>
-                            <constraint firstItem="XWE-od-fd1" firstAttribute="centerX" secondItem="0wt-cT-OxN" secondAttribute="centerX" id="Ftn-Da-Gzq"/>
-                            <constraint firstItem="i6r-bp-4K7" firstAttribute="width" secondItem="0wt-cT-OxN" secondAttribute="width" multiplier="0.8" id="HiU-IE-5Gp"/>
-                            <constraint firstItem="i6r-bp-4K7" firstAttribute="centerY" secondItem="0wt-cT-OxN" secondAttribute="centerY" multiplier="0.9" id="Nrn-BV-eTH"/>
-                            <constraint firstItem="aNC-tB-5cl" firstAttribute="centerX" secondItem="0wt-cT-OxN" secondAttribute="centerX" id="ObK-i9-3fo"/>
-                            <constraint firstItem="hQn-QQ-nAE" firstAttribute="height" secondItem="0wt-cT-OxN" secondAttribute="height" multiplier="0.14" id="UBb-LS-2Jd"/>
-                            <constraint firstItem="QCf-aO-mjY" firstAttribute="centerY" secondItem="0wt-cT-OxN" secondAttribute="centerY" multiplier="1.4" id="VXZ-0t-omL"/>
-                            <constraint firstItem="aNC-tB-5cl" firstAttribute="width" secondItem="0wt-cT-OxN" secondAttribute="width" multiplier="0.8" id="deW-wv-xz9"/>
-                            <constraint firstItem="hQn-QQ-nAE" firstAttribute="centerX" secondItem="0wt-cT-OxN" secondAttribute="centerX" id="exi-za-hdT"/>
-                            <constraint firstItem="ax2-42-F5M" firstAttribute="centerX" secondItem="0wt-cT-OxN" secondAttribute="centerX" id="fdA-ux-ms9"/>
-                            <constraint firstItem="i6r-bp-4K7" firstAttribute="height" secondItem="0wt-cT-OxN" secondAttribute="height" multiplier="0.0439276" id="iVl-Fg-Omh"/>
-                            <constraint firstItem="aNC-tB-5cl" firstAttribute="height" secondItem="0wt-cT-OxN" secondAttribute="height" multiplier="0.0387597" id="jta-iM-3OI"/>
-                            <constraint firstItem="rlK-9c-1RE" firstAttribute="height" secondItem="0wt-cT-OxN" secondAttribute="height" multiplier="0.0439276" id="kW5-O2-Ru2"/>
-                            <constraint firstItem="QCf-aO-mjY" firstAttribute="height" secondItem="0wt-cT-OxN" secondAttribute="height" multiplier="0.175" id="lk3-qu-V08"/>
-                            <constraint firstItem="ax2-42-F5M" firstAttribute="height" secondItem="0wt-cT-OxN" secondAttribute="height" multiplier="0.0439276" id="n7v-7d-iXX"/>
-                            <constraint firstItem="hQn-QQ-nAE" firstAttribute="width" secondItem="0wt-cT-OxN" secondAttribute="width" multiplier="0.8" id="oOA-vO-nLH"/>
-                            <constraint firstItem="ax2-42-F5M" firstAttribute="centerY" secondItem="0wt-cT-OxN" secondAttribute="centerY" multiplier="1.2" id="onx-gd-Bbk"/>
-                            <constraint firstItem="XWE-od-fd1" firstAttribute="width" secondItem="0wt-cT-OxN" secondAttribute="width" multiplier="0.8" id="pjM-TS-do8"/>
-                            <constraint firstItem="rlK-9c-1RE" firstAttribute="width" secondItem="0wt-cT-OxN" secondAttribute="width" multiplier="0.8" id="qvR-Tv-iYU"/>
-                            <constraint firstItem="hQn-QQ-nAE" firstAttribute="centerY" secondItem="0wt-cT-OxN" secondAttribute="centerY" multiplier="1.7" id="rHm-hU-UI1"/>
-                            <constraint firstItem="rlK-9c-1RE" firstAttribute="centerY" secondItem="0wt-cT-OxN" secondAttribute="centerY" multiplier="1.05" id="rWd-fc-KcO"/>
-                            <constraint firstItem="XWE-od-fd1" firstAttribute="centerY" secondItem="0wt-cT-OxN" secondAttribute="centerY" multiplier="0.425" id="rc4-6u-kCr"/>
-                            <constraint firstItem="QCf-aO-mjY" firstAttribute="centerX" secondItem="0wt-cT-OxN" secondAttribute="centerX" id="uLZ-jA-1SF"/>
-                            <constraint firstItem="aNC-tB-5cl" firstAttribute="centerY" secondItem="0wt-cT-OxN" secondAttribute="centerY" multiplier="1.9" id="wzG-Pw-Ecu"/>
-                            <constraint firstItem="i6r-bp-4K7" firstAttribute="centerX" secondItem="0wt-cT-OxN" secondAttribute="centerX" id="zDc-2P-dis"/>
-                        </constraints>
-                        <viewLayoutGuide key="safeArea" id="0wt-cT-OxN"/>
-                    </view>
-                    <navigationItem key="navigationItem" title="Deposit" id="FOz-qB-kwY"/>
-                    <connections>
-                        <outlet property="categoryEntryTextField" destination="i6r-bp-4K7" id="31o-sp-sa3"/>
-                        <outlet property="itemEntryTextField" destination="rlK-9c-1RE" id="DYS-xb-sKQ"/>
-                        <outlet property="noteEntryTextView" destination="hQn-QQ-nAE" id="hhf-Pd-lIl"/>
-                        <outlet property="quantityEntryTextField" destination="ax2-42-F5M" id="Z9d-L7-iW3"/>
-                        <outlet property="quantityTypePickerView" destination="QCf-aO-mjY" id="QGj-2o-jiw"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="MKF-Tx-ntV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="5545" y="356"/>
+            <point key="canvasLocation" x="4622" y="-340"/>
         </scene>
         <!--Forgotten Password View Controller-->
         <scene sceneID="Ule-J5-Lf6">
@@ -601,9 +406,6 @@
                                 <rect key="frame" x="302" y="7" width="92" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="firetest"/>
-                                <connections>
-                                    <segue destination="ahK-am-UMM" kind="show" identifier="forgottenPasswordToFiretest" id="Vcb-FG-4LY"/>
-                                </connections>
                             </button>
                         </barButtonItem>
                     </navigationItem>
@@ -643,70 +445,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nKN-Fh-BAz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="4628" y="-1729"/>
-        </scene>
-        <!--View Controller-->
-        <scene sceneID="oU3-gA-o0r">
-            <objects>
-                <viewController id="ahK-am-UMM" customClass="ViewController" customModule="Totes" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="B58-qh-Aro">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Quote &amp; author displeyed here:" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0AM-Eb-cLV">
-                                <rect key="frame" x="31" y="84.5" width="352" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter quote here:" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4Jz-iW-Xoo">
-                                <rect key="frame" x="31" y="220.5" width="352" height="34"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Author here:" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cXh-dL-FTp">
-                                <rect key="frame" x="31" y="292" width="352" height="34"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wHs-fn-YVg">
-                                <rect key="frame" x="329" y="341.5" width="46" height="30"/>
-                                <state key="normal" title="Save"/>
-                                <connections>
-                                    <action selector="saveButtonTapped:" destination="ahK-am-UMM" eventType="touchUpInside" id="COi-so-c8g"/>
-                                </connections>
-                            </button>
-                        </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <constraints>
-                            <constraint firstItem="cXh-dL-FTp" firstAttribute="width" secondItem="gfK-RR-D91" secondAttribute="width" multiplier="0.85" id="0pU-sr-zeR"/>
-                            <constraint firstItem="0AM-Eb-cLV" firstAttribute="centerY" secondItem="gfK-RR-D91" secondAttribute="centerY" multiplier="0.2" id="27v-6Y-0oe"/>
-                            <constraint firstItem="cXh-dL-FTp" firstAttribute="centerY" secondItem="gfK-RR-D91" secondAttribute="centerY" multiplier="0.65" id="4Ch-1J-QbQ"/>
-                            <constraint firstItem="cXh-dL-FTp" firstAttribute="height" secondItem="gfK-RR-D91" secondAttribute="height" multiplier="0.0439276" id="4WH-LR-f9u"/>
-                            <constraint firstItem="0AM-Eb-cLV" firstAttribute="centerX" secondItem="gfK-RR-D91" secondAttribute="centerX" id="4YU-6c-hrz"/>
-                            <constraint firstItem="4Jz-iW-Xoo" firstAttribute="height" secondItem="gfK-RR-D91" secondAttribute="height" multiplier="0.0439276" id="4dj-Pn-OQ0"/>
-                            <constraint firstItem="4Jz-iW-Xoo" firstAttribute="centerY" secondItem="gfK-RR-D91" secondAttribute="centerY" multiplier="0.5" id="4hL-dE-Wq2"/>
-                            <constraint firstItem="wHs-fn-YVg" firstAttribute="centerY" secondItem="gfK-RR-D91" secondAttribute="centerY" multiplier="0.75" id="7Ol-0K-uaZ"/>
-                            <constraint firstItem="wHs-fn-YVg" firstAttribute="width" secondItem="gfK-RR-D91" secondAttribute="width" multiplier="0.111111" id="Dco-9l-2mi"/>
-                            <constraint firstItem="4Jz-iW-Xoo" firstAttribute="width" secondItem="gfK-RR-D91" secondAttribute="width" multiplier="0.85" id="Hcv-Y7-6U8"/>
-                            <constraint firstItem="0AM-Eb-cLV" firstAttribute="height" secondItem="gfK-RR-D91" secondAttribute="height" multiplier="0.0271318" id="IeD-uN-Ko4"/>
-                            <constraint firstItem="4Jz-iW-Xoo" firstAttribute="centerX" secondItem="gfK-RR-D91" secondAttribute="centerX" id="PfZ-j1-ZHF"/>
-                            <constraint firstItem="0AM-Eb-cLV" firstAttribute="width" secondItem="gfK-RR-D91" secondAttribute="width" multiplier="0.85" id="QbC-Ah-SU9"/>
-                            <constraint firstItem="wHs-fn-YVg" firstAttribute="height" secondItem="gfK-RR-D91" secondAttribute="height" multiplier="0.0387597" id="auW-0C-eGB"/>
-                            <constraint firstItem="cXh-dL-FTp" firstAttribute="centerX" secondItem="gfK-RR-D91" secondAttribute="centerX" id="hXU-rv-fMD"/>
-                            <constraint firstItem="wHs-fn-YVg" firstAttribute="centerX" secondItem="gfK-RR-D91" secondAttribute="centerX" multiplier="1.7" id="sgA-bE-cBo"/>
-                        </constraints>
-                        <viewLayoutGuide key="safeArea" id="gfK-RR-D91"/>
-                    </view>
-                    <navigationItem key="navigationItem" id="Z7g-Fj-Hev"/>
-                    <connections>
-                        <outlet property="authorsNameTextField" destination="cXh-dL-FTp" id="euH-lN-hwr"/>
-                        <outlet property="quoteLabel" destination="0AM-Eb-cLV" id="GnJ-pK-ijH"/>
-                        <outlet property="quoteTextField" destination="4Jz-iW-Xoo" id="9pr-Be-lVz"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="z4H-2i-lHF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="3770" y="-2419"/>
         </scene>
         <!--Section Table View Controller-->
         <scene sceneID="Uoq-Wz-ujh">
@@ -750,7 +488,7 @@
                     </tableView>
                     <navigationItem key="navigationItem" prompt="Section" id="kvW-Rz-08B">
                         <nil key="title"/>
-                        <button key="titleView" opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Fvq-dh-OEQ">
+                        <button key="titleView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Fvq-dh-OEQ">
                             <rect key="frame" x="102" y="41" width="94" height="30"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <state key="normal" title="Section Trash"/>
@@ -764,9 +502,6 @@
                                     <rect key="frame" x="302" y="41" width="92" height="30"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     <state key="normal" title="Deposit"/>
-                                    <connections>
-                                        <segue destination="Xvh-XO-Ngc" kind="show" identifier="sectionToDeposit" id="Ndi-2X-es8"/>
-                                    </connections>
                                 </button>
                             </barButtonItem>
                             <barButtonItem title="Withdrawal" style="plain" id="t9l-nf-g0W">
@@ -774,9 +509,6 @@
                                     <rect key="frame" x="202" y="41" width="92" height="30"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     <state key="normal" title="Withdraw"/>
-                                    <connections>
-                                        <segue destination="iAh-bi-xHN" kind="show" identifier="sectionToWithdraw" id="a9O-ox-RtF"/>
-                                    </connections>
                                 </button>
                             </barButtonItem>
                         </rightBarButtonItems>
@@ -818,138 +550,14 @@
             </objects>
             <point key="canvasLocation" x="5545" y="-1729"/>
         </scene>
-        <!--Withdrawal-->
-        <scene sceneID="m38-0r-rAs">
-            <objects>
-                <viewController id="iAh-bi-xHN" customClass="WithdrawalViewController" customModule="Totes" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="cWY-hy-1Yw">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="qrcode.viewfinder" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="JpR-85-1st">
-                                <rect key="frame" x="41.5" y="73" width="331" height="328.5"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" secondItem="JpR-85-1st" secondAttribute="height" multiplier="1:1" id="w24-PM-yVQ"/>
-                                </constraints>
-                            </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Transactor" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DNt-Oe-gWX">
-                                <rect key="frame" x="41.5" y="461.5" width="331" height="27"/>
-                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="25"/>
-                                <color key="textColor" red="0.09111206979" green="0.065848462280000006" blue="0.29197227949999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Item Category" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jLR-Pm-cKg">
-                                <rect key="frame" x="41.5" y="509" width="331" height="27"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
-                                <color key="textColor" red="0.09111206979" green="0.065848462280000006" blue="0.29197227949999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Item Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EAF-UF-ac9">
-                                <rect key="frame" x="41.5" y="556.5" width="331" height="27"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
-                                <color key="textColor" red="0.09111206979" green="0.065848462280000006" blue="0.29197227949999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Quantity" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gUz-Ug-kof">
-                                <rect key="frame" x="41.5" y="604" width="331" height="27"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
-                                <color key="textColor" red="0.09111206979" green="0.065848462280000006" blue="0.29197227949999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Metric" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="107-mz-r7o">
-                                <rect key="frame" x="41.5" y="651.5" width="331" height="27"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
-                                <color key="textColor" red="0.09111206979" green="0.065848462280000006" blue="0.29197227949999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2mb-um-HDK">
-                                <rect key="frame" x="41.5" y="805" width="331" height="28.5"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
-                                <state key="normal" title="Withdraw Amount"/>
-                                <connections>
-                                    <action selector="withdrawAmountButton:" destination="iAh-bi-xHN" eventType="touchUpInside" id="cMD-Nq-1kX"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="t6H-KL-QPP">
-                                <rect key="frame" x="41.5" y="864.5" width="331" height="28.5"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
-                                <state key="normal" title="Withdraw All"/>
-                                <connections>
-                                    <action selector="withdrawAllButton:" destination="iAh-bi-xHN" eventType="touchUpInside" id="mCI-FV-qkw"/>
-                                </connections>
-                            </button>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter amount to withdraw:" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="P8s-SA-VJV">
-                                <rect key="frame" x="41.5" y="720" width="331" height="32.5"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                        </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <constraints>
-                            <constraint firstItem="EAF-UF-ac9" firstAttribute="width" secondItem="V7y-8D-byb" secondAttribute="width" multiplier="0.8" id="0NL-Yb-JrV"/>
-                            <constraint firstItem="gUz-Ug-kof" firstAttribute="height" secondItem="V7y-8D-byb" secondAttribute="height" multiplier="0.035" id="14S-4c-ado"/>
-                            <constraint firstItem="t6H-KL-QPP" firstAttribute="width" secondItem="V7y-8D-byb" secondAttribute="width" multiplier="0.799517" id="2JS-jM-Mrz"/>
-                            <constraint firstItem="JpR-85-1st" firstAttribute="centerX" secondItem="V7y-8D-byb" secondAttribute="centerX" id="5ru-XK-cWD"/>
-                            <constraint firstItem="2mb-um-HDK" firstAttribute="centerY" secondItem="V7y-8D-byb" secondAttribute="centerY" multiplier="1.725" id="6q9-g9-mCY"/>
-                            <constraint firstItem="gUz-Ug-kof" firstAttribute="centerX" secondItem="V7y-8D-byb" secondAttribute="centerX" id="84N-Yn-ZVa"/>
-                            <constraint firstItem="107-mz-r7o" firstAttribute="width" secondItem="V7y-8D-byb" secondAttribute="width" multiplier="0.799517" id="8hY-Ag-xmq"/>
-                            <constraint firstItem="t6H-KL-QPP" firstAttribute="height" secondItem="V7y-8D-byb" secondAttribute="height" multiplier="0.0371287" id="A22-Fq-3Fi"/>
-                            <constraint firstItem="gUz-Ug-kof" firstAttribute="width" secondItem="V7y-8D-byb" secondAttribute="width" multiplier="0.8" id="C4T-aK-JZQ"/>
-                            <constraint firstItem="2mb-um-HDK" firstAttribute="width" secondItem="V7y-8D-byb" secondAttribute="width" multiplier="0.8" id="Edx-nA-Rlc"/>
-                            <constraint firstItem="2mb-um-HDK" firstAttribute="height" secondItem="V7y-8D-byb" secondAttribute="height" multiplier="0.0371287" id="GuP-6f-R3c"/>
-                            <constraint firstItem="t6H-KL-QPP" firstAttribute="centerX" secondItem="V7y-8D-byb" secondAttribute="centerX" id="H4T-ta-pl4"/>
-                            <constraint firstItem="JpR-85-1st" firstAttribute="centerY" secondItem="V7y-8D-byb" secondAttribute="centerY" multiplier="0.5" id="HNg-Jw-hTw"/>
-                            <constraint firstItem="P8s-SA-VJV" firstAttribute="height" secondItem="V7y-8D-byb" secondAttribute="height" multiplier="0.0420792" id="KGg-ou-Vow"/>
-                            <constraint firstItem="2mb-um-HDK" firstAttribute="centerX" secondItem="V7y-8D-byb" secondAttribute="centerX" id="LxR-WR-ieD"/>
-                            <constraint firstItem="107-mz-r7o" firstAttribute="height" secondItem="V7y-8D-byb" secondAttribute="height" multiplier="0.035" id="P3V-zj-egX"/>
-                            <constraint firstItem="EAF-UF-ac9" firstAttribute="centerX" secondItem="V7y-8D-byb" secondAttribute="centerX" id="PCB-kV-H7o"/>
-                            <constraint firstItem="jLR-Pm-cKg" firstAttribute="centerY" secondItem="V7y-8D-byb" secondAttribute="centerY" multiplier="1.1" id="WWy-v7-CZd"/>
-                            <constraint firstItem="jLR-Pm-cKg" firstAttribute="width" secondItem="V7y-8D-byb" secondAttribute="width" multiplier="0.8" id="X59-8h-ppr"/>
-                            <constraint firstItem="gUz-Ug-kof" firstAttribute="centerY" secondItem="V7y-8D-byb" secondAttribute="centerY" multiplier="1.3" id="anm-NS-kYR"/>
-                            <constraint firstItem="P8s-SA-VJV" firstAttribute="width" secondItem="V7y-8D-byb" secondAttribute="width" multiplier="0.8" id="bx7-ab-5hn"/>
-                            <constraint firstItem="jLR-Pm-cKg" firstAttribute="centerX" secondItem="V7y-8D-byb" secondAttribute="centerX" id="hcR-FA-tav"/>
-                            <constraint firstItem="EAF-UF-ac9" firstAttribute="centerY" secondItem="V7y-8D-byb" secondAttribute="centerY" multiplier="1.2" id="kKN-SY-Dvr"/>
-                            <constraint firstItem="107-mz-r7o" firstAttribute="centerY" secondItem="V7y-8D-byb" secondAttribute="centerY" multiplier="1.4" id="obz-gT-nQx"/>
-                            <constraint firstItem="EAF-UF-ac9" firstAttribute="height" secondItem="V7y-8D-byb" secondAttribute="height" multiplier="0.035" id="p20-24-Td4"/>
-                            <constraint firstItem="DNt-Oe-gWX" firstAttribute="centerY" secondItem="V7y-8D-byb" secondAttribute="centerY" id="pao-Fe-gQU"/>
-                            <constraint firstItem="P8s-SA-VJV" firstAttribute="centerY" secondItem="V7y-8D-byb" secondAttribute="centerY" multiplier="1.55" id="qCu-yB-dmr"/>
-                            <constraint firstItem="t6H-KL-QPP" firstAttribute="centerY" secondItem="V7y-8D-byb" secondAttribute="centerY" multiplier="1.85" id="qiQ-Bc-4Jk"/>
-                            <constraint firstItem="107-mz-r7o" firstAttribute="centerX" secondItem="V7y-8D-byb" secondAttribute="centerX" id="rax-nn-p3v"/>
-                            <constraint firstItem="DNt-Oe-gWX" firstAttribute="width" secondItem="V7y-8D-byb" secondAttribute="width" multiplier="0.8" id="tja-Dv-43s"/>
-                            <constraint firstItem="JpR-85-1st" firstAttribute="width" secondItem="V7y-8D-byb" secondAttribute="width" multiplier="0.8" id="u1F-k2-YIp"/>
-                            <constraint firstItem="DNt-Oe-gWX" firstAttribute="height" secondItem="V7y-8D-byb" secondAttribute="height" multiplier="0.035" id="u9y-AW-UK6"/>
-                            <constraint firstItem="DNt-Oe-gWX" firstAttribute="centerX" secondItem="V7y-8D-byb" secondAttribute="centerX" id="vrf-5n-LE2"/>
-                            <constraint firstItem="jLR-Pm-cKg" firstAttribute="height" secondItem="V7y-8D-byb" secondAttribute="height" multiplier="0.035" id="w0u-hb-4me"/>
-                            <constraint firstItem="P8s-SA-VJV" firstAttribute="centerX" secondItem="V7y-8D-byb" secondAttribute="centerX" id="ws1-7Q-B0F"/>
-                        </constraints>
-                        <viewLayoutGuide key="safeArea" id="V7y-8D-byb"/>
-                    </view>
-                    <navigationItem key="navigationItem" title="Withdrawal" id="wGx-jy-WUy"/>
-                    <connections>
-                        <outlet property="amountEntryTextField" destination="P8s-SA-VJV" id="dE7-9X-oUD"/>
-                        <outlet property="itemCategoryLabel" destination="jLR-Pm-cKg" id="B0o-bh-hf6"/>
-                        <outlet property="itemNameLabel" destination="EAF-UF-ac9" id="bIH-wy-pwg"/>
-                        <outlet property="metricLabel" destination="107-mz-r7o" id="DwZ-YB-Xg9"/>
-                        <outlet property="quantityLabel" destination="gUz-Ug-kof" id="SVb-66-kVj"/>
-                        <outlet property="transactorLabel" destination="DNt-Oe-gWX" id="jue-PX-vzm"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="mpo-DK-F5T" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="3771" y="356"/>
-        </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="w6k-mE-ygq"/>
         <segue reference="VYp-tC-0ID"/>
-        <segue reference="3V8-C4-ddi"/>
         <segue reference="4Zg-bQ-z1R"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="paperplane" catalog="system" width="128" height="121"/>
         <image name="person.badge.plus" catalog="system" width="128" height="116"/>
-        <image name="qrcode" catalog="system" width="128" height="114"/>
-        <image name="qrcode.viewfinder" catalog="system" width="128" height="114"/>
         <image name="questionmark" catalog="system" width="96" height="128"/>
     </resources>
 </document>

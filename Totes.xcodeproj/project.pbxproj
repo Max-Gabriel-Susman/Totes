@@ -25,11 +25,7 @@
 		A680DD7F24ABABCF00A8A0A3 /* RegistrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A680DD7E24ABABCF00A8A0A3 /* RegistrationViewController.swift */; };
 		A680DD8124ABADEA00A8A0A3 /* ForgottenPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A680DD8024ABADEA00A8A0A3 /* ForgottenPasswordViewController.swift */; };
 		A680DD8524ABCF3500A8A0A3 /* TransactionListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A680DD8424ABCF3500A8A0A3 /* TransactionListTableViewController.swift */; };
-		A680DD8724ABCF4F00A8A0A3 /* TransactionDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A680DD8624ABCF4F00A8A0A3 /* TransactionDetailViewController.swift */; };
-		A680DD8924ABCF6000A8A0A3 /* WithdrawalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A680DD8824ABCF6000A8A0A3 /* WithdrawalViewController.swift */; };
-		A680DD8B24ABCF6F00A8A0A3 /* DepositViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A680DD8A24ABCF6F00A8A0A3 /* DepositViewController.swift */; };
 		A697914F24B77CD3001581AA /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A697914E24B77CD3001581AA /* GoogleService-Info.plist */; };
-		A697915124B7A969001581AA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A697915024B7A969001581AA /* ViewController.swift */; };
 		A697915424B7B94E001581AA /* InventoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A697915324B7B94E001581AA /* InventoryTableViewCell.swift */; };
 		A697915624B7B95C001581AA /* SectionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A697915524B7B95C001581AA /* SectionTableViewCell.swift */; };
 		A697915924B7B9D7001581AA /* SectionTrashTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A697915824B7B9D7001581AA /* SectionTrashTableViewCell.swift */; };
@@ -61,11 +57,7 @@
 		A680DD7E24ABABCF00A8A0A3 /* RegistrationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationViewController.swift; sourceTree = "<group>"; };
 		A680DD8024ABADEA00A8A0A3 /* ForgottenPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgottenPasswordViewController.swift; sourceTree = "<group>"; };
 		A680DD8424ABCF3500A8A0A3 /* TransactionListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionListTableViewController.swift; sourceTree = "<group>"; };
-		A680DD8624ABCF4F00A8A0A3 /* TransactionDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionDetailViewController.swift; sourceTree = "<group>"; };
-		A680DD8824ABCF6000A8A0A3 /* WithdrawalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WithdrawalViewController.swift; sourceTree = "<group>"; };
-		A680DD8A24ABCF6F00A8A0A3 /* DepositViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DepositViewController.swift; sourceTree = "<group>"; };
 		A697914E24B77CD3001581AA /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
-		A697915024B7A969001581AA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		A697915324B7B94E001581AA /* InventoryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InventoryTableViewCell.swift; sourceTree = "<group>"; };
 		A697915524B7B95C001581AA /* SectionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionTableViewCell.swift; sourceTree = "<group>"; };
 		A697915824B7B9D7001581AA /* SectionTrashTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionTrashTableViewCell.swift; sourceTree = "<group>"; };
@@ -189,10 +181,6 @@
 				A680DD7E24ABABCF00A8A0A3 /* RegistrationViewController.swift */,
 				A680DD8024ABADEA00A8A0A3 /* ForgottenPasswordViewController.swift */,
 				A680DD8424ABCF3500A8A0A3 /* TransactionListTableViewController.swift */,
-				A680DD8624ABCF4F00A8A0A3 /* TransactionDetailViewController.swift */,
-				A680DD8824ABCF6000A8A0A3 /* WithdrawalViewController.swift */,
-				A680DD8A24ABCF6F00A8A0A3 /* DepositViewController.swift */,
-				A697915024B7A969001581AA /* ViewController.swift */,
 				A697915C24B7BD87001581AA /* InventoryTrashListTableViewController.swift */,
 				A697915E24B7BDA1001581AA /* SectionTrashListTableViewController.swift */,
 			);
@@ -346,8 +334,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				A643A6C6248724AD00BD3364 /* SectionController.swift in Sources */,
-				A680DD8B24ABCF6F00A8A0A3 /* DepositViewController.swift in Sources */,
-				A680DD8724ABCF4F00A8A0A3 /* TransactionDetailViewController.swift in Sources */,
 				A643A6C42487249A00BD3364 /* UserController.swift in Sources */,
 				A643A6CE2487251C00BD3364 /* InventoryTableViewController.swift in Sources */,
 				A697915B24B7B9F3001581AA /* InventoryTrashTableViewCell.swift in Sources */,
@@ -362,13 +348,11 @@
 				A697915424B7B94E001581AA /* InventoryTableViewCell.swift in Sources */,
 				A697915D24B7BD87001581AA /* InventoryTrashListTableViewController.swift in Sources */,
 				A697915624B7B95C001581AA /* SectionTableViewCell.swift in Sources */,
-				A697915124B7A969001581AA /* ViewController.swift in Sources */,
 				A680DD8524ABCF3500A8A0A3 /* TransactionListTableViewController.swift in Sources */,
 				A643A6BE2486EE5E00BD3364 /* User.swift in Sources */,
 				A643A6D02487254300BD3364 /* SectionTableViewController.swift in Sources */,
 				A680DD7D24ABABBF00A8A0A3 /* LoginViewController.swift in Sources */,
 				A697915F24B7BDA1001581AA /* SectionTrashListTableViewController.swift in Sources */,
-				A680DD8924ABCF6000A8A0A3 /* WithdrawalViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

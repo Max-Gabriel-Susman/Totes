@@ -9,15 +9,8 @@
 import Foundation
 
 
-class Section {
+struct Section {
     
     let sectionName: String
-    let itemCount: Int
-    var items: [Item]
-    
-    init(sectionName: String, itemCount: Int, items: [Item] = []) {
-        self.sectionName = sectionName
-        self.itemCount = itemCount
-        self.items = items
-    }
-} // END OF CLASS
+  
+} // END OF STRUCT

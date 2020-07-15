@@ -9,14 +9,8 @@
 import Foundation
 
 
-class User {
+struct User {
     
-    let username: String
-    let password: String
-    
-    init(username: String, password: String) {
-        self.username = username
-        self.password = password
-    }
-    
-} // END OF CLASS
+    let userID: String
+  
+} // END OF STRUCT

@@ -130,7 +130,7 @@
                                 </tableViewCellContentView>
                                 <accessibility key="accessibilityConfiguration" identifier="showSection"/>
                                 <connections>
-                                    <segue destination="IGb-ym-9AV" kind="show" identifier="inventoryToSection" id="wVg-l4-lGb"/>
+                                    <segue destination="IGb-ym-9AV" kind="show" identifier="inventoryToSection" id="dpM-re-n9v"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>

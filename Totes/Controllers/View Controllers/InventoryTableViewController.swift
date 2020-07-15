@@ -12,13 +12,19 @@ import Firebase
 
 class InventoryTableViewController: UITableViewController {
     // MARK: - Properties
+    //var user: User?
     var docRef: DocumentReference!
+    // this value is due for a nameChange
     var quoteListener: ListenerRegistration!
+    //var userID = user.userID
     var user: String = "user0"
     var FBsections: [String : Any] = [:]
     var sectionNames: [String] = []
     var sectionItemSelections: [Int] = []
-
+    let segueIdentifier = "inventoryToSection"
+    let cellReuseIdentifier = "showSection"
+    // perhaps we can/should assign docRef here?
+    //docRef = Firestore.firestore().document("/totes/usersMap/usersCollection/\(user)/")
     // MARK: - LifecycleMethods
     // I think we need to keep this, note entirely sure though
 //    override func viewWillAppear(_ animated: Bool) {
@@ -31,8 +37,10 @@ class InventoryTableViewController: UITableViewController {
         
         // Firestore path for db queries
         docRef = Firestore.firestore().document("/totes/usersMap/usersCollection/\(user)/")
+        //docRef = Firestore.firestore().document("/totes/usersMap/usersCollection/\(userID)/")
         
         // Reads data from a given user document in Firestore
+        // this value is due for a nameChange
         quoteListener = docRef.addSnapshotListener { (docSnapshot, error) in
         
             // Ensures the data captured isn't nil
@@ -59,10 +67,7 @@ class InventoryTableViewController: UITableViewController {
         super.viewWillDisappear(animated)
         quoteListener.remove()
     }
-    
-//    override func didReceiveMemoryWarning() {
-//        super.didReceiveMemoryWarning()
-//    }
+ 
     // MARK: - Actions
     
     // MARK: - Table view data source
@@ -71,7 +76,7 @@ class InventoryTableViewController: UITableViewController {
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "showSection", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: cellReuseIdentifier, for: indexPath)
         
         let sectionName = sectionNames[indexPath.row]
         
@@ -92,5 +97,26 @@ class InventoryTableViewController: UITableViewController {
         } else if editingStyle == .insert {
             // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
         }    
+    }
+    
+    // how should I implement this process for a regular view controller?
+    // for some reason the data in the next table is reloaded twice and incorrectly, it seems to be coming from one off the two functions below this one
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        // section is the object we're passing to SectionTableViewController to dictate which sections data it will be populated with
+        let section = Section(sectionName: sectionNames[indexPath.row])
+        // I'm pretty sure we're also going to need to pass the user object from the loginVC
+        
+        // performs segue passing section object to the destination
+        performSegue(withIdentifier: segueIdentifier, sender: section)
+        
+    }
+    
+    // MARK: - Navigation
+    // a variable typed any must be casted prior to use
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == segueIdentifier {
+            let destVC = segue.destination as! SectionTableViewController
+            destVC.section = sender as? Section
+        }
     }
 } // END OF CLASS

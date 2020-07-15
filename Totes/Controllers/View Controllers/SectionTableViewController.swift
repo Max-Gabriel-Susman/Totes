@@ -12,10 +12,13 @@ import Firebase
 class SectionTableViewController: UITableViewController {
     
     // MARK: - Properties
-        var docRef: DocumentReference!
-        var quoteListener: ListenerRegistration!
-        var user: String = "user0"
-        var sections: [String] = []
+    var docRef: DocumentReference!
+    var quoteListener: ListenerRegistration!
+    var user: String = "user0"
+    // I think we might end up not actually needing sections
+    var sections: [String] = []
+    var itemNames: [String] = []
+    var itemQuantities: [Int] = []
 
         // MARK: - LifecycleMethods
         override func viewDidLoad() {
@@ -36,15 +39,15 @@ class SectionTableViewController: UITableViewController {
                 // populates a local dictionary with data from the sections map
                 let section0 = myData?["section0"] as? [String : Any] ?? [:]
                 let name = section0["name"] as? String ?? ""
-                
+                let items = section0["items"] as? [String : Int] ?? [:]
                 print(name)
                 
                 
                 // populate arrays with the keys and values from the map
-//                for section in self.FBsections {
-//                    self.sectionNames.append(section.key)
-//                    self.sectionItemSelections.append(section.value as! Int)
-//                }
+                for item in items {
+                    self.itemNames.append(item.key)
+                    self.itemQuantities.append(item.value)
+                }
                 
                 // populates tableview with the data
                 self.tableView.reloadData()
@@ -63,19 +66,19 @@ class SectionTableViewController: UITableViewController {
         
         // MARK: - Table view data source
         override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-            return 0//sectionNames.count
+            return itemNames.count
         }
 
         override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
             let cell = tableView.dequeueReusableCell(withIdentifier: "showItem", for: indexPath)
             
-//            let sectionName = sectionNames[indexPath.row]
-//
-//            let sectionItemSelection = sectionItemSelections[indexPath.row]
-//
-//            cell.textLabel?.text = sectionName
-//
-//            cell.detailTextLabel?.text = "\(sectionItemSelection)"
+            let itemName = itemNames[indexPath.row]
+
+            let itemQuantity = itemQuantities[indexPath.row]
+
+            cell.textLabel?.text = itemName
+
+            cell.detailTextLabel?.text = "\(itemQuantity)"
 
             return cell
         }

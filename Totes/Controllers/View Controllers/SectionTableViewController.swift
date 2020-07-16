@@ -25,8 +25,8 @@ class SectionTableViewController: UITableViewController {
     // MARK: - LifecycleMethods
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        // Assigns a string passed from InventorytableviewController to the sectionName property of the local section object
+        print("we've arrived")
+        // Assigns the correct string to section.sectionName for backend pathing
         setSection()
         
         // Firestore path for db queries
@@ -42,16 +42,12 @@ class SectionTableViewController: UITableViewController {
             let myData = docSnapshot.data()
             
             // populates a local dictionary with data from the sections map
-            let section0 = myData?["section0"] as? [String : Any] ?? [:]
-            let name = section0["name"] as? String ?? ""
-            let items = section0["items"] as? [String : Int] ?? [:]
-            print(name)
-            
+            let sectionSelection = myData?[self.section?.sectionName ?? ""] as? [String : Any] ?? [:]
             
             // populate arrays with the keys and values from the map
-            for item in items {
+            for item in sectionSelection {
                 self.itemNames.append(item.key)
-                self.itemQuantities.append(item.value)
+                self.itemQuantities.append(item.value as? Int ?? 0)
             }
             
             // populates tableview with the data
@@ -97,6 +93,7 @@ class SectionTableViewController: UITableViewController {
     
     // MARK: - HelperMethods
     func setSection() {
+        // why is it always lenses? other section names aren't happenin
         guard let sectionName = section?.sectionName else { return }
         print("\(sectionName) is aquired.")
     }

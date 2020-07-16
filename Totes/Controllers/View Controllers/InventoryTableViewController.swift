@@ -16,6 +16,7 @@ class InventoryTableViewController: UITableViewController {
     var docRef: DocumentReference!
     // this value is due for a nameChange
     var quoteListener: ListenerRegistration!
+    var section: Section?
     //var userID = user.userID
     var user: String = "user0"
     var FBsections: [String : Any] = [:]
@@ -27,8 +28,10 @@ class InventoryTableViewController: UITableViewController {
     //docRef = Firestore.firestore().document("/totes/usersMap/usersCollection/\(user)/")
     // MARK: - LifecycleMethods
     // I think we need to keep this, note entirely sure though
+    // let's see
 //    override func viewWillAppear(_ animated: Bool) {
 //        super.viewWillAppear(animated)
+//        print("we're back agin")
 //
 //    }
     
@@ -69,6 +72,9 @@ class InventoryTableViewController: UITableViewController {
     }
  
     // MARK: - Actions
+    @IBAction func unwind( _ seg: UIStoryboardSegue) {
+        
+    }
     
     // MARK: - Table view data source
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -101,14 +107,22 @@ class InventoryTableViewController: UITableViewController {
     
     // how should I implement this process for a regular view controller?
     // for some reason the data in the next table is reloaded twice and incorrectly, it seems to be coming from one off the two functions below this one
+    // maybe the redundancy is here? yes
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         // section is the object we're passing to SectionTableViewController to dictate which sections data it will be populated with
-        let section = Section(sectionName: sectionNames[indexPath.row])
+
+        self.section = Section(sectionName: sectionNames[indexPath.row])
         // I'm pretty sure we're also going to need to pass the user object from the loginVC
         
-        // performs segue passing section object to the destination
-        performSegue(withIdentifier: segueIdentifier, sender: section)
         
+        
+        // performs segue passing section object to the destination
+        // this is the source of the redundancy, we need to find a way to pass the data without pefroming a segue here
+        
+        //performSegue(withIdentifier: segueIdentifier, sender: section)
+        
+        
+
     }
     
     // MARK: - Navigation
@@ -116,7 +130,8 @@ class InventoryTableViewController: UITableViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == segueIdentifier {
             let destVC = segue.destination as! SectionTableViewController
-            destVC.section = sender as? Section
+            
+            destVC.section = self.section
         }
     }
 } // END OF CLASS

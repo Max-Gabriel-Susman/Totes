@@ -12,7 +12,7 @@ import Firebase
 class SectionTableViewController: UITableViewController {
     
     // MARK: - Properties
-    var section: Section?
+    //var section: String?
     var sectionName: String?
     var docRef: DocumentReference!
     var quoteListener: ListenerRegistration!
@@ -23,11 +23,15 @@ class SectionTableViewController: UITableViewController {
     var itemQuantities: [Int] = []
 
     // MARK: - LifecycleMethods
+    //instantiateView
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        print("we've arrived")
+        
+        print("we've arrived \(sectionName ?? "")")
         // Assigns the correct string to section.sectionName for backend pathing
-        setSection()
+        // we need to figure out why the sectionTableView is rendering with a section value that is one section late?
+        //setSection()
         
         // Firestore path for db queries
         docRef = Firestore.firestore().document("/totes/usersMap/usersCollection/\(user)/")
@@ -42,7 +46,7 @@ class SectionTableViewController: UITableViewController {
             let myData = docSnapshot.data()
             
             // populates a local dictionary with data from the sections map
-            let sectionSelection = myData?[self.section?.sectionName ?? ""] as? [String : Any] ?? [:]
+            let sectionSelection = myData?[self.sectionName ?? ""] as? [String : Any] ?? [:]
             
             // populate arrays with the keys and values from the map
             for item in sectionSelection {
@@ -92,10 +96,10 @@ class SectionTableViewController: UITableViewController {
     }
     
     // MARK: - HelperMethods
-    func setSection() {
-        // why is it always lenses? other section names aren't happenin
-        guard let sectionName = section?.sectionName else { return }
-        print("\(sectionName) is aquired.")
-    }
+//    func setSection() {
+//        // why is it always lenses? other section names aren't happenin
+//        guard let sectionName = section else { return }
+//        print("\(sectionName) is aquired.")
+//    }
     
 } // END OF CLASS

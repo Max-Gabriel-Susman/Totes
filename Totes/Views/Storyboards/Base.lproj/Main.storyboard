@@ -154,21 +154,11 @@
                                     <state key="normal" title="Deposit"/>
                                 </button>
                             </barButtonItem>
-                            <barButtonItem title="Withdraw" style="plain" id="bQn-jE-K90">
-                                <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="VXc-It-nFK">
-                                    <rect key="frame" x="142" y="41" width="92" height="30"/>
-                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                    <state key="normal" title="Withdraw"/>
-                                </button>
-                            </barButtonItem>
                             <barButtonItem title="Trash" style="plain" id="Yp1-Mr-uW2">
                                 <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Mpd-Da-uEY">
                                     <rect key="frame" x="50" y="41" width="92" height="30"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     <state key="normal" title="Trash"/>
-                                    <connections>
-                                        <segue destination="61w-ah-LYH" kind="show" identifier="inventoryToInventoryTrash" id="VNy-cf-AcD"/>
-                                    </connections>
                                 </button>
                             </barButtonItem>
                         </rightBarButtonItems>
@@ -417,35 +407,6 @@
             </objects>
             <point key="canvasLocation" x="3770" y="-1720"/>
         </scene>
-        <!--Inventory Trash List Table View Controller-->
-        <scene sceneID="wh3-wz-gZh">
-            <objects>
-                <tableViewController id="61w-ah-LYH" customClass="InventoryTrashListTableViewController" customModule="Totes" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="Vj0-7H-Qmt">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="whG-5r-5sg">
-                                <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="whG-5r-5sg" id="WyO-aY-l4R">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                </tableViewCellContentView>
-                            </tableViewCell>
-                        </prototypes>
-                        <connections>
-                            <outlet property="dataSource" destination="61w-ah-LYH" id="olL-N2-ptv"/>
-                            <outlet property="delegate" destination="61w-ah-LYH" id="zL1-x5-ecZ"/>
-                        </connections>
-                    </tableView>
-                    <navigationItem key="navigationItem" prompt="Trash" id="yZM-0u-3uv"/>
-                </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="nKN-Fh-BAz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="4628" y="-1729"/>
-        </scene>
         <!--Section Table View Controller-->
         <scene sceneID="Uoq-Wz-ujh">
             <objects>
@@ -492,63 +453,19 @@
                             <rect key="frame" x="102" y="41" width="94" height="30"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <state key="normal" title="Section Trash"/>
-                            <connections>
-                                <segue destination="Vth-Ay-QIy" kind="show" identifier="sectionToTrash" id="EFH-mb-IW7"/>
-                            </connections>
                         </button>
-                        <rightBarButtonItems>
-                            <barButtonItem title="Deposit" style="plain" id="grK-MU-Gmz">
-                                <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="B9S-3m-bto">
-                                    <rect key="frame" x="302" y="41" width="92" height="30"/>
-                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                    <state key="normal" title="Deposit"/>
-                                </button>
-                            </barButtonItem>
-                            <barButtonItem title="Withdrawal" style="plain" id="t9l-nf-g0W">
-                                <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="T1a-Xg-wSS">
-                                    <rect key="frame" x="202" y="41" width="92" height="30"/>
-                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                    <state key="normal" title="Withdraw"/>
-                                </button>
-                            </barButtonItem>
-                        </rightBarButtonItems>
+                        <barButtonItem key="rightBarButtonItem" title="Deposit" style="plain" id="grK-MU-Gmz">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="B9S-3m-bto">
+                                <rect key="frame" x="302" y="41" width="92" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Deposit"/>
+                            </button>
+                        </barButtonItem>
                     </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KxL-NI-9wY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="5545" y="-1007"/>
-        </scene>
-        <!--Section Trash List Table View Controller-->
-        <scene sceneID="pPS-a5-MVP">
-            <objects>
-                <tableViewController id="Vth-Ay-QIy" customClass="SectionTrashListTableViewController" customModule="Totes" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="nqz-Xs-Ajp">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="showItem" id="p3o-ii-DUo">
-                                <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="p3o-ii-DUo" id="uuf-Cg-Qwd">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                </tableViewCellContentView>
-                                <accessibility key="accessibilityConfiguration" identifier="showItem">
-                                    <bool key="isElement" value="YES"/>
-                                </accessibility>
-                            </tableViewCell>
-                        </prototypes>
-                        <connections>
-                            <outlet property="dataSource" destination="Vth-Ay-QIy" id="b97-ZX-dp5"/>
-                            <outlet property="delegate" destination="Vth-Ay-QIy" id="pRf-Xs-u08"/>
-                        </connections>
-                    </tableView>
-                    <navigationItem key="navigationItem" prompt="Section Trash" id="ABV-2S-h8g"/>
-                </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="hFG-eM-mkl" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="5545" y="-1729"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>

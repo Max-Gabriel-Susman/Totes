@@ -16,7 +16,7 @@ class InventoryTableViewController: UITableViewController {
     var docRef: DocumentReference!
     // this value is due for a nameChange
     var quoteListener: ListenerRegistration!
-    var section: Section?
+    var sectionName: String?
     //var userID = user.userID
     var user: String = "user0"
     var FBsections: [String : Any] = [:]
@@ -76,6 +76,8 @@ class InventoryTableViewController: UITableViewController {
         
     }
     
+    
+    
     // MARK: - Table view data source
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return sectionNames.count
@@ -110,28 +112,18 @@ class InventoryTableViewController: UITableViewController {
     // maybe the redundancy is here? yes
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         // section is the object we're passing to SectionTableViewController to dictate which sections data it will be populated with
-
-        self.section = Section(sectionName: sectionNames[indexPath.row])
-        // I'm pretty sure we're also going to need to pass the user object from the loginVC
+        self.sectionName = sectionNames[indexPath.row]
         
-        
-        
-        // performs segue passing section object to the destination
-        // this is the source of the redundancy, we need to find a way to pass the data without pefroming a segue here
-        
-        //performSegue(withIdentifier: segueIdentifier, sender: section)
-        
-        
-
     }
+
     
     // MARK: - Navigation
     // a variable typed any must be casted prior to use
+    // sectiontableview is still populating with old data needs a fix, rip
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == segueIdentifier {
-            let destVC = segue.destination as! SectionTableViewController
-            
-            destVC.section = self.section
+        if let vc = segue.destination as? SectionTableViewController
+        {
+            vc.sectionName = self.sectionName
         }
     }
 } // END OF CLASS

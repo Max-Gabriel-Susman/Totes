@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		152D0F596099D61D3F9D60D4 /* Pods_Totes.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3CA25C478FA8303039CC76E6 /* Pods_Totes.framework */; };
+		85D025CD83D971F29662F657 /* Pods_Totes.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 957B8A80824CBEED48457C25 /* Pods_Totes.framework */; };
 		A643A6A12486ED6500BD3364 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A643A6A02486ED6500BD3364 /* AppDelegate.swift */; };
 		A643A6A32486ED6500BD3364 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A643A6A22486ED6500BD3364 /* SceneDelegate.swift */; };
 		A643A6A82486ED6500BD3364 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A643A6A62486ED6500BD3364 /* Main.storyboard */; };
@@ -31,12 +31,13 @@
 		A697915B24B7B9F3001581AA /* InventoryTrashTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A697915A24B7B9F3001581AA /* InventoryTrashTableViewCell.swift */; };
 		A697915D24B7BD87001581AA /* InventoryTrashListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A697915C24B7BD87001581AA /* InventoryTrashListTableViewController.swift */; };
 		A697915F24B7BDA1001581AA /* SectionTrashListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A697915E24B7BDA1001581AA /* SectionTrashListTableViewController.swift */; };
+		A6A8F44524CEDD4300C173CD /* EmailVerificationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6A8F44424CEDD4300C173CD /* EmailVerificationViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		25C406D9D7E84AE28CDFB068 /* Pods-Totes.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Totes.release.xcconfig"; path = "Target Support Files/Pods-Totes/Pods-Totes.release.xcconfig"; sourceTree = "<group>"; };
-		3CA25C478FA8303039CC76E6 /* Pods_Totes.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Totes.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		6958AE8096BE558EDB8FEFD1 /* Pods-Totes.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Totes.debug.xcconfig"; path = "Target Support Files/Pods-Totes/Pods-Totes.debug.xcconfig"; sourceTree = "<group>"; };
+		3BB2C958DBFE29F016DED8B7 /* Pods-Totes.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Totes.release.xcconfig"; path = "Target Support Files/Pods-Totes/Pods-Totes.release.xcconfig"; sourceTree = "<group>"; };
+		957B8A80824CBEED48457C25 /* Pods_Totes.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Totes.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9F5511CD0119587BE08FFF59 /* Pods-Totes.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Totes.debug.xcconfig"; path = "Target Support Files/Pods-Totes/Pods-Totes.debug.xcconfig"; sourceTree = "<group>"; };
 		A643A69D2486ED6500BD3364 /* Totes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Totes.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A643A6A02486ED6500BD3364 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A643A6A22486ED6500BD3364 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -62,6 +63,7 @@
 		A697915A24B7B9F3001581AA /* InventoryTrashTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InventoryTrashTableViewCell.swift; sourceTree = "<group>"; };
 		A697915C24B7BD87001581AA /* InventoryTrashListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InventoryTrashListTableViewController.swift; sourceTree = "<group>"; };
 		A697915E24B7BDA1001581AA /* SectionTrashListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionTrashListTableViewController.swift; sourceTree = "<group>"; };
+		A6A8F44424CEDD4300C173CD /* EmailVerificationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailVerificationViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,28 +71,20 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				152D0F596099D61D3F9D60D4 /* Pods_Totes.framework in Frameworks */,
+				85D025CD83D971F29662F657 /* Pods_Totes.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		9DC9A250E81B5A538DB39AB5 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				3CA25C478FA8303039CC76E6 /* Pods_Totes.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
 		A643A6942486ED6500BD3364 = {
 			isa = PBXGroup;
 			children = (
 				A643A69F2486ED6500BD3364 /* Totes */,
 				A643A69E2486ED6500BD3364 /* Products */,
 				C859188159BC12E293A5773F /* Pods */,
-				9DC9A250E81B5A538DB39AB5 /* Frameworks */,
+				D85D2F1C01FABB912C883848 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -176,6 +170,7 @@
 				A643A6CF2487254300BD3364 /* SectionTableViewController.swift */,
 				A680DD7C24ABABBF00A8A0A3 /* LoginViewController.swift */,
 				A680DD7E24ABABCF00A8A0A3 /* RegistrationViewController.swift */,
+				A6A8F44424CEDD4300C173CD /* EmailVerificationViewController.swift */,
 				A680DD8024ABADEA00A8A0A3 /* ForgottenPasswordViewController.swift */,
 				A680DD8424ABCF3500A8A0A3 /* TransactionListTableViewController.swift */,
 				A697915C24B7BD87001581AA /* InventoryTrashListTableViewController.swift */,
@@ -208,10 +203,18 @@
 		C859188159BC12E293A5773F /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				6958AE8096BE558EDB8FEFD1 /* Pods-Totes.debug.xcconfig */,
-				25C406D9D7E84AE28CDFB068 /* Pods-Totes.release.xcconfig */,
+				9F5511CD0119587BE08FFF59 /* Pods-Totes.debug.xcconfig */,
+				3BB2C958DBFE29F016DED8B7 /* Pods-Totes.release.xcconfig */,
 			);
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		D85D2F1C01FABB912C883848 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				957B8A80824CBEED48457C25 /* Pods_Totes.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -221,11 +224,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = A643A6B12486ED6900BD3364 /* Build configuration list for PBXNativeTarget "Totes" */;
 			buildPhases = (
-				D78EB597D9278629462AFEF1 /* [CP] Check Pods Manifest.lock */,
+				0057F97C94D8B60626B6CB05 /* [CP] Check Pods Manifest.lock */,
 				A643A6992486ED6500BD3364 /* Sources */,
 				A643A69A2486ED6500BD3364 /* Frameworks */,
 				A643A69B2486ED6500BD3364 /* Resources */,
-				11F41EB14BDFC75BA3437658 /* [CP] Embed Pods Frameworks */,
+				C204020600F6124111EF5708 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -284,24 +287,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		11F41EB14BDFC75BA3437658 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Totes/Pods-Totes-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Totes/Pods-Totes-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Totes/Pods-Totes-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		D78EB597D9278629462AFEF1 /* [CP] Check Pods Manifest.lock */ = {
+		0057F97C94D8B60626B6CB05 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -323,6 +309,23 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		C204020600F6124111EF5708 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Totes/Pods-Totes-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Totes/Pods-Totes-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Totes/Pods-Totes-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -340,6 +343,7 @@
 				A643A6A12486ED6500BD3364 /* AppDelegate.swift in Sources */,
 				A643A6C02487248300BD3364 /* Section.swift in Sources */,
 				A643A6A32486ED6500BD3364 /* SceneDelegate.swift in Sources */,
+				A6A8F44524CEDD4300C173CD /* EmailVerificationViewController.swift in Sources */,
 				A680DD8124ABADEA00A8A0A3 /* ForgottenPasswordViewController.swift in Sources */,
 				A697915424B7B94E001581AA /* InventoryTableViewCell.swift in Sources */,
 				A697915D24B7BD87001581AA /* InventoryTrashListTableViewController.swift in Sources */,
@@ -490,7 +494,7 @@
 		};
 		A643A6B22486ED6900BD3364 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 6958AE8096BE558EDB8FEFD1 /* Pods-Totes.debug.xcconfig */;
+			baseConfigurationReference = 9F5511CD0119587BE08FFF59 /* Pods-Totes.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -509,7 +513,7 @@
 		};
 		A643A6B32486ED6900BD3364 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 25C406D9D7E84AE28CDFB068 /* Pods-Totes.release.xcconfig */;
+			baseConfigurationReference = 3BB2C958DBFE29F016DED8B7 /* Pods-Totes.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;

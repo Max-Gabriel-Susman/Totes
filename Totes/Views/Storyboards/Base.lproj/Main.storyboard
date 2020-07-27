@@ -149,14 +149,14 @@
                             </barButtonItem>
                             <barButtonItem title="Deposit" style="plain" id="0dG-gV-eHu">
                                 <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="BTg-gq-VgQ">
-                                    <rect key="frame" x="234" y="41" width="92" height="30"/>
+                                    <rect key="frame" x="200" y="41" width="92" height="30"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     <state key="normal" title="Deposit"/>
                                 </button>
                             </barButtonItem>
                             <barButtonItem title="Trash" style="plain" id="Yp1-Mr-uW2">
                                 <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Mpd-Da-uEY">
-                                    <rect key="frame" x="50" y="41" width="92" height="30"/>
+                                    <rect key="frame" x="100" y="41" width="92" height="30"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     <state key="normal" title="Trash"/>
                                 </button>
@@ -200,6 +200,7 @@
                                 <state key="normal" title="Register"/>
                                 <connections>
                                     <action selector="registerButton:" destination="Dss-HS-6Ys" eventType="touchUpInside" id="pVH-51-hTn"/>
+                                    <segue destination="EOB-66-QD0" kind="show" id="5cx-fZ-VGT"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bKt-an-S9U">
@@ -270,6 +271,54 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gv1-bv-QlQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3771" y="-340"/>
+        </scene>
+        <!--Email Verification View Controller-->
+        <scene sceneID="88S-Tu-GZW">
+            <objects>
+                <viewController id="EOB-66-QD0" customClass="EmailVerificationViewController" customModule="Totes" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="7OW-So-fL0">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="edh-H3-ETE">
+                                <rect key="frame" x="31" y="650" width="352" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <state key="normal" title="Return to Login"/>
+                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="clock" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="1wS-Qn-wXX">
+                                <rect key="frame" x="87" y="165.5" width="240" height="239"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="1wS-Qn-wXX" secondAttribute="height" multiplier="1:1" id="xnN-Ws-9YL"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="An email confirmation has been sent to &lt;your email&gt;" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1LS-8M-TyX">
+                                <rect key="frame" x="31" y="464.5" width="352" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="edh-H3-ETE" firstAttribute="height" secondItem="Gc6-SA-E51" secondAttribute="height" multiplier="0.0387597" id="3JS-7c-DKf"/>
+                            <constraint firstItem="1wS-Qn-wXX" firstAttribute="centerY" secondItem="Gc6-SA-E51" secondAttribute="centerY" multiplier="0.6" id="4zf-5p-fNW"/>
+                            <constraint firstItem="1LS-8M-TyX" firstAttribute="height" secondItem="Gc6-SA-E51" secondAttribute="height" multiplier="0.0271318" id="DS2-HT-Y76"/>
+                            <constraint firstItem="edh-H3-ETE" firstAttribute="centerX" secondItem="Gc6-SA-E51" secondAttribute="centerX" id="Fu0-xj-TiB"/>
+                            <constraint firstItem="edh-H3-ETE" firstAttribute="width" secondItem="Gc6-SA-E51" secondAttribute="width" multiplier="0.85" id="JhG-Uv-C7H"/>
+                            <constraint firstItem="1wS-Qn-wXX" firstAttribute="centerX" secondItem="Gc6-SA-E51" secondAttribute="centerX" id="S3k-EC-JbV"/>
+                            <constraint firstItem="1wS-Qn-wXX" firstAttribute="width" secondItem="Gc6-SA-E51" secondAttribute="width" multiplier="0.57971" id="UHq-zm-lGn"/>
+                            <constraint firstItem="1LS-8M-TyX" firstAttribute="centerX" secondItem="Gc6-SA-E51" secondAttribute="centerX" id="XZ3-1p-sWa"/>
+                            <constraint firstItem="1LS-8M-TyX" firstAttribute="width" secondItem="Gc6-SA-E51" secondAttribute="width" multiplier="0.85" id="alW-Ju-3hI"/>
+                            <constraint firstItem="edh-H3-ETE" firstAttribute="centerY" secondItem="Gc6-SA-E51" secondAttribute="centerY" multiplier="1.4" id="oTR-ZE-A1a"/>
+                            <constraint firstItem="1LS-8M-TyX" firstAttribute="centerY" secondItem="Gc6-SA-E51" secondAttribute="centerY" id="wrd-dT-0Gi"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Gc6-SA-E51"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="Yeg-IC-1Am"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="VV0-g0-YkU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3758" y="383"/>
         </scene>
         <!--Transactions-->
         <scene sceneID="2Xz-Sc-qUV">
@@ -450,7 +499,7 @@
                     <navigationItem key="navigationItem" prompt="Section" id="kvW-Rz-08B">
                         <nil key="title"/>
                         <button key="titleView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Fvq-dh-OEQ">
-                            <rect key="frame" x="102" y="41" width="94" height="30"/>
+                            <rect key="frame" x="160" y="41" width="94" height="30"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <state key="normal" title="Section Trash"/>
                         </button>
@@ -473,6 +522,7 @@
         <segue reference="4Zg-bQ-z1R"/>
     </inferredMetricsTieBreakers>
     <resources>
+        <image name="clock" catalog="system" width="128" height="121"/>
         <image name="paperplane" catalog="system" width="128" height="121"/>
         <image name="person.badge.plus" catalog="system" width="128" height="116"/>
         <image name="questionmark" catalog="system" width="96" height="128"/>

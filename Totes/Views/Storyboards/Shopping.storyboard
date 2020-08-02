@@ -1,7 +1,119 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13142" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="jMp-Rd-j4b">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12042"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
-    <scenes/>
+    <scenes>
+        <!--Listing List Table View Controller-->
+        <scene sceneID="JQ8-vL-bWc">
+            <objects>
+                <tableViewController id="jMp-Rd-j4b" customClass="ListingListTableViewController" customModule="Totes" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="Y99-8o-OFg">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <searchBar key="tableHeaderView" contentMode="redraw" id="F86-Nx-Tf1">
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            <textInputTraits key="textInputTraits"/>
+                        </searchBar>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="showListing" id="X3A-8s-8Db">
+                                <rect key="frame" x="0.0" y="72" width="414" height="43.5"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="X3A-8s-8Db" id="mnH-lB-hdb">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                                <accessibility key="accessibilityConfiguration" identifier="showListing"/>
+                                <connections>
+                                    <segue destination="Ciz-FV-mPy" kind="show" id="bWV-RX-dy0"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="jMp-Rd-j4b" id="Hck-Hg-Lfs"/>
+                            <outlet property="delegate" destination="jMp-Rd-j4b" id="RZy-oC-Ywf"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="yWM-xB-GFc">
+                        <barButtonItem key="rightBarButtonItem" style="plain" id="w9d-dy-jhJ">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="ESb-Ma-vYR">
+                                <rect key="frame" x="302" y="7" width="92" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Go To Cart"/>
+                            </button>
+                            <connections>
+                                <segue destination="Vsv-NO-wiq" kind="show" id="F9b-AY-nJP"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ckG-Y8-zpj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="6248" y="1837"/>
+        </scene>
+        <!--Cart View Controller-->
+        <scene sceneID="8gY-fK-E96">
+            <objects>
+                <viewController id="Vsv-NO-wiq" customClass="CartViewController" customModule="Totes" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Rge-VX-ZZP">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d2m-wx-Krj">
+                                <rect key="frame" x="184" y="388.5" width="46" height="31"/>
+                                <state key="normal" title="Proceed to Checkout"/>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="d2m-wx-Krj" firstAttribute="width" secondItem="rfC-nv-NVu" secondAttribute="width" multiplier="0.111111" id="3rf-W1-m2D"/>
+                            <constraint firstItem="d2m-wx-Krj" firstAttribute="height" secondItem="rfC-nv-NVu" secondAttribute="height" multiplier="0.0387597" id="Tn5-Aa-Nms"/>
+                            <constraint firstItem="d2m-wx-Krj" firstAttribute="centerX" secondItem="rfC-nv-NVu" secondAttribute="centerX" id="Zfw-rP-KF4"/>
+                            <constraint firstItem="d2m-wx-Krj" firstAttribute="centerY" secondItem="rfC-nv-NVu" secondAttribute="centerY" id="zrI-HZ-IOJ"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="rfC-nv-NVu"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="Ct7-6I-py7"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="k1T-Ji-4Z2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="7306" y="1837"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="EYq-aI-Kv1">
+            <objects>
+                <viewController id="tQy-dN-vWc" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="OmY-2T-gan">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="tjH-ar-LgR"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Mjp-D3-E2v" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="8454" y="1847"/>
+        </scene>
+        <!--Listing Detail View Controller-->
+        <scene sceneID="TdE-JX-lgd">
+            <objects>
+                <viewController id="Ciz-FV-mPy" customClass="ListingDetailViewController" customModule="Totes" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="aaf-z6-E9C">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="AA1-nl-fCz"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="Gq2-v3-J5Y"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7zj-fT-rrF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="6251" y="2602"/>
+        </scene>
+    </scenes>
 </document>

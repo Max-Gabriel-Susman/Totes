@@ -24,6 +24,7 @@ class LoginViewController: UIViewController {
     
     // MARK: - Actions
     @IBAction func loginButton(_ sender: Any) {
+        
     }
     @IBAction func registrationButton(_ sender: Any) {
     }

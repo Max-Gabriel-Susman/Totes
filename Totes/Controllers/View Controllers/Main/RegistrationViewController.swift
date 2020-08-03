@@ -25,6 +25,7 @@ class RegistrationViewController: UIViewController {
     
     
     // MARK: - Properties
+    let mockDataru = ["Prometheus" : ["password" : "Moses1998!", "email" : "gabe.susman@gmail.com"], "NobodyHome" : ["password" : "Susman1998!", "email" : "gaebster7@gmail.com"]]
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -42,53 +43,98 @@ class RegistrationViewController: UIViewController {
         let password = passwordEntryTextField.text ?? ""
         let passwordConfirmation = passwordConfirmationTextField.text ?? ""
         
-        if email.count <= 0 {
-            
-            emailEntryPromptLabel.text = "The email address was invalid"
-            failedRegistration()
-            
-        }
-                
-        if password != passwordConfirmation {
-            
-            passwordConfirmationPromptLabel.text = "The two password fields didn't match"
-            failedRegistration()
-        }
-        
-        if password.count < 8 {
-            
-            passwordEntryPromptLabel.text = "Your password is too short"
-            failedRegistration()
-            print("I work")
-            
-        }
-        
-        if username.count < 8 {
-            
-            usernameEntryPromptLabel.text = "Your username is too short"
-            failedRegistration()
-            print("username work")
-            
-        }
-            
+        emailEntryPromptLabel.text = ""
         usernameEntryPromptLabel.text = ""
-        print(email)
-        print(username)
-        print(password)
-        let usernames: [String] = ["Prometheus", "Nobody"]
+        passwordConfirmationPromptLabel.text = ""
+        passwordEntryPromptLabel.text = ""
+        
+        
+        
+        if email.count > 0 && password == passwordConfirmation && password.count >= 8 && username.count >= 8 {
+            
+            // The credentials passed the client side logic and are passed to serverside
+            
+            // Ensures username isn't already taken
+            let usernames = mockDataru.keys
+            
+            for string in usernames {
+                if string == username {
+                    
+                    usernameEntryPromptLabel.text = "Username is already taken"
+                    clearTextFields()
+                    
+                }
+            }
+            
+            // Ensures password is correct
+            // we need to move this logic to loginVC
+//            let actualPassword = mockDataru[username]?["password"] ?? ""
+//            
+//            if password == actualPassword  {
+//                
+//                // we need to navigate to the confirmation page
+//                
+//            } else {
+//                
+//                passwordEntryPromptLabel.text = "Password is incorrect"
+//                clearTextFields()
+//                
+//            }
+            
+            
+        } else {
+            
+            // The credentials failed the client side logic
+            if email.count <= 0 {
+                
+                emailEntryPromptLabel.text = "The email address was invalid"
+                clearTextFields()
+                
+            }
+                    
+            if password != passwordConfirmation {
+                
+                passwordConfirmationPromptLabel.text = "The two password fields didn't match"
+                clearTextFields()
+            }
+            
+            if password.count < 8 {
+                
+                passwordEntryPromptLabel.text = "Your password is too short"
+                clearTextFields()
+                print("I work")
+                
+            }
+            
+            if username.count < 8 {
+                
+                usernameEntryPromptLabel.text = "Your username is too short"
+                clearTextFields()
+                print("username work")
+                
+            }
+        }
+        
+        
+        
             
         
     }
     // fine as i
-    func failedRegistration() {
+    
+    
+    @IBAction func forgottenPasswordButton(_ sender: Any) {
+    }
+    
+    // MARK: - Helper Methods
+    func clearTextFields() {
         emailAddressEntryTextField.text = ""
         usernameEntryTextField.text = ""
         passwordEntryTextField.text = ""
         passwordConfirmationTextField.text = ""
     }
     
-    @IBAction func forgottenPasswordButton(_ sender: Any) {
-    }
+    
     
     // We may implement these later but lets leave it out for simplicity's sake
 //    func validEmailAddress() -> Bool {

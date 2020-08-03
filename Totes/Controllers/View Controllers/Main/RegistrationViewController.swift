@@ -9,12 +9,19 @@
 import UIKit
 import Firebase
 
+
 class RegistrationViewController: UIViewController {
+    
     // MARK: - Outlets
-    // pretty sure this guys wrong, going to fix later
+    @IBOutlet weak var emailEntryPromptLabel: UILabel!
+    @IBOutlet weak var usernameEntryPromptLabel: UILabel!
+    @IBOutlet weak var passwordEntryPromptLabel: UILabel!
+    @IBOutlet weak var passwordConfirmationPromptLabel: UILabel!
+    
     @IBOutlet weak var emailAddressEntryTextField: UITextField!
     @IBOutlet weak var usernameEntryTextField: UITextField!
     @IBOutlet weak var passwordEntryTextField: UITextField!
+    @IBOutlet weak var passwordConfirmationTextField: UITextField!
     
     
     // MARK: - Properties
@@ -28,19 +35,82 @@ class RegistrationViewController: UIViewController {
     // MARK: - Actions
     // I need to add the logic to create a user in the firestore db using this action
     @IBAction func registerButton(_ sender: Any) {
-        // casts email username and password text field optionals as strings and ensures they meet reqs
-        // what is best practice for determining a valid email?
-        // we also need to query the db and ensure accounts with this username and or email don't already exist on record
-        guard let email = emailAddressEntryTextField.text as? String, email != "", let username = usernameEntryTextField.text as? String, username.count >= 8, let password = passwordEntryTextField.text as? String, password.count >= 8 else { return }
         
+        // Unwraps the TextFields content into local Strings
+        let email = emailAddressEntryTextField.text ?? ""
+        let username = usernameEntryTextField.text ?? ""
+        let password = passwordEntryTextField.text ?? ""
+        let passwordConfirmation = passwordConfirmationTextField.text ?? ""
+        
+        if email.count <= 0 {
+            
+            emailEntryPromptLabel.text = "The email address was invalid"
+            failedRegistration()
+            
+        }
+                
+        if password != passwordConfirmation {
+            
+            passwordConfirmationPromptLabel.text = "The two password fields didn't match"
+            failedRegistration()
+        }
+        
+        if password.count < 8 {
+            
+            passwordEntryPromptLabel.text = "Your password is too short"
+            failedRegistration()
+            print("I work")
+            
+        }
+        
+        if username.count < 8 {
+            
+            usernameEntryPromptLabel.text = "Your username is too short"
+            failedRegistration()
+            print("username work")
+            
+        }
+            
+        usernameEntryPromptLabel.text = ""
         print(email)
         print(username)
         print(password)
-        // we need visual feedback for when the user enters the wrong email
+        let usernames: [String] = ["Prometheus", "Nobody"]
+            
+        
     }
     // fine as i
+    func failedRegistration() {
+        emailAddressEntryTextField.text = ""
+        usernameEntryTextField.text = ""
+        passwordEntryTextField.text = ""
+        passwordConfirmationTextField.text = ""
+    }
+    
     @IBAction func forgottenPasswordButton(_ sender: Any) {
     }
+    
+    // We may implement these later but lets leave it out for simplicity's sake
+//    func validEmailAddress() -> Bool {
+//
+//        for char in email {
+//            if char == "@" {
+//                return true
+//            }
+//        }
+//
+//        return false
+//    }
+//    func invalidCharacters(string: String) -> Bool {
+//
+//        for char in string {
+//            if char == " " {
+//                return true
+//            }
+//        }
+//
+//        return false
+//    }
     
 
     // we need to do a conditional segue to the email verification view controller

@@ -20,6 +20,8 @@ class LoginViewController: UIViewController {
     //@IBOutlet weak var enterUsernameTextField: UITextField!
     
     // MARK: - Properties
+    // we need isAuthenticated to revert to false post segue
+    var isAuthenticated = false
     let mockDataru = ["Prometheus" : ["password" : "Moses1998!", "email" : "gabe.susman@gmail.com"], "NobodyHome" : ["password" : "Susman1998!", "email" : "gaebster7@gmail.com"]]
 
     override func viewDidLoad() {
@@ -31,15 +33,15 @@ class LoginViewController: UIViewController {
     // MARK: - Actions
     @IBAction func loginButton(_ sender: Any) {
         
+        // Variable used in authentication process
         var isUser = false
-        var isAuthenticated = false
         var actualPassword = ""
         
+        // Captures user entry
         let usernameEntry = enterUsernameTextField.text ?? ""
         let passwordEntry = enterPasswordTextField.text ?? ""
         
-        let user = User(username: usernameEntry, password: passwordEntry)
-        
+        // Validates username entry
         for key in mockDataru.keys {
             if key == usernameEntry {
                 isUser = true
@@ -48,8 +50,6 @@ class LoginViewController: UIViewController {
             }
         }
         
-        print(actualPassword)
-        print(passwordEntry)
         
         if isUser == true {
             
@@ -83,7 +83,7 @@ class LoginViewController: UIViewController {
     @IBAction func forgottenPasswordButton(_ sender: Any) {
     }
     
-    // MARK: - Methods
+    // MARK: - Helper Methods
     func clearTextFields() {
         
         enterUsernameTextField.text = ""
@@ -97,11 +97,20 @@ class LoginViewController: UIViewController {
         passwordEntryPromptLabel.text = ""
         
     }
+    
     // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
+        
+        // allows navigation in the event of successful authentication
+        if identifier == "loginToTabBar" && isAuthenticated == true {
+            
+            return true
+            
+        } else {
+            
+            return false
+            
+        }
+        
     }
 } // END OF CLASS

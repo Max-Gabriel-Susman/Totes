@@ -21,6 +21,7 @@
                                 <state key="normal" title="Login"/>
                                 <connections>
                                     <action selector="loginButton:" destination="qwK-A5-tDZ" eventType="touchUpInside" id="ggC-QO-yx4"/>
+                                    <segue destination="uE5-Fg-G7W" kind="show" identifier="loginToTabBar" id="hy1-DG-d9B"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ipo-jZ-kIY">
@@ -399,7 +400,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="qoL-8W-AJS"/>
+        <segue reference="WD4-AM-vgZ"/>
         <segue reference="9xK-px-7Tj"/>
     </inferredMetricsTieBreakers>
     <resources>

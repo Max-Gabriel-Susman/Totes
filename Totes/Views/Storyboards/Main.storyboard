@@ -21,7 +21,6 @@
                                 <state key="normal" title="Login"/>
                                 <connections>
                                     <action selector="loginButton:" destination="qwK-A5-tDZ" eventType="touchUpInside" id="ggC-QO-yx4"/>
-                                    <segue destination="uE5-Fg-G7W" kind="show" id="YOI-fe-h83"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ipo-jZ-kIY">
@@ -33,13 +32,13 @@
                                     <segue destination="Iug-o3-UeT" kind="show" identifier="loginToRegistration" id="9xK-px-7Tj"/>
                                 </connections>
                             </button>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter password here:" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Pp3-xE-kTZ">
-                                <rect key="frame" x="41.5" y="637" width="331" height="32.5"/>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter username here:" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Pp3-xE-kTZ">
+                                <rect key="frame" x="41.5" y="553.5" width="331" height="33"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter username here:" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bbK-rC-ySE">
-                                <rect key="frame" x="41.5" y="553.5" width="331" height="33"/>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter password here:" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bbK-rC-ySE">
+                                <rect key="frame" x="41.5" y="637" width="331" height="32.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
@@ -57,26 +56,26 @@
                                     <segue destination="o7v-7g-7kj" kind="show" identifier="loginToForgottenPassword" id="qoL-8W-AJS"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="u8c-Ml-63A">
-                                <rect key="frame" x="41" y="524" width="42" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="u8c-Ml-63A">
+                                <rect key="frame" x="41.5" y="524" width="331" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
+                                <color key="textColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ran-M0-rly">
-                                <rect key="frame" x="41" y="608" width="42" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ran-M0-rly">
+                                <rect key="frame" x="41.5" y="607" width="331" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
+                                <color key="textColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="u8c-Ml-63A" firstAttribute="centerY" secondItem="6PI-6B-js8" secondAttribute="centerY" id="06m-uA-g0a"/>
+                            <constraint firstItem="u8c-Ml-63A" firstAttribute="centerY" secondItem="6PI-6B-js8" secondAttribute="centerY" multiplier="1.125" id="06m-uA-g0a"/>
                             <constraint firstItem="ipo-jZ-kIY" firstAttribute="width" secondItem="6PI-6B-js8" secondAttribute="width" multiplier="0.8" id="2dZ-b4-7PT"/>
-                            <constraint firstItem="bbK-rC-ySE" firstAttribute="centerY" secondItem="6PI-6B-js8" secondAttribute="centerY" multiplier="1.2" id="33p-LE-VCa"/>
+                            <constraint firstItem="bbK-rC-ySE" firstAttribute="centerY" secondItem="6PI-6B-js8" secondAttribute="centerY" multiplier="1.375" id="33p-LE-VCa"/>
                             <constraint firstItem="bbK-rC-ySE" firstAttribute="centerX" secondItem="6PI-6B-js8" secondAttribute="centerX" id="4n3-qz-SIP"/>
-                            <constraint firstItem="Pp3-xE-kTZ" firstAttribute="centerY" secondItem="6PI-6B-js8" secondAttribute="centerY" multiplier="1.375" id="4ta-G1-jt4"/>
+                            <constraint firstItem="Pp3-xE-kTZ" firstAttribute="centerY" secondItem="6PI-6B-js8" secondAttribute="centerY" multiplier="1.2" id="4ta-G1-jt4"/>
                             <constraint firstItem="RXv-ry-Wup" firstAttribute="width" secondItem="6PI-6B-js8" secondAttribute="width" multiplier="0.8" id="6Wx-aK-oPG"/>
                             <constraint firstItem="ipo-jZ-kIY" firstAttribute="height" secondItem="6PI-6B-js8" secondAttribute="height" multiplier="0.0387597" id="9fu-As-8As"/>
                             <constraint firstItem="cVL-U0-N6v" firstAttribute="height" secondItem="6PI-6B-js8" secondAttribute="height" multiplier="0.0387597" id="BqL-h7-zPl"/>
@@ -85,7 +84,7 @@
                             <constraint firstItem="Pp3-xE-kTZ" firstAttribute="width" secondItem="6PI-6B-js8" secondAttribute="width" multiplier="0.8" id="RV1-pr-vir"/>
                             <constraint firstItem="Ran-M0-rly" firstAttribute="centerX" secondItem="6PI-6B-js8" secondAttribute="centerX" id="Rfc-8h-w25"/>
                             <constraint firstItem="RXv-ry-Wup" firstAttribute="centerX" secondItem="6PI-6B-js8" secondAttribute="centerX" id="TrS-8x-TR7"/>
-                            <constraint firstItem="u8c-Ml-63A" firstAttribute="width" secondItem="6PI-6B-js8" secondAttribute="width" multiplier="0.101449" id="cWv-8q-gxx"/>
+                            <constraint firstItem="u8c-Ml-63A" firstAttribute="width" secondItem="6PI-6B-js8" secondAttribute="width" multiplier="0.8" id="cWv-8q-gxx"/>
                             <constraint firstItem="R9i-IP-8tT" firstAttribute="centerY" secondItem="6PI-6B-js8" secondAttribute="centerY" multiplier="1.75" id="cmT-h4-Dje"/>
                             <constraint firstItem="cVL-U0-N6v" firstAttribute="width" secondItem="6PI-6B-js8" secondAttribute="width" multiplier="0.8" id="dfG-eD-5Hb"/>
                             <constraint firstItem="bbK-rC-ySE" firstAttribute="height" secondItem="6PI-6B-js8" secondAttribute="height" multiplier="0.0420792" id="e0J-SR-Y7F"/>
@@ -94,9 +93,9 @@
                             <constraint firstItem="Pp3-xE-kTZ" firstAttribute="height" secondItem="6PI-6B-js8" secondAttribute="height" multiplier="0.0420792" id="g5P-3E-t0y"/>
                             <constraint firstItem="u8c-Ml-63A" firstAttribute="centerX" secondItem="6PI-6B-js8" secondAttribute="centerX" id="l9D-iI-nJm"/>
                             <constraint firstItem="bbK-rC-ySE" firstAttribute="width" secondItem="6PI-6B-js8" secondAttribute="width" multiplier="0.8" id="mhN-YW-0KJ"/>
-                            <constraint firstItem="Ran-M0-rly" firstAttribute="centerY" secondItem="6PI-6B-js8" secondAttribute="centerY" id="nkh-RQ-nat"/>
+                            <constraint firstItem="Ran-M0-rly" firstAttribute="centerY" secondItem="6PI-6B-js8" secondAttribute="centerY" multiplier="1.3" id="nkh-RQ-nat"/>
                             <constraint firstItem="R9i-IP-8tT" firstAttribute="centerX" secondItem="6PI-6B-js8" secondAttribute="centerX" id="oA6-cC-kGv"/>
-                            <constraint firstItem="Ran-M0-rly" firstAttribute="width" secondItem="6PI-6B-js8" secondAttribute="width" multiplier="0.101449" id="srF-XF-2EB"/>
+                            <constraint firstItem="Ran-M0-rly" firstAttribute="width" secondItem="6PI-6B-js8" secondAttribute="width" multiplier="0.8" id="srF-XF-2EB"/>
                             <constraint firstItem="Pp3-xE-kTZ" firstAttribute="centerX" secondItem="6PI-6B-js8" secondAttribute="centerX" id="teg-0q-qRA"/>
                             <constraint firstItem="R9i-IP-8tT" firstAttribute="width" secondItem="6PI-6B-js8" secondAttribute="width" multiplier="0.8" id="upN-GC-3A0"/>
                             <constraint firstItem="cVL-U0-N6v" firstAttribute="centerY" secondItem="6PI-6B-js8" secondAttribute="centerY" multiplier="1.55" id="wc3-n8-SbS"/>
@@ -109,7 +108,9 @@
                     <navigationItem key="navigationItem" title="Login" id="S9r-Ms-lyP"/>
                     <connections>
                         <outlet property="enterPasswordTextField" destination="bbK-rC-ySE" id="ID0-rl-lJK"/>
-                        <outlet property="enterUsernameTextField" destination="bbK-rC-ySE" id="BlI-mn-fOd"/>
+                        <outlet property="enterUsernameTextField" destination="Pp3-xE-kTZ" id="wlT-7B-Xqg"/>
+                        <outlet property="passwordEntryPromptLabel" destination="Ran-M0-rly" id="A6N-i3-UQY"/>
+                        <outlet property="usernameEntryPromptLabel" destination="u8c-Ml-63A" id="55O-XO-D5L"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sKL-vd-72D" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -398,7 +399,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="WD4-AM-vgZ"/>
+        <segue reference="qoL-8W-AJS"/>
         <segue reference="9xK-px-7Tj"/>
     </inferredMetricsTieBreakers>
     <resources>

@@ -11,6 +11,8 @@ import Foundation
 
 struct User {
     
-    let userID: String
+    let username: String
+    let password: String
+    // let email: String
   
 } // END OF STRUCT

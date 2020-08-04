@@ -25,6 +25,7 @@ class RegistrationViewController: UIViewController {
     
     
     // MARK: - Properties
+    var isValidRegistry = false
     let mockDataru = ["Prometheus" : ["password" : "Moses1998!", "email" : "gabe.susman@gmail.com"], "NobodyHome" : ["password" : "Susman1998!", "email" : "gaebster7@gmail.com"]]
 
     override func viewDidLoad() {
@@ -49,55 +50,43 @@ class RegistrationViewController: UIViewController {
         passwordEntryPromptLabel.text = ""
         
         
-        
+        // Performs client side checks on registered credentials
         if email.count > 0 && password == passwordConfirmation && password.count >= 8 && username.count >= 8 {
             
-            // The credentials passed the client side logic and are passed to serverside
-            
-            // Ensures username isn't already taken
+            // Pulls username collection from the server
             let usernames = mockDataru.keys
             
+            // Checks for duplicate username value server side & manages UIElement content
             for string in usernames {
                 if string == username {
                     
                     usernameEntryPromptLabel.text = "Username is already taken"
                     clearTextFields()
+                    break
                     
                 }
             }
             
-            // Ensures password is correct
-            // we need to move this logic to loginVC
-//            let actualPassword = mockDataru[username]?["password"] ?? ""
-//            
-//            if password == actualPassword  {
-//                
-//                // we need to navigate to the confirmation page
-//                
-//            } else {
-//                
-//                passwordEntryPromptLabel.text = "Password is incorrect"
-//                clearTextFields()
-//                
-//            }
-            
-            
+            isValidRegistry = true
+        // Invalid Credential registry branch
         } else {
             
-            // The credentials failed the client side logic
+            // Invalid email address branch
             if email.count <= 0 {
                 
                 emailEntryPromptLabel.text = "The email address was invalid"
                 clearTextFields()
                 
             }
-                    
+            
+            // Failed password confirmation branch
             if password != passwordConfirmation {
                 
                 passwordConfirmationPromptLabel.text = "The two password fields didn't match"
                 clearTextFields()
             }
             
+            // Invalid password branch
             if password.count < 8 {
                 
                 passwordEntryPromptLabel.text = "Your password is too short"
@@ -106,6 +95,7 @@ class RegistrationViewController: UIViewController {
                 
             }
             
+            // Invalid username branch
             if username.count < 8 {
                 
                 usernameEntryPromptLabel.text = "Your username is too short"
@@ -114,14 +104,7 @@ class RegistrationViewController: UIViewController {
                 
             }
         }
-        
-        
-        
-            
-        
     }
-    // fine as i
-    
     
     @IBAction func forgottenPasswordButton(_ sender: Any) {
     }
@@ -134,42 +117,19 @@ class RegistrationViewController: UIViewController {
         passwordConfirmationTextField.text = ""
     }
     
-    
-    
-    // We may implement these later but lets leave it out for simplicity's sake
-//    func validEmailAddress() -> Bool {
-//
-//        for char in email {
-//            if char == "@" {
-//                return true
-//            }
-//        }
-//
-//        return false
-//    }
-//    func invalidCharacters(string: String) -> Bool {
-//
-//        for char in string {
-//            if char == " " {
-//                return true
-//            }
-//        }
-//
-//        return false
-//    }
-    
-
-    // we need to do a conditional segue to the email verification view controller
-
     // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    // "Framework not found GoogleAppMeasurement"
-//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-//        if let vc = segue.destination as? EmailVerificationViewController
-//        {
-//
-//        }
-//    }
-
+    override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
+        
+        // allows navigation in the event of successful authentication
+        if identifier == "regisrationToEmailVerification" && isValidRegistry == true {
+            
+            return true
+            
+        } else {
+            
+            return false
+            
+        }
+        
+    }
 }

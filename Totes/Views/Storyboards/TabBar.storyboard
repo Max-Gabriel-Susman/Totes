@@ -52,10 +52,10 @@
             </objects>
             <point key="canvasLocation" x="5428" y="-1227"/>
         </scene>
-        <!--Contacts-->
+        <!--Collaboration-->
         <scene sceneID="xwy-FI-D7W">
             <objects>
-                <viewControllerPlaceholder storyboardName="Contacts" id="KoV-oF-rzi" sceneMemberID="viewController">
+                <viewControllerPlaceholder storyboardName="Collaboration" id="KoV-oF-rzi" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Collaborate" id="fD7-nG-Sq4"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BVF-Bu-er1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

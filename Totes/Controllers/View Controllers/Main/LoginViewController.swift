@@ -20,13 +20,37 @@ class LoginViewController: UIViewController {
     // MARK: - Properties
     // we need isAuthenticated to revert to false post segue
     var isAuthenticated = false
-    // we need to move away from the mockData and start working with data from the server
+    var docRef: DocumentReference!
+    var usersListener: ListenerRegistration!
+    var user: String?
     let mockDataru = ["Prometheus" : ["password" : "Moses1998!", "email" : "gabe.susman@gmail.com"], "NobodyHome" : ["password" : "Susman1998!", "email" : "gaebster7@gmail.com"]]
+    var users: [String : Any] = [:]
 
     // MARK: - Lifecycle Methods
     override func viewDidLoad() {
         super.viewDidLoad()
+        docRef = Firestore.firestore().document("users/userbase")
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        usersListener = docRef.addSnapshotListener { (docSnapshot, error) in
+            guard let docSnapshot = docSnapshot, docSnapshot.exists else { return }
+            let userbase = docSnapshot.data()
+            // we need to pull the username here
+            let users = userbase?["users"] as? [String : Any] ?? [:]
+            
+            // it doesn't look like 
+            print(users)
+            print(self.mockDataru)
+        }
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        usersListener.remove()
+    }
+
     
     // MARK: - Actions
     @IBAction func loginButton(_ sender: Any) {
@@ -52,12 +76,14 @@ class LoginViewController: UIViewController {
         // Validates password entry
         if isUser == true {
             
+           
             // Succesful authentication branch & manages UIelement content
             if actualPassword == passwordEntry {
                 
                 isAuthenticated = true
                 clearLabels()
-                //clearTextFields()
+                user = usernameEntry
+                print("this is user post authentication : \(user)")
                 print("Logged in!")
             
             // Failed password validation branch & manages UIelement content
@@ -112,20 +138,31 @@ class LoginViewController: UIViewController {
             
             return true
         
+        // allows unconditional navigation to the forgottenPassword controller
+        } else if identifier == "loginToForgottenPassword" {
+            
+            return true
+        
         // navigation won't be performed
         } else {
             
             return false
             
         }
-        
     }
     
-    // MARK: - Navigation
+//    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+//        // section is the object we're passing to SectionTableViewController to dictate which sections data it will be populated with
+//        self.username = sectionNames[indexPath.row]
+//
+//    }
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
+    
+    // MARK: - Navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+        if let vc = segue.destination as? InventoryTableViewController
+        {
+            vc.user = "Ford Prefect"
+        }
     }
 } // END OF CLASS

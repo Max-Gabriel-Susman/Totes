@@ -166,7 +166,7 @@
                                 <state key="normal" title="Register"/>
                                 <connections>
                                     <action selector="registerButton:" destination="Iug-o3-UeT" eventType="touchUpInside" id="5xk-RF-4Nq"/>
-                                    <segue destination="3OG-jH-A4E" kind="show" identifier="regisrationToEmailVerification" id="7Va-U1-1ef"/>
+                                    <segue destination="vEm-tQ-QGj" kind="show" identifier="registrationToEmailVerification" id="KmX-mh-ImF"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="48n-1e-RdF">
@@ -286,53 +286,35 @@
             </objects>
             <point key="canvasLocation" x="4673.913043478261" y="-1015.1785714285713"/>
         </scene>
-        <!--Email Verification View Controller-->
-        <scene sceneID="EJ8-pE-rwo">
+        <!--View Controller-->
+        <scene sceneID="kfS-RK-Aw5">
             <objects>
-                <viewController id="3OG-jH-A4E" customClass="EmailVerificationViewController" customModule="Totes" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="xZf-9z-9KC">
+                <viewController id="vEm-tQ-QGj" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="lIL-VK-Rdp">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dR4-Hp-bQr">
-                                <rect key="frame" x="31" y="650" width="352" height="30"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
-                                <state key="normal" title="Return to Login"/>
-                            </button>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="clock" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="6dP-xM-k0m">
-                                <rect key="frame" x="87" y="165.5" width="240" height="239"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" secondItem="6dP-xM-k0m" secondAttribute="height" multiplier="1:1" id="wd5-86-CHU"/>
-                                </constraints>
-                            </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="An email confirmation has been sent to &lt;your email&gt;" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="swn-sB-AQX">
-                                <rect key="frame" x="31" y="464.5" width="352" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="you done got registered" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FhK-5h-w0I">
+                                <rect key="frame" x="186" y="464.5" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="dR4-Hp-bQr" firstAttribute="centerX" secondItem="tGw-hl-YWO" secondAttribute="centerX" id="12h-qP-d1t"/>
-                            <constraint firstItem="dR4-Hp-bQr" firstAttribute="height" secondItem="tGw-hl-YWO" secondAttribute="height" multiplier="0.0387597" id="5Sw-5Z-okp"/>
-                            <constraint firstItem="6dP-xM-k0m" firstAttribute="width" secondItem="tGw-hl-YWO" secondAttribute="width" multiplier="0.57971" id="6JO-cO-AqE"/>
-                            <constraint firstItem="6dP-xM-k0m" firstAttribute="centerX" secondItem="tGw-hl-YWO" secondAttribute="centerX" id="PCX-ER-YNU"/>
-                            <constraint firstItem="swn-sB-AQX" firstAttribute="width" secondItem="tGw-hl-YWO" secondAttribute="width" multiplier="0.85" id="alX-6c-NLs"/>
-                            <constraint firstItem="swn-sB-AQX" firstAttribute="centerY" secondItem="tGw-hl-YWO" secondAttribute="centerY" id="fOG-lC-B0i"/>
-                            <constraint firstItem="dR4-Hp-bQr" firstAttribute="width" secondItem="tGw-hl-YWO" secondAttribute="width" multiplier="0.85" id="lHC-6g-7WH"/>
-                            <constraint firstItem="6dP-xM-k0m" firstAttribute="centerY" secondItem="tGw-hl-YWO" secondAttribute="centerY" multiplier="0.6" id="lUp-Ig-sNN"/>
-                            <constraint firstItem="swn-sB-AQX" firstAttribute="centerX" secondItem="tGw-hl-YWO" secondAttribute="centerX" id="mfL-2G-Hvv"/>
-                            <constraint firstItem="swn-sB-AQX" firstAttribute="height" secondItem="tGw-hl-YWO" secondAttribute="height" multiplier="0.0271318" id="rtQ-o7-h8e"/>
-                            <constraint firstItem="dR4-Hp-bQr" firstAttribute="centerY" secondItem="tGw-hl-YWO" secondAttribute="centerY" multiplier="1.4" id="zYc-DU-Zsr"/>
+                            <constraint firstItem="FhK-5h-w0I" firstAttribute="centerY" secondItem="8Nb-cL-d1d" secondAttribute="centerY" id="9Zm-ID-PI5"/>
+                            <constraint firstItem="FhK-5h-w0I" firstAttribute="centerX" secondItem="8Nb-cL-d1d" secondAttribute="centerX" id="kHN-1d-ugh"/>
+                            <constraint firstItem="FhK-5h-w0I" firstAttribute="width" secondItem="8Nb-cL-d1d" secondAttribute="width" multiplier="0.101449" id="qRu-dr-p54"/>
+                            <constraint firstItem="FhK-5h-w0I" firstAttribute="height" secondItem="8Nb-cL-d1d" secondAttribute="height" multiplier="0.0271318" id="x5a-eH-4lj"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="tGw-hl-YWO"/>
+                        <viewLayoutGuide key="safeArea" id="8Nb-cL-d1d"/>
                     </view>
-                    <navigationItem key="navigationItem" id="Btx-Gj-ktg"/>
+                    <navigationItem key="navigationItem" id="4lx-H1-6eh"/>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Mfb-tl-6IZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cNh-N4-inI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5555" y="-1015"/>
+            <point key="canvasLocation" x="5462" y="-1015"/>
         </scene>
         <!--Forgotten Password View Controller-->
         <scene sceneID="S6m-Xh-3aB">
@@ -401,11 +383,10 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="qoL-8W-AJS"/>
+        <segue reference="WD4-AM-vgZ"/>
         <segue reference="9xK-px-7Tj"/>
     </inferredMetricsTieBreakers>
     <resources>
-        <image name="clock" catalog="system" width="128" height="121"/>
         <image name="paperplane" catalog="system" width="128" height="121"/>
         <image name="person.badge.plus" catalog="system" width="128" height="116"/>
         <image name="questionmark" catalog="system" width="96" height="128"/>

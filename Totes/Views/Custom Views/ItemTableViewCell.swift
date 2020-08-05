@@ -1,14 +1,14 @@
 //
-//  SectionTableViewCell.swift
+//  ItemTableViewCell.swift
 //  Totes
 //
-//  Created by Moses on 7/9/20.
+//  Created by Moses on 8/5/20.
 //  Copyright © 2020 Max Susman. All rights reserved.
 //
 
 import UIKit
 
-class SectionTableViewCell: UITableViewCell {
+class ItemTableViewCell: UITableViewCell {
 
     override func awakeFromNib() {
         super.awakeFromNib()

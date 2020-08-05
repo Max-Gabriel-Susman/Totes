@@ -17,50 +17,27 @@
 		A643A6C6248724AD00BD3364 /* SectionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A643A6C5248724AD00BD3364 /* SectionController.swift */; };
 		A643A6C8248724BA00BD3364 /* ItemController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A643A6C7248724BA00BD3364 /* ItemController.swift */; };
 		A643A6CE2487251C00BD3364 /* InventoryTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A643A6CD2487251C00BD3364 /* InventoryTableViewController.swift */; };
-		A64B45CA24D4241700367CC2 /* ConversationListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A64B45C924D4241700367CC2 /* ConversationListTableViewController.swift */; };
 		A64B45CC24D429F100367CC2 /* ContactListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A64B45CB24D429F100367CC2 /* ContactListTableViewController.swift */; };
 		A64B45D224D42A6D00367CC2 /* ContactDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A64B45D124D42A6D00367CC2 /* ContactDetailViewController.swift */; };
-		A64B45DC24D42EA500367CC2 /* ConversationTrashTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A64B45DB24D42EA500367CC2 /* ConversationTrashTableViewController.swift */; };
 		A64B45E024D432DF00367CC2 /* ItemTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A64B45DF24D432DF00367CC2 /* ItemTableViewController.swift */; };
 		A64B45E824D43E3E00367CC2 /* SettingSectionListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A64B45E724D43E3E00367CC2 /* SettingSectionListTableViewController.swift */; };
 		A64B45EA24D43E5600367CC2 /* SettingListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A64B45E924D43E5600367CC2 /* SettingListTableViewController.swift */; };
 		A64B45EC24D43E6B00367CC2 /* SettingDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A64B45EB24D43E6B00367CC2 /* SettingDetailViewController.swift */; };
-		A64B45EE24D440C200367CC2 /* FinanceDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A64B45ED24D440C200367CC2 /* FinanceDetailViewController.swift */; };
-		A64B45F024D440E600367CC2 /* ListingListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A64B45EF24D440E600367CC2 /* ListingListTableViewController.swift */; };
-		A64B45F224D4413700367CC2 /* ListingDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A64B45F124D4413700367CC2 /* ListingDetailViewController.swift */; };
-		A64B45F424D44DFB00367CC2 /* CartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A64B45F324D44DFB00367CC2 /* CartViewController.swift */; };
-		A64B45F624D44F5900367CC2 /* CheckoutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A64B45F524D44F5900367CC2 /* CheckoutViewController.swift */; };
-		A64B45F824D44F8F00367CC2 /* CheckoutConfirmationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A64B45F724D44F8F00367CC2 /* CheckoutConfirmationViewController.swift */; };
-		A64B460324D453C400367CC2 /* Shopping.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A64B460224D453C400367CC2 /* Shopping.storyboard */; };
-		A64B460724D453ED00367CC2 /* Help.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A64B460624D453ED00367CC2 /* Help.storyboard */; };
-		A64B460924D453F600367CC2 /* Account.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A64B460824D453F600367CC2 /* Account.storyboard */; };
 		A64B460B24D4540100367CC2 /* Inventories.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A64B460A24D4540100367CC2 /* Inventories.storyboard */; };
-		A64B460D24D4540B00367CC2 /* Transactions.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A64B460C24D4540B00367CC2 /* Transactions.storyboard */; };
-		A64B460F24D4542400367CC2 /* Conversations.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A64B460E24D4542400367CC2 /* Conversations.storyboard */; };
-		A64B461124D4558800367CC2 /* TransactionDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A64B461024D4558800367CC2 /* TransactionDetailViewController.swift */; };
-		A64B461324D4559D00367CC2 /* TransactionTrashTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A64B461224D4559D00367CC2 /* TransactionTrashTableViewController.swift */; };
-		A64B461524D45D5A00367CC2 /* HelpListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A64B461424D45D5A00367CC2 /* HelpListTableViewController.swift */; };
-		A64B461724D45D7500367CC2 /* HelpDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A64B461624D45D7500367CC2 /* HelpDetailViewController.swift */; };
-		A64B461924D45D8700367CC2 /* ContactSupportViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A64B461824D45D8700367CC2 /* ContactSupportViewController.swift */; };
 		A64B461B24D45E5000367CC2 /* ProfileSettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A64B461A24D45E5000367CC2 /* ProfileSettingsViewController.swift */; };
 		A67185A424D7838E00334EEA /* Scan.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A67185A324D7838E00334EEA /* Scan.storyboard */; };
 		A67185A724D783EB00334EEA /* ScanCodeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A67185A624D783EB00334EEA /* ScanCodeViewController.swift */; };
-		A67185AA24D788ED00334EEA /* newInventories.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A67185A924D788ED00334EEA /* newInventories.storyboard */; };
-		A67185AF24D78A9900334EEA /* SectionTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A67185AE24D78A9900334EEA /* SectionTableViewController.swift */; };
 		A680DD7D24ABABBF00A8A0A3 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A680DD7C24ABABBF00A8A0A3 /* LoginViewController.swift */; };
 		A680DD7F24ABABCF00A8A0A3 /* RegistrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A680DD7E24ABABCF00A8A0A3 /* RegistrationViewController.swift */; };
 		A680DD8124ABADEA00A8A0A3 /* ForgottenPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A680DD8024ABADEA00A8A0A3 /* ForgottenPasswordViewController.swift */; };
-		A680DD8524ABCF3500A8A0A3 /* TransactionListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A680DD8424ABCF3500A8A0A3 /* TransactionListTableViewController.swift */; };
 		A697914F24B77CD3001581AA /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A697914E24B77CD3001581AA /* GoogleService-Info.plist */; };
 		A697915424B7B94E001581AA /* InventoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A697915324B7B94E001581AA /* InventoryTableViewCell.swift */; };
-		A697915624B7B95C001581AA /* SectionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A697915524B7B95C001581AA /* SectionTableViewCell.swift */; };
-		A697915924B7B9D7001581AA /* SectionTrashTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A697915824B7B9D7001581AA /* SectionTrashTableViewCell.swift */; };
-		A697915B24B7B9F3001581AA /* InventoryTrashTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A697915A24B7B9F3001581AA /* InventoryTrashTableViewCell.swift */; };
 		A6A23B3B24D7642800D56431 /* Contacts.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A6A23B3A24D7642800D56431 /* Contacts.storyboard */; };
 		A6A23B3D24D766C200D56431 /* TabBar.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A6A23B3C24D766C200D56431 /* TabBar.storyboard */; };
-		A6A23B3F24D76F6100D56431 /* MessageListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6A23B3E24D76F6100D56431 /* MessageListTableViewController.swift */; };
 		A6A23B4324D7723E00D56431 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A6A23B4224D7723E00D56431 /* Main.storyboard */; };
 		A6A8F44524CEDD4300C173CD /* EmailVerificationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6A8F44424CEDD4300C173CD /* EmailVerificationViewController.swift */; };
+		A6E0B87124DB32DE0021F32B /* Account.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A6E0B87024DB32DE0021F32B /* Account.storyboard */; };
+		A6E0B87324DB45730021F32B /* ItemTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6E0B87224DB45730021F32B /* ItemTableViewCell.swift */; };
 		C47C2A6B4DF39EBD5A4C6E08 /* Pods_Totes.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A6F6C9A96DA0A476C5F11C9 /* Pods_Totes.framework */; };
 /* End PBXBuildFile section */
 
@@ -79,50 +56,27 @@
 		A643A6C5248724AD00BD3364 /* SectionController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionController.swift; sourceTree = "<group>"; };
 		A643A6C7248724BA00BD3364 /* ItemController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemController.swift; sourceTree = "<group>"; };
 		A643A6CD2487251C00BD3364 /* InventoryTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InventoryTableViewController.swift; sourceTree = "<group>"; };
-		A64B45C924D4241700367CC2 /* ConversationListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConversationListTableViewController.swift; sourceTree = "<group>"; };
 		A64B45CB24D429F100367CC2 /* ContactListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactListTableViewController.swift; sourceTree = "<group>"; };
 		A64B45D124D42A6D00367CC2 /* ContactDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactDetailViewController.swift; sourceTree = "<group>"; };
-		A64B45DB24D42EA500367CC2 /* ConversationTrashTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConversationTrashTableViewController.swift; sourceTree = "<group>"; };
 		A64B45DF24D432DF00367CC2 /* ItemTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemTableViewController.swift; sourceTree = "<group>"; };
 		A64B45E724D43E3E00367CC2 /* SettingSectionListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingSectionListTableViewController.swift; sourceTree = "<group>"; };
 		A64B45E924D43E5600367CC2 /* SettingListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingListTableViewController.swift; sourceTree = "<group>"; };
 		A64B45EB24D43E6B00367CC2 /* SettingDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingDetailViewController.swift; sourceTree = "<group>"; };
-		A64B45ED24D440C200367CC2 /* FinanceDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinanceDetailViewController.swift; sourceTree = "<group>"; };
-		A64B45EF24D440E600367CC2 /* ListingListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListingListTableViewController.swift; sourceTree = "<group>"; };
-		A64B45F124D4413700367CC2 /* ListingDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListingDetailViewController.swift; sourceTree = "<group>"; };
-		A64B45F324D44DFB00367CC2 /* CartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartViewController.swift; sourceTree = "<group>"; };
-		A64B45F524D44F5900367CC2 /* CheckoutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckoutViewController.swift; sourceTree = "<group>"; };
-		A64B45F724D44F8F00367CC2 /* CheckoutConfirmationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckoutConfirmationViewController.swift; sourceTree = "<group>"; };
-		A64B460224D453C400367CC2 /* Shopping.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Shopping.storyboard; sourceTree = "<group>"; };
-		A64B460624D453ED00367CC2 /* Help.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Help.storyboard; sourceTree = "<group>"; };
-		A64B460824D453F600367CC2 /* Account.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Account.storyboard; sourceTree = "<group>"; };
 		A64B460A24D4540100367CC2 /* Inventories.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Inventories.storyboard; sourceTree = "<group>"; };
-		A64B460C24D4540B00367CC2 /* Transactions.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Transactions.storyboard; sourceTree = "<group>"; };
-		A64B460E24D4542400367CC2 /* Conversations.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Conversations.storyboard; sourceTree = "<group>"; };
-		A64B461024D4558800367CC2 /* TransactionDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionDetailViewController.swift; sourceTree = "<group>"; };
-		A64B461224D4559D00367CC2 /* TransactionTrashTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionTrashTableViewController.swift; sourceTree = "<group>"; };
-		A64B461424D45D5A00367CC2 /* HelpListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelpListTableViewController.swift; sourceTree = "<group>"; };
-		A64B461624D45D7500367CC2 /* HelpDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelpDetailViewController.swift; sourceTree = "<group>"; };
-		A64B461824D45D8700367CC2 /* ContactSupportViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactSupportViewController.swift; sourceTree = "<group>"; };
 		A64B461A24D45E5000367CC2 /* ProfileSettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileSettingsViewController.swift; sourceTree = "<group>"; };
 		A67185A324D7838E00334EEA /* Scan.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Scan.storyboard; sourceTree = "<group>"; };
 		A67185A624D783EB00334EEA /* ScanCodeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScanCodeViewController.swift; sourceTree = "<group>"; };
-		A67185A924D788ED00334EEA /* newInventories.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = newInventories.storyboard; sourceTree = "<group>"; };
-		A67185AE24D78A9900334EEA /* SectionTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SectionTableViewController.swift; path = "../../../../../../../../../Library/Mobile Documents/com~apple~CloudDocs/.Trash/SectionTableViewController.swift"; sourceTree = "<group>"; };
 		A680DD7C24ABABBF00A8A0A3 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		A680DD7E24ABABCF00A8A0A3 /* RegistrationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationViewController.swift; sourceTree = "<group>"; };
 		A680DD8024ABADEA00A8A0A3 /* ForgottenPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgottenPasswordViewController.swift; sourceTree = "<group>"; };
-		A680DD8424ABCF3500A8A0A3 /* TransactionListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionListTableViewController.swift; sourceTree = "<group>"; };
 		A697914E24B77CD3001581AA /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		A697915324B7B94E001581AA /* InventoryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InventoryTableViewCell.swift; sourceTree = "<group>"; };
-		A697915524B7B95C001581AA /* SectionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionTableViewCell.swift; sourceTree = "<group>"; };
-		A697915824B7B9D7001581AA /* SectionTrashTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionTrashTableViewCell.swift; sourceTree = "<group>"; };
-		A697915A24B7B9F3001581AA /* InventoryTrashTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InventoryTrashTableViewCell.swift; sourceTree = "<group>"; };
 		A6A23B3A24D7642800D56431 /* Contacts.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Contacts.storyboard; sourceTree = "<group>"; };
 		A6A23B3C24D766C200D56431 /* TabBar.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TabBar.storyboard; sourceTree = "<group>"; };
-		A6A23B3E24D76F6100D56431 /* MessageListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageListTableViewController.swift; sourceTree = "<group>"; };
 		A6A23B4224D7723E00D56431 /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		A6A8F44424CEDD4300C173CD /* EmailVerificationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailVerificationViewController.swift; sourceTree = "<group>"; };
+		A6E0B87024DB32DE0021F32B /* Account.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Account.storyboard; sourceTree = "<group>"; };
+		A6E0B87224DB45730021F32B /* ItemTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemTableViewCell.swift; sourceTree = "<group>"; };
 		B3BB852FC84B16DDDC7DD7B1 /* Pods-Totes.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Totes.debug.xcconfig"; path = "Target Support Files/Pods-Totes/Pods-Totes.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -227,12 +181,11 @@
 			isa = PBXGroup;
 			children = (
 				A64B460A24D4540100367CC2 /* Inventories.storyboard */,
-				A67185A824D7868400334EEA /* inactive */,
 				A6A23B3C24D766C200D56431 /* TabBar.storyboard */,
 				A6A23B3A24D7642800D56431 /* Contacts.storyboard */,
 				A6A23B4224D7723E00D56431 /* Main.storyboard */,
 				A67185A324D7838E00334EEA /* Scan.storyboard */,
-				A67185A924D788ED00334EEA /* newInventories.storyboard */,
+				A6E0B87024DB32DE0021F32B /* Account.storyboard */,
 			);
 			path = Storyboards;
 			sourceTree = "<group>";
@@ -241,13 +194,9 @@
 			isa = PBXGroup;
 			children = (
 				A67185A524D783B200334EEA /* Scan */,
-				A64B460124D4524500367CC2 /* Shopping */,
-				A64B460024D4515300367CC2 /* Transactions */,
 				A64B45FF24D4512900367CC2 /* Main */,
 				A64B45FD24D450FD00367CC2 /* Contacts */,
-				A64B45FC24D450A400367CC2 /* Conversations */,
 				A64B45FB24D4509A00367CC2 /* Inventories */,
-				A64B45FA24D4509100367CC2 /* Help */,
 				A64B45F924D4508800367CC2 /* Account */,
 			);
 			path = "View Controllers";
@@ -274,34 +223,13 @@
 			path = Account;
 			sourceTree = "<group>";
 		};
-		A64B45FA24D4509100367CC2 /* Help */ = {
-			isa = PBXGroup;
-			children = (
-				A64B461424D45D5A00367CC2 /* HelpListTableViewController.swift */,
-				A64B461624D45D7500367CC2 /* HelpDetailViewController.swift */,
-				A64B461824D45D8700367CC2 /* ContactSupportViewController.swift */,
-			);
-			path = Help;
-			sourceTree = "<group>";
-		};
 		A64B45FB24D4509A00367CC2 /* Inventories */ = {
 			isa = PBXGroup;
 			children = (
-				A67185AE24D78A9900334EEA /* SectionTableViewController.swift */,
 				A643A6CD2487251C00BD3364 /* InventoryTableViewController.swift */,
 				A64B45DF24D432DF00367CC2 /* ItemTableViewController.swift */,
 			);
 			path = Inventories;
-			sourceTree = "<group>";
-		};
-		A64B45FC24D450A400367CC2 /* Conversations */ = {
-			isa = PBXGroup;
-			children = (
-				A64B45C924D4241700367CC2 /* ConversationListTableViewController.swift */,
-				A64B45DB24D42EA500367CC2 /* ConversationTrashTableViewController.swift */,
-				A6A23B3E24D76F6100D56431 /* MessageListTableViewController.swift */,
-			);
-			path = Conversations;
 			sourceTree = "<group>";
 		};
 		A64B45FD24D450FD00367CC2 /* Contacts */ = {
@@ -324,29 +252,6 @@
 			path = Main;
 			sourceTree = "<group>";
 		};
-		A64B460024D4515300367CC2 /* Transactions */ = {
-			isa = PBXGroup;
-			children = (
-				A680DD8424ABCF3500A8A0A3 /* TransactionListTableViewController.swift */,
-				A64B461024D4558800367CC2 /* TransactionDetailViewController.swift */,
-				A64B461224D4559D00367CC2 /* TransactionTrashTableViewController.swift */,
-			);
-			path = Transactions;
-			sourceTree = "<group>";
-		};
-		A64B460124D4524500367CC2 /* Shopping */ = {
-			isa = PBXGroup;
-			children = (
-				A64B45ED24D440C200367CC2 /* FinanceDetailViewController.swift */,
-				A64B45EF24D440E600367CC2 /* ListingListTableViewController.swift */,
-				A64B45F124D4413700367CC2 /* ListingDetailViewController.swift */,
-				A64B45F324D44DFB00367CC2 /* CartViewController.swift */,
-				A64B45F524D44F5900367CC2 /* CheckoutViewController.swift */,
-				A64B45F724D44F8F00367CC2 /* CheckoutConfirmationViewController.swift */,
-			);
-			path = Shopping;
-			sourceTree = "<group>";
-		};
 		A67185A524D783B200334EEA /* Scan */ = {
 			isa = PBXGroup;
 			children = (
@@ -355,25 +260,11 @@
 			path = Scan;
 			sourceTree = "<group>";
 		};
-		A67185A824D7868400334EEA /* inactive */ = {
-			isa = PBXGroup;
-			children = (
-				A64B460824D453F600367CC2 /* Account.storyboard */,
-				A64B460C24D4540B00367CC2 /* Transactions.storyboard */,
-				A64B460E24D4542400367CC2 /* Conversations.storyboard */,
-				A64B460224D453C400367CC2 /* Shopping.storyboard */,
-				A64B460624D453ED00367CC2 /* Help.storyboard */,
-			);
-			path = inactive;
-			sourceTree = "<group>";
-		};
 		A697915224B7B925001581AA /* Custom Views */ = {
 			isa = PBXGroup;
 			children = (
 				A697915324B7B94E001581AA /* InventoryTableViewCell.swift */,
-				A697915524B7B95C001581AA /* SectionTableViewCell.swift */,
-				A697915824B7B9D7001581AA /* SectionTrashTableViewCell.swift */,
-				A697915A24B7B9F3001581AA /* InventoryTrashTableViewCell.swift */,
+				A6E0B87224DB45730021F32B /* ItemTableViewCell.swift */,
 			);
 			path = "Custom Views";
 			sourceTree = "<group>";
@@ -449,17 +340,12 @@
 			files = (
 				A643A6AD2486ED6900BD3364 /* LaunchScreen.storyboard in Resources */,
 				A697914F24B77CD3001581AA /* GoogleService-Info.plist in Resources */,
+				A6E0B87124DB32DE0021F32B /* Account.storyboard in Resources */,
 				A64B460B24D4540100367CC2 /* Inventories.storyboard in Resources */,
 				A643A6AA2486ED6900BD3364 /* Assets.xcassets in Resources */,
-				A64B460724D453ED00367CC2 /* Help.storyboard in Resources */,
-				A64B460F24D4542400367CC2 /* Conversations.storyboard in Resources */,
-				A67185AA24D788ED00334EEA /* newInventories.storyboard in Resources */,
 				A6A23B4324D7723E00D56431 /* Main.storyboard in Resources */,
-				A64B460324D453C400367CC2 /* Shopping.storyboard in Resources */,
 				A6A23B3D24D766C200D56431 /* TabBar.storyboard in Resources */,
-				A64B460924D453F600367CC2 /* Account.storyboard in Resources */,
 				A6A23B3B24D7642800D56431 /* Contacts.storyboard in Resources */,
-				A64B460D24D4540B00367CC2 /* Transactions.storyboard in Resources */,
 				A67185A424D7838E00334EEA /* Scan.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -516,43 +402,25 @@
 				A643A6C6248724AD00BD3364 /* SectionController.swift in Sources */,
 				A643A6C42487249A00BD3364 /* UserController.swift in Sources */,
 				A67185A724D783EB00334EEA /* ScanCodeViewController.swift in Sources */,
-				A64B45EE24D440C200367CC2 /* FinanceDetailViewController.swift in Sources */,
 				A643A6CE2487251C00BD3364 /* InventoryTableViewController.swift in Sources */,
-				A6A23B3F24D76F6100D56431 /* MessageListTableViewController.swift in Sources */,
-				A697915B24B7B9F3001581AA /* InventoryTrashTableViewCell.swift in Sources */,
 				A64B45D224D42A6D00367CC2 /* ContactDetailViewController.swift in Sources */,
-				A67185AF24D78A9900334EEA /* SectionTableViewController.swift in Sources */,
 				A643A6C8248724BA00BD3364 /* ItemController.swift in Sources */,
-				A64B45F024D440E600367CC2 /* ListingListTableViewController.swift in Sources */,
 				A64B45CC24D429F100367CC2 /* ContactListTableViewController.swift in Sources */,
-				A64B461724D45D7500367CC2 /* HelpDetailViewController.swift in Sources */,
 				A680DD7F24ABABCF00A8A0A3 /* RegistrationViewController.swift in Sources */,
-				A64B45F824D44F8F00367CC2 /* CheckoutConfirmationViewController.swift in Sources */,
 				A64B45EC24D43E6B00367CC2 /* SettingDetailViewController.swift in Sources */,
-				A64B461924D45D8700367CC2 /* ContactSupportViewController.swift in Sources */,
-				A697915924B7B9D7001581AA /* SectionTrashTableViewCell.swift in Sources */,
-				A64B45CA24D4241700367CC2 /* ConversationListTableViewController.swift in Sources */,
 				A643A6A12486ED6500BD3364 /* AppDelegate.swift in Sources */,
 				A643A6C02487248300BD3364 /* Section.swift in Sources */,
 				A643A6A32486ED6500BD3364 /* SceneDelegate.swift in Sources */,
-				A64B461524D45D5A00367CC2 /* HelpListTableViewController.swift in Sources */,
-				A64B45F424D44DFB00367CC2 /* CartViewController.swift in Sources */,
 				A6A8F44524CEDD4300C173CD /* EmailVerificationViewController.swift in Sources */,
 				A64B461B24D45E5000367CC2 /* ProfileSettingsViewController.swift in Sources */,
 				A680DD8124ABADEA00A8A0A3 /* ForgottenPasswordViewController.swift in Sources */,
 				A697915424B7B94E001581AA /* InventoryTableViewCell.swift in Sources */,
-				A64B45F224D4413700367CC2 /* ListingDetailViewController.swift in Sources */,
 				A64B45E824D43E3E00367CC2 /* SettingSectionListTableViewController.swift in Sources */,
-				A697915624B7B95C001581AA /* SectionTableViewCell.swift in Sources */,
-				A680DD8524ABCF3500A8A0A3 /* TransactionListTableViewController.swift in Sources */,
-				A64B45F624D44F5900367CC2 /* CheckoutViewController.swift in Sources */,
 				A64B45E024D432DF00367CC2 /* ItemTableViewController.swift in Sources */,
 				A643A6BE2486EE5E00BD3364 /* User.swift in Sources */,
 				A680DD7D24ABABBF00A8A0A3 /* LoginViewController.swift in Sources */,
-				A64B45DC24D42EA500367CC2 /* ConversationTrashTableViewController.swift in Sources */,
-				A64B461324D4559D00367CC2 /* TransactionTrashTableViewController.swift in Sources */,
+				A6E0B87324DB45730021F32B /* ItemTableViewCell.swift in Sources */,
 				A64B45EA24D43E5600367CC2 /* SettingListTableViewController.swift in Sources */,
-				A64B461124D4558800367CC2 /* TransactionDetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

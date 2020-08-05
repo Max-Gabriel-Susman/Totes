@@ -10,16 +10,21 @@
         <scene sceneID="gLQ-5Y-EK0">
             <objects>
                 <tabBarController id="eQf-H6-Nei" sceneMemberID="viewController">
-                    <navigationItem key="navigationItem" id="Jnj-ZG-5Jw"/>
+                    <navigationItem key="navigationItem" id="Jnj-ZG-5Jw">
+                        <barButtonItem key="rightBarButtonItem" title="Settings" id="CNt-mo-7nF">
+                            <connections>
+                                <segue destination="A6z-dm-Vh4" kind="show" id="3FQ-4P-I4y"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="l1E-iq-igH">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
                     <connections>
-                        <segue destination="KoV-oF-rzi" kind="relationship" relationship="viewControllers" id="VJy-If-wAN"/>
-                        <segue destination="76f-Re-10K" kind="relationship" relationship="viewControllers" id="NeF-CV-MEl"/>
                         <segue destination="hxN-pV-C7j" kind="relationship" relationship="viewControllers" id="WV8-IT-kLe"/>
+                        <segue destination="KoV-oF-rzi" kind="relationship" relationship="viewControllers" id="VJy-If-wAN"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9wM-Or-I8d" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -36,25 +41,16 @@
             </objects>
             <point key="canvasLocation" x="5436" y="-1143"/>
         </scene>
-        <!--Scan-->
-        <scene sceneID="Fcy-ax-OIs">
-            <objects>
-                <viewControllerPlaceholder storyboardName="Scan" id="76f-Re-10K" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Scan" id="Lmd-Dy-owN"/>
-                </viewControllerPlaceholder>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="9aW-Ep-VTW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="5428" y="-1041"/>
-        </scene>
         <!--Account-->
         <scene sceneID="vLv-5j-JK5">
             <objects>
                 <viewControllerPlaceholder storyboardName="Account" id="A6z-dm-Vh4" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Item" id="tPT-da-KzY"/>
+                    <navigationItem key="navigationItem" id="jcR-SA-NTl"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="04W-y5-wdk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5447" y="-822"/>
+            <point key="canvasLocation" x="5428" y="-1227"/>
         </scene>
         <!--Contacts-->
         <scene sceneID="xwy-FI-D7W">

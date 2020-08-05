@@ -25,17 +25,18 @@ class RegistrationViewController: UIViewController {
     
     
     // MARK: - Properties
-    var isValidRegistry = false
+    var isUniqueUsername = false
     let mockDataru = ["Prometheus" : ["password" : "Moses1998!", "email" : "gabe.susman@gmail.com"], "NobodyHome" : ["password" : "Susman1998!", "email" : "gaebster7@gmail.com"]]
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         // Do any additional setup after loading the view.
     }
     
     // MARK: - Actions
     // I need to add the logic to create a user in the firestore db using this action
+    // but first we need to persist registered users in the mock data
     @IBAction func registerButton(_ sender: Any) {
         
         // Unwraps the TextFields content into local Strings
@@ -44,30 +45,26 @@ class RegistrationViewController: UIViewController {
         let password = passwordEntryTextField.text ?? ""
         let passwordConfirmation = passwordConfirmationTextField.text ?? ""
         
-        emailEntryPromptLabel.text = ""
-        usernameEntryPromptLabel.text = ""
-        passwordConfirmationPromptLabel.text = ""
-        passwordEntryPromptLabel.text = ""
+        // Resets the label values to empty
+        clearLabels()
         
         
-        // Performs client side checks on registered credentials
+        
         if email.count > 0 && password == passwordConfirmation && password.count >= 8 && username.count >= 8 {
             
-            // Pulls username collection from the server
-            let usernames = mockDataru.keys
+            isUniqueUsername = true
             
-            // Checks for duplicate username value server side & manages UIElement content
-            for string in usernames {
+            for string in mockDataru.keys {
+                
                 if string == username {
-                    
+                
+                    print("username taken")
                     usernameEntryPromptLabel.text = "Username is already taken"
-                    clearTextFields()
-                    break
+                    isUniqueUsername = false
                     
                 }
             }
             
-            isValidRegistry = true
         // Invalid Credential registry branch
         } else {
             
@@ -75,7 +72,6 @@ class RegistrationViewController: UIViewController {
             if email.count <= 0 {
                 
                 emailEntryPromptLabel.text = "The email address was invalid"
-                clearTextFields()
                 
             }
             
@@ -83,15 +79,13 @@ class RegistrationViewController: UIViewController {
             if password != passwordConfirmation {
                 
                 passwordConfirmationPromptLabel.text = "The two password fields didn't match"
-                clearTextFields()
+                
             }
             
             // Invalid password branch
             if password.count < 8 {
                 
                 passwordEntryPromptLabel.text = "Your password is too short"
-                clearTextFields()
-                print("I work")
                 
             }
             
@@ -99,8 +93,6 @@ class RegistrationViewController: UIViewController {
             if username.count < 8 {
                 
                 usernameEntryPromptLabel.text = "Your username is too short"
-                clearTextFields()
-                print("username work")
                 
             }
         }
@@ -117,19 +109,31 @@ class RegistrationViewController: UIViewController {
         passwordConfirmationTextField.text = ""
     }
     
+    func clearLabels() {
+        emailEntryPromptLabel.text = ""
+        usernameEntryPromptLabel.text = ""
+        passwordEntryPromptLabel.text = ""
+        passwordConfirmationPromptLabel.text = ""
+    }
+    
     // MARK: - Navigation
     override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
         
         // allows navigation in the event of successful authentication
-        if identifier == "regisrationToEmailVerification" && isValidRegistry == true {
+        if identifier == "registrationToEmailVerification" && isUniqueUsername == true {
             
             return true
+        
+        // allows unconditional navigation to forgottenPassword vc
+        } else if identifier == "registrationToForgottenPassword" {
             
+            return true
+        
+        // navigation will not occur
         } else {
-            
+         
             return false
             
         }
-        
     }
 }

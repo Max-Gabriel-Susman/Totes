@@ -14,61 +14,31 @@ class InventoryTableViewController: UITableViewController {
     // MARK: - Properties
     //var user: User?
     var docRef: DocumentReference!
+    var userBase: CollectionReference!  
     // this value is due for a nameChange
-    var quoteListener: ListenerRegistration!
+    var inventoryListener: ListenerRegistration!
     var sectionName: String?
     //var userID = user.userID
-    var user: String = "user0"
+    var user: String? 
     var FBsections: [String : Any] = [:]
     var sectionNames: [String] = []
     var sectionItemSelections: [Int] = []
     let segueIdentifier = "inventoryToSection"
-    let cellReuseIdentifier = "showSection"
-    // perhaps we can/should assign docRef here?
-    //docRef = Firestore.firestore().document("/totes/usersMap/usersCollection/\(user)/")
-    // MARK: - LifecycleMethods
-    // I think we need to keep this, note entirely sure though
-    // let's see
-//    override func viewWillAppear(_ animated: Bool) {
-//        super.viewWillAppear(animated)
-//        print("we're back agin")
-//
-//    }
+    let cellReuseIdentifier = "showItem"
     
+    // MARK: - LifecycleMethods
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        // Firestore path for db queries
-        docRef = Firestore.firestore().document("/totes/usersMap/usersCollection/\(user)/")
-        //docRef = Firestore.firestore().document("/totes/usersMap/usersCollection/\(userID)/")
+        print("This is the user: \(user ?? "")")
         
-        // Reads data from a given user document in Firestore
-        // this value is due for a nameChange
-        quoteListener = docRef.addSnapshotListener { (docSnapshot, error) in
-        
-            // Ensures the data captured isn't nil
-            guard let docSnapshot = docSnapshot, docSnapshot.exists else { return }
-            
-            // Creates a local object in which to store the data
-            let myData = docSnapshot.data()
-            
-            // populates a local dictionary with data from the sections map
-            self.FBsections = myData?["sections"] as? [String : Any] ?? [:]
-            
-            // populate arrays with the keys and values from the map
-            for section in self.FBsections {
-                self.sectionNames.append(section.key)
-                self.sectionItemSelections.append(section.value as! Int)
-            }
-            
-            // populates tableview with the data
-            self.tableView.reloadData()
-        }
+        userBase = Firestore.firestore().collection("/totes/usersMeta/userbase")
+                
     }
     
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
-        quoteListener.remove()
+        //inventoryListener.remove()
     }
  
     // MARK: - Actions
@@ -106,13 +76,10 @@ class InventoryTableViewController: UITableViewController {
             // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
         }    
     }
-    
-    // how should I implement this process for a regular view controller?
-    // for some reason the data in the next table is reloaded twice and incorrectly, it seems to be coming from one off the two functions below this one
-    // maybe the redundancy is here? yes
+   
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         // section is the object we're passing to SectionTableViewController to dictate which sections data it will be populated with
-        self.sectionName = sectionNames[indexPath.row]
+        //self.sectionName = sectionNames[indexPath.row]
         
     }
 
@@ -121,9 +88,9 @@ class InventoryTableViewController: UITableViewController {
     // a variable typed any must be casted prior to use
     // sectiontableview is still populating with old data needs a fix, rip
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if let vc = segue.destination as? SectionTableViewController
-        {
-            vc.sectionName = self.sectionName
-        }
+//        if let vc = segue.destination as? ItemTableViewController
+//        {
+//            vc.sectionName = self.sectionName
+//        }
     }
 } // END OF CLASS

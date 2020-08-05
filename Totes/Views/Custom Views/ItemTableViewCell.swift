@@ -10,15 +10,11 @@ import UIKit
 
 class ItemTableViewCell: UITableViewCell {
 
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
-    }
+    // MARK: - Outlets
+    @IBOutlet weak var itemLabel: UILabel!
+    @IBOutlet weak var itemQuantityLabel: UILabel!
+    
+    // MARK: - Actions
+    @IBOutlet weak var changeQuantityButtonTapped: UIButton!
 
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
-    }
-
-}
+} // END OF CLASS

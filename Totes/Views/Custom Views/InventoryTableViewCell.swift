@@ -10,15 +10,17 @@ import UIKit
 
 class InventoryTableViewCell: UITableViewCell {
 
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
+    // MARK: - Outlets
+    @IBOutlet weak var inventoryLabel: UILabel!
+    @IBOutlet weak var numOfItemsInInventoryLabel: UILabel!
+    
+    // MARK: - Actions
+    @IBAction func addItemButtonTapped(_ sender: Any) {
+        
+        
+        
     }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
-    }
-
+    
+    
+    
 }

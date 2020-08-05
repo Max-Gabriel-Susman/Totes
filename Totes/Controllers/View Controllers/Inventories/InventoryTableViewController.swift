@@ -42,11 +42,10 @@ class InventoryTableViewController: UITableViewController {
     }
  
     // MARK: - Actions
-    @IBAction func unwind( _ seg: UIStoryboardSegue) {
+    @IBAction func accountButtonTapped(_ sender: Any) {
         
+        print("THis be ye user : \(user ?? "")")
     }
-    
-    
     
     // MARK: - Table view data source
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

@@ -1,14 +1,14 @@
 //
-//  ContactListTableViewController.swift
+//  CollaboratorListTableViewController.swift
 //  Totes
 //
-//  Created by Moses on 7/31/20.
+//  Created by Moses on 8/5/20.
 //  Copyright © 2020 Max Susman. All rights reserved.
 //
 
 import UIKit
 
-class ContactListTableViewController: UITableViewController {
+class CollaboratorListTableViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()

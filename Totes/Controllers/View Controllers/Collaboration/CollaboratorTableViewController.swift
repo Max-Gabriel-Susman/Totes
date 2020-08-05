@@ -1,23 +1,23 @@
 //
-//  ItemTableViewController.swift
+//  CollaboratorTableViewController.swift
 //  Totes
 //
-//  Created by Moses on 7/31/20.
+//  Created by Moses on 8/5/20.
 //  Copyright © 2020 Max Susman. All rights reserved.
 //
 
 import UIKit
 
-class ItemTableViewController: UITableViewController {
+class CollaboratorTableViewController: UITableViewController {
 
-    // MARK: - Outlets
-    
-    // MARK: - Properties
-    let reuseIdentifier = "showItem"
-    
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        // Uncomment the following line to preserve selection between presentations
+        // self.clearsSelectionOnViewWillAppear = false
+
+        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
+        // self.navigationItem.rightBarButtonItem = self.editButtonItem
     }
 
     // MARK: - Table view data source
@@ -32,13 +32,16 @@ class ItemTableViewController: UITableViewController {
         return 0
     }
 
+    /*
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: reuseIdentifier, for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
 
         // Configure the cell...
 
         return cell
     }
+    */
+
     /*
     // Override to support conditional editing of the table view.
     override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {

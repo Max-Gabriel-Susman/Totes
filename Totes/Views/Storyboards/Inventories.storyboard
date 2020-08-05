@@ -15,7 +15,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="showItem" rowHeight="100" id="ozo-xd-RiJ">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="showItem" rowHeight="100" id="ozo-xd-RiJ" customClass="InventoryTableViewCell" customModule="Totes" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="414" height="100"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="ozo-xd-RiJ" id="3f9-nz-pfR">
@@ -25,6 +25,9 @@
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1km-3f-ddK">
                                             <rect key="frame" x="318.5" y="35" width="46" height="30"/>
                                             <state key="normal" title="+-"/>
+                                            <connections>
+                                                <action selector="addItemButtonTapped:" destination="ozo-xd-RiJ" eventType="touchUpInside" id="ium-JR-vNw"/>
+                                            </connections>
                                         </button>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="(Inventory)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qnz-dd-Uc3">
                                             <rect key="frame" x="30.5" y="39.5" width="84" height="21"/>
@@ -56,6 +59,8 @@
                                 </tableViewCellContentView>
                                 <accessibility key="accessibilityConfiguration" identifier="showItem"/>
                                 <connections>
+                                    <outlet property="inventoryLabel" destination="qnz-dd-Uc3" id="GQc-Pr-Tdd"/>
+                                    <outlet property="numOfItemsInInventoryLabel" destination="lvb-R0-owo" id="6Fh-cp-tj0"/>
                                     <segue destination="uMk-EI-2jo" kind="show" id="bgK-Eg-sMp"/>
                                 </connections>
                             </tableViewCell>
@@ -68,7 +73,11 @@
                     <tabBarItem key="tabBarItem" title="Inventories" id="HVe-52-2S0"/>
                     <navigationItem key="navigationItem" prompt="Inventory" id="K6R-pO-sg2">
                         <barButtonItem key="backBarButtonItem" title="Logout" id="Sl4-0i-o6e"/>
-                        <barButtonItem key="rightBarButtonItem" style="done" systemItem="trash" id="BWY-Fv-rJv"/>
+                        <barButtonItem key="rightBarButtonItem" title="Account" style="done" id="BWY-Fv-rJv">
+                            <connections>
+                                <action selector="accountButtonTapped:" destination="ZrW-ak-vqp" id="akb-xj-qn9"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W27-1E-f0D" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -84,7 +93,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="showTransaction" rowHeight="100" id="jOe-BO-Vet">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="showItem" rowHeight="100" id="jOe-BO-Vet" customClass="ItemTableViewCell" customModule="Totes" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="414" height="100"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="jOe-BO-Vet" id="Eak-Hn-6FI">
@@ -123,7 +132,12 @@
                                         <constraint firstItem="p9I-aw-E8A" firstAttribute="height" secondItem="Eak-Hn-6FI" secondAttribute="height" multiplier="0.21" id="pvx-F8-q3O"/>
                                     </constraints>
                                 </tableViewCellContentView>
-                                <accessibility key="accessibilityConfiguration" identifier="showTransaction"/>
+                                <accessibility key="accessibilityConfiguration" identifier="showItem"/>
+                                <connections>
+                                    <outlet property="changeQuantityButtonTapped" destination="xSu-yL-tgI" id="l0d-x7-iYg"/>
+                                    <outlet property="itemLabel" destination="vAD-P3-kkV" id="0w4-mz-V5N"/>
+                                    <outlet property="itemQuantityLabel" destination="p9I-aw-E8A" id="6Nc-St-gYW"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>

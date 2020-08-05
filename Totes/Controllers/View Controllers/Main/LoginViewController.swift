@@ -38,11 +38,8 @@ class LoginViewController: UIViewController {
             guard let docSnapshot = docSnapshot, docSnapshot.exists else { return }
             let userbase = docSnapshot.data()
             // we need to pull the username here
-            let users = userbase?["users"] as? [String : Any] ?? [:]
-            
-            // it doesn't look like 
-            print(users)
-            print(self.mockDataru)
+            //let users = userbase?["users"] as? [String : Any] ?? [:]
+            // perhaps I'm going to want to explore .map
         }
     }
     
@@ -83,8 +80,7 @@ class LoginViewController: UIViewController {
                 isAuthenticated = true
                 clearLabels()
                 user = usernameEntry
-                print("this is user post authentication : \(user)")
-                print("Logged in!")
+                print("this is user post authentication : \(user ?? "")")
             
             // Failed password validation branch & manages UIelement content
             } else {
@@ -105,8 +101,10 @@ class LoginViewController: UIViewController {
         
         
     }
+    
     @IBAction func registrationButton(_ sender: Any) {
     }
+    
     @IBAction func forgottenPasswordButton(_ sender: Any) {
     }
     
@@ -148,21 +146,6 @@ class LoginViewController: UIViewController {
             
             return false
             
-        }
-    }
-    
-//    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-//        // section is the object we're passing to SectionTableViewController to dictate which sections data it will be populated with
-//        self.username = sectionNames[indexPath.row]
-//
-//    }
-
-    
-    // MARK: - Navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if let vc = segue.destination as? InventoryTableViewController
-        {
-            vc.user = "Ford Prefect"
         }
     }
 } // END OF CLASS

@@ -148,4 +148,12 @@ class LoginViewController: UIViewController {
             
         }
     }
+    
+    // MARK: - Navigation
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let barViewControllers = segue.destination as! UITabBarController
+        let destinationViewController = barViewControllers.viewControllers?[0] as! InventoryTableViewController
+        destinationViewController.user = user
+
+    }
 } // END OF CLASS

@@ -11,11 +11,7 @@
             <objects>
                 <tabBarController id="eQf-H6-Nei" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="Jnj-ZG-5Jw">
-                        <barButtonItem key="rightBarButtonItem" title="Settings" id="CNt-mo-7nF">
-                            <connections>
-                                <segue destination="A6z-dm-Vh4" kind="show" id="3FQ-4P-I4y"/>
-                            </connections>
-                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="Settings" id="CNt-mo-7nF"/>
                     </navigationItem>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="l1E-iq-igH">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>

@@ -18,33 +18,38 @@ class InventoryTableViewController: UITableViewController {
     
     
     // MARK: - Properties
-    //var user: User?
-    var docRef: DocumentReference!
-    var userBase: CollectionReference!  
-    // this value is due for a nameChange
+    var userRef: DocumentReference!
+    var userBase: CollectionReference!
     var inventoryListener: ListenerRegistration!
-    var sectionName: String?
-    //var userID = user.userID
+    var inventoryName: String?
     var user: String? 
-    var FBsections: [String : Any] = [:]
-    var sectionNames: [String] = []
-    var sectionItemSelections: [Int] = []
-    let segueIdentifier = "inventoryToSection"
+    var inventories: [String : Any] = [:]
+    var inventoryNames: [String] = []
+    var inventorySelections: [Int] = []
+    let segueIdentifier = "inventoryToItem"
     let cellReuseIdentifier = "showItem"
     
     // MARK: - LifecycleMethods
+//    override func viewWillAppear(_ animated: Bool) {
+//        super.viewWillAppear(animated)
+//        
+////        inventoryListener = userBase.addSnapshotListener { (docSnapshot, error) in
+////        guard let docSnapshot = docSnapshot, docSnapshot.exists else { return }
+////        let myData = docSnapshot.data()
+//        
+//        }
+//    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        print("This is the user inventoryTBVC : \(user ?? "")")
-        welcomeBackLabel.text = user ?? "did not load"
+        welcomeBackLabel.text = user ?? ""
         userBase = Firestore.firestore().collection("/totes/usersMeta/userbase")
                 
     }
     
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
-        //inventoryListener.remove()
+        inventoryListener.remove()
     }
  
     // MARK: - Actions
@@ -58,19 +63,19 @@ class InventoryTableViewController: UITableViewController {
     
     // MARK: - Table view data source
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return sectionNames.count
+        return inventoryNames.count
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: cellReuseIdentifier, for: indexPath)
         
-        let sectionName = sectionNames[indexPath.row]
+        let inventoryName = inventoryNames[indexPath.row]
         
-        let sectionItemSelection = sectionItemSelections[indexPath.row]
+        let inventorySelection = inventorySelections[indexPath.row]
         
-        cell.textLabel?.text = sectionName
+        cell.textLabel?.text = inventoryName
         
-        cell.detailTextLabel?.text = "\(sectionItemSelection)"
+        cell.detailTextLabel?.text = "\(inventorySelection)"
 
         return cell
     }
@@ -87,7 +92,7 @@ class InventoryTableViewController: UITableViewController {
    
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         // section is the object we're passing to SectionTableViewController to dictate which sections data it will be populated with
-        //self.sectionName = sectionNames[indexPath.row]
+        self.inventoryName = inventoryNames[indexPath.row]
         
     }
 
@@ -96,9 +101,9 @@ class InventoryTableViewController: UITableViewController {
     // a variable typed any must be casted prior to use
     // sectiontableview is still populating with old data needs a fix, rip
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-//        if let vc = segue.destination as? ItemTableViewController
-//        {
-//            vc.sectionName = self.sectionName
-//        }
+        if let vc = segue.destination as? ItemTableViewController
+        {
+            vc.inventoryName = self.inventoryName
+        }
     }
 } // END OF CLASS

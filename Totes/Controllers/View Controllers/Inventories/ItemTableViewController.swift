@@ -15,6 +15,7 @@ class ItemTableViewController: UITableViewController {
     @IBOutlet weak var bioLabel: UILabel!
     
     // MARK: - Properties
+    var inventoryName: String?
     let reuseIdentifier = "showItem"
     
     // MARK: -  LifeCycle Methods

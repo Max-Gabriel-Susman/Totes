@@ -195,14 +195,23 @@
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PvN-L6-vOj">
                                     <rect key="frame" x="15.5" y="139.5" width="124" height="30"/>
                                     <state key="normal" title="Manage Affiliates"/>
+                                    <connections>
+                                        <action selector="manageAffiliatesButtonTapped:" destination="uMk-EI-2jo" eventType="touchUpInside" id="kd4-JG-8oR"/>
+                                    </connections>
                                 </button>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gcS-ct-4aY">
                                     <rect key="frame" x="145" y="139.5" width="124" height="30"/>
                                     <state key="normal" title="Configure"/>
+                                    <connections>
+                                        <action selector="configureButtonTapped:" destination="uMk-EI-2jo" eventType="touchUpInside" id="BXu-Pv-SRo"/>
+                                    </connections>
                                 </button>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BJi-pM-Yyv">
                                     <rect key="frame" x="274.5" y="139.5" width="124" height="30"/>
                                     <state key="normal" title="Shop &amp; Restock"/>
+                                    <connections>
+                                        <action selector="shopNRestockButtonTapped:" destination="uMk-EI-2jo" eventType="touchUpInside" id="2Au-03-m5h"/>
+                                    </connections>
                                 </button>
                             </subviews>
                             <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -297,6 +306,10 @@
                             </barButtonItem>
                         </rightBarButtonItems>
                     </navigationItem>
+                    <connections>
+                        <outlet property="bioLabel" destination="bIM-zf-sfg" id="6zN-lT-EkO"/>
+                        <outlet property="inventoryNameLabel" destination="8LT-Ur-V0J" id="83Z-w1-ZTE"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="azg-dh-KWv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

@@ -11,14 +11,26 @@ import UIKit
 class ItemTableViewController: UITableViewController {
 
     // MARK: - Outlets
+    @IBOutlet weak var inventoryNameLabel: UILabel!
+    @IBOutlet weak var bioLabel: UILabel!
     
     // MARK: - Properties
     let reuseIdentifier = "showItem"
     
+    // MARK: -  LifeCycle Methods
     override func viewDidLoad() {
         super.viewDidLoad()
 
     }
+    
+    // MARK: - Actions
+    @IBAction func manageAffiliatesButtonTapped(_ sender: Any) {
+    }
+    @IBAction func configureButtonTapped(_ sender: Any) {
+    }
+    @IBAction func shopNRestockButtonTapped(_ sender: Any) {
+    }
+    
 
     // MARK: - Table view data source
 

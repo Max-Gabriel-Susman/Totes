@@ -11,6 +11,12 @@ import Firebase
 
 
 class InventoryTableViewController: UITableViewController {
+    
+    // MARK: - Outlets
+    @IBOutlet weak var profilePictureImageView: UIImageView!
+    @IBOutlet weak var welcomeBackLabel: UILabel!
+    
+    
     // MARK: - Properties
     //var user: User?
     var docRef: DocumentReference!
@@ -30,8 +36,8 @@ class InventoryTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        print("This is the user: \(user ?? "")")
-        
+        print("This is the user inventoryTBVC : \(user ?? "")")
+        welcomeBackLabel.text = user ?? "did not load"
         userBase = Firestore.firestore().collection("/totes/usersMeta/userbase")
                 
     }
@@ -42,10 +48,13 @@ class InventoryTableViewController: UITableViewController {
     }
  
     // MARK: - Actions
-    @IBAction func accountButtonTapped(_ sender: Any) {
-        
-        print("THis be ye user : \(user ?? "")")
+    @IBAction func settingsButtonTapped(_ sender: Any) {
     }
+    @IBAction func editInfoButtonTapped(_ sender: Any) {
+    }
+    @IBAction func contactsButtonTapped(_ sender: Any) {
+    }
+    
     
     // MARK: - Table view data source
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

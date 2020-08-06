@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0C36E2287EEAEA4471686D09 /* Pods_Totes.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C5DF88BAAB6ED2C0A4A672F9 /* Pods_Totes.framework */; };
 		A643A6A12486ED6500BD3364 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A643A6A02486ED6500BD3364 /* AppDelegate.swift */; };
 		A643A6A32486ED6500BD3364 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A643A6A22486ED6500BD3364 /* SceneDelegate.swift */; };
 		A643A6AA2486ED6900BD3364 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A643A6A92486ED6900BD3364 /* Assets.xcassets */; };
@@ -37,12 +38,11 @@
 		A6E0B87E24DB4FE90021F32B /* CollaboratorTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6E0B87D24DB4FE90021F32B /* CollaboratorTableViewController.swift */; };
 		A6E0B88024DB50080021F32B /* CollaboratorListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6E0B87F24DB50080021F32B /* CollaboratorListTableViewController.swift */; };
 		A6E0B88224DB503A0021F32B /* Inventory.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6E0B88124DB503A0021F32B /* Inventory.swift */; };
-		C47C2A6B4DF39EBD5A4C6E08 /* Pods_Totes.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A6F6C9A96DA0A476C5F11C9 /* Pods_Totes.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		581F75829FCB4205BA12DF98 /* Pods-Totes.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Totes.release.xcconfig"; path = "Target Support Files/Pods-Totes/Pods-Totes.release.xcconfig"; sourceTree = "<group>"; };
-		5A6F6C9A96DA0A476C5F11C9 /* Pods_Totes.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Totes.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		027A941053096A8F322A590E /* Pods-Totes.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Totes.debug.xcconfig"; path = "Target Support Files/Pods-Totes/Pods-Totes.debug.xcconfig"; sourceTree = "<group>"; };
+		9511E7EF4766E3AD703567EA /* Pods-Totes.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Totes.release.xcconfig"; path = "Target Support Files/Pods-Totes/Pods-Totes.release.xcconfig"; sourceTree = "<group>"; };
 		A643A69D2486ED6500BD3364 /* Totes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Totes.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A643A6A02486ED6500BD3364 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A643A6A22486ED6500BD3364 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -75,7 +75,7 @@
 		A6E0B87D24DB4FE90021F32B /* CollaboratorTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollaboratorTableViewController.swift; sourceTree = "<group>"; };
 		A6E0B87F24DB50080021F32B /* CollaboratorListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollaboratorListTableViewController.swift; sourceTree = "<group>"; };
 		A6E0B88124DB503A0021F32B /* Inventory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Inventory.swift; sourceTree = "<group>"; };
-		B3BB852FC84B16DDDC7DD7B1 /* Pods-Totes.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Totes.debug.xcconfig"; path = "Target Support Files/Pods-Totes/Pods-Totes.debug.xcconfig"; sourceTree = "<group>"; };
+		C5DF88BAAB6ED2C0A4A672F9 /* Pods_Totes.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Totes.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,28 +83,20 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C47C2A6B4DF39EBD5A4C6E08 /* Pods_Totes.framework in Frameworks */,
+				0C36E2287EEAEA4471686D09 /* Pods_Totes.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		28310A05C15FAE668D8AD79B /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				5A6F6C9A96DA0A476C5F11C9 /* Pods_Totes.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
 		A643A6942486ED6500BD3364 = {
 			isa = PBXGroup;
 			children = (
 				A643A69F2486ED6500BD3364 /* Totes */,
 				A643A69E2486ED6500BD3364 /* Products */,
 				C859188159BC12E293A5773F /* Pods */,
-				28310A05C15FAE668D8AD79B /* Frameworks */,
+				D97F2EF42B04F8E64E2708A0 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -269,10 +261,18 @@
 		C859188159BC12E293A5773F /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				B3BB852FC84B16DDDC7DD7B1 /* Pods-Totes.debug.xcconfig */,
-				581F75829FCB4205BA12DF98 /* Pods-Totes.release.xcconfig */,
+				027A941053096A8F322A590E /* Pods-Totes.debug.xcconfig */,
+				9511E7EF4766E3AD703567EA /* Pods-Totes.release.xcconfig */,
 			);
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		D97F2EF42B04F8E64E2708A0 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C5DF88BAAB6ED2C0A4A672F9 /* Pods_Totes.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -282,11 +282,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = A643A6B12486ED6900BD3364 /* Build configuration list for PBXNativeTarget "Totes" */;
 			buildPhases = (
-				DD28D1A1EF7A46DA3BEAEF65 /* [CP] Check Pods Manifest.lock */,
+				405F0EB07763B27BDCFB32D7 /* [CP] Check Pods Manifest.lock */,
 				A643A6992486ED6500BD3364 /* Sources */,
 				A643A69A2486ED6500BD3364 /* Frameworks */,
 				A643A69B2486ED6500BD3364 /* Resources */,
-				662A4B34CB917792FDE7DC9B /* [CP] Embed Pods Frameworks */,
+				8B1CA9F3C48565598C24A5B7 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -350,24 +350,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		662A4B34CB917792FDE7DC9B /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Totes/Pods-Totes-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Totes/Pods-Totes-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Totes/Pods-Totes-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		DD28D1A1EF7A46DA3BEAEF65 /* [CP] Check Pods Manifest.lock */ = {
+		405F0EB07763B27BDCFB32D7 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -387,6 +370,23 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8B1CA9F3C48565598C24A5B7 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Totes/Pods-Totes-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Totes/Pods-Totes-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Totes/Pods-Totes-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -550,7 +550,7 @@
 		};
 		A643A6B22486ED6900BD3364 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = B3BB852FC84B16DDDC7DD7B1 /* Pods-Totes.debug.xcconfig */;
+			baseConfigurationReference = 027A941053096A8F322A590E /* Pods-Totes.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -569,7 +569,7 @@
 		};
 		A643A6B32486ED6900BD3364 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 581F75829FCB4205BA12DF98 /* Pods-Totes.release.xcconfig */;
+			baseConfigurationReference = 9511E7EF4766E3AD703567EA /* Pods-Totes.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;

@@ -80,7 +80,7 @@ class LoginViewController: UIViewController {
                 isAuthenticated = true
                 clearLabels()
                 user = usernameEntry
-                print("this is user post authentication : \(user ?? "")")
+                print("this is user post authentication loginVC : \(user ?? "")")
             
             // Failed password validation branch & manages UIelement content
             } else {
